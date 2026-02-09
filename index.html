@@ -1,14 +1,16 @@
 <!DOCTYPE html>
+
 <html lang="lt">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Dantų implantacija Vilniuje | Odontologijos klinika LamaLocal</title>
-    <meta name="description"
-        content="Profesionali dantų implantacija ir odontologijos paslaugos Vilniuje. Patyrę specialistai, moderni įranga, ilgalaikė garantija. Registruokitės nemokamai konsultacijai!">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://svytintysdantys.lt/">
+    <meta
+        content="Profesionali dantų implantacija ir odontologijos paslaugos Vilniuje. Patyrę specialistai, moderni įranga, ilgalaikė garantija. Registruokitės nemokamai konsultacijai!"
+        name="description" />
+    <meta content="index, follow" name="robots" />
+    <link href="https://svytintysdantys.lt/" rel="canonical" />
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -17,18 +19,18 @@
       "image": "https://svytintysdantys.lt/logo.png",
       "@id": "https://svytintysdantys.lt",
       "url": "https://svytintysdantys.lt",
-      "telephone": "+37064195947",
+      "telephone": "+37061203030",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Arsenalo g. 1, Vilnius, 01143 Vilniaus m. sav.",
-        "addressLocality": "Vilnius",
-        "postalCode": "09100",
+        "streetAddress": "Vytauto pr. 83, Kaunas, 44238 Kauno m. sav.",
+        "addressLocality": "Kaunas",
+        "postalCode": "44238",
         "addressCountry": "LT"
       },
       "geo": {
         "@type": "GeoCoordinates",
-        "latitude": 54.7075388,
-        "longitude": 25.3040408
+        "latitude": 54.8960748,
+        "longitude": 23.9221346
       },
       "openingHoursSpecification": [
         {
@@ -40,61 +42,47 @@
             "Thursday",
             "Friday"
           ],
-          "opens": "08:00",
-          "closes": "20:00"
+          "opens": "09:00",
+          "closes": "16:00"
         }
       ],
       "priceRange": "$$"
     }
     </script>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#F6A0B3',
-                        'primary-dark': '#e08ca0',
-                        'primary-light': '#ffe4ea',
-                    }
-                }
-            }
-        }
-    </script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        .gradient-bg {
-            background: linear-gradient(135deg, #F6A0B3 0%, #e08ca0 100%);
-        }
+    <script src="js/theme-config.js"></script>
+    <link rel="stylesheet" href="css/theme.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
 
-        .glass-effect {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-        }
 
-        .service-card {
-            transition: all 0.3s ease;
-        }
+    .glass-effect {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    }
 
-        .service-card:hover {
-            transform: translateY(-5px);
-        }
+    .service-card {
+    transition: all 0.3s ease;
+    }
 
-        @keyframes float {
+    .service-card:hover {
+    transform: translateY(-5px);
+    }
 
-            0%,
-            100% {
-                transform: translateY(0px);
-            }
+    @keyframes float {
 
-            50% {
-                transform: translateY(-10px);
-            }
-        }
+    0%,
+    100% {
+    transform: translateY(0px);
+    }
 
-        .float-animation {
-            animation: float 3s ease-in-out infinite;
-        }
+    50% {
+    transform: translateY(-10px);
+    }
+    }
+
+    .float-animation {
+    animation: float 3s ease-in-out infinite;
+    }
     </style>
 </head>
 
@@ -103,45 +91,42 @@
     <nav class="fixed top-0 w-full bg-white shadow-lg z-50">
         <div class="container mx-auto px-4">
             <div class="flex justify-between items-center py-4">
-                <a href="index.html" class="flex items-center space-x-2 hover:opacity-80 transition">
-                    <img src="logo lama.png" alt="LamaLocal Logo" class="h-10 w-auto">
-
+                <a class="flex items-center space-x-2 hover:opacity-80 transition" href="index.html">
+                    <img alt="Alfadenta Logo" class="h-10 w-auto" loading="lazy"
+                        src="Photos/Logotipas/alfadenta logotipas.png" />
+                    <span class="text-xl font-bold">Alfadenta</span>
                 </a>
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex items-center space-x-6">
-                    <a href="index.html" class="text-primary font-semibold">Pradžia</a>
-                    <a href="services.html" class="text-gray-700 hover:text-primary transition">Paslaugos</a>
-                    <a href="doctors.html" class="text-gray-700 hover:text-primary transition">Gydytojai</a>
-
-                    <a href="booking.html" class="text-gray-700 hover:text-primary transition">Registruotis</a>
-                    <a href="contact.html" class="text-gray-700 hover:text-primary transition">Kontaktai</a>
-
-                    <a href="contact.html"
-                        class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary-dark transition">
+                    <a class="text-primary font-semibold" href="index.html">Pradžia</a>
+                    <a class="text-gray-700 hover:text-primary transition" href="services.html">Paslaugos</a>
+                    <a class="text-gray-700 hover:text-primary transition" href="doctors.html">Gydytojai</a>
+                    <a class="text-gray-700 hover:text-primary transition" href="booking.html">Registruotis</a>
+                    <a class="text-gray-700 hover:text-primary transition" href="contact.html">Kontaktai</a>
+                    <a class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary-dark transition"
+                        href="contact.html">
                         Susisiekite
                     </a>
                 </div>
                 <!-- Mobile Call & Menu Buttons -->
                 <div class="md:hidden flex items-center space-x-3">
-                    <a href="tel:+37064195947"
-                        class="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition flex items-center space-x-2">
+                    <a class="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition flex items-center space-x-2"
+                        href="tel:+37061203030">
                         <i class="fas fa-phone"></i>
                         <span class="font-semibold">Skambinti</span>
                     </a>
-                    <button id="mobile-menu-btn" class="text-gray-700">
+                    <button class="text-gray-700" id="mobile-menu-btn">
                         <i class="fas fa-bars text-xl"></i>
                     </button>
                 </div>
             </div>
             <!-- Mobile Menu -->
-            <div id="mobile-menu" class="hidden md:hidden pb-4">
-                <a href="index.html" class="block py-2 text-primary font-semibold">Pradžia</a>
-                <a href="services.html" class="block py-2 text-gray-700 hover:text-primary">Paslaugos</a>
-                <a href="doctors.html" class="block py-2 text-gray-700 hover:text-primary">Gydytojai</a>
-
-                <a href="booking.html" class="block py-2 text-gray-700 hover:text-primary">Registruotis</a>
-                <a href="contact.html" class="block py-2 text-gray-700 hover:text-primary">Kontaktai</a>
-
+            <div class="hidden md:hidden pb-4" id="mobile-menu">
+                <a class="block py-2 text-primary font-semibold" href="index.html">Pradžia</a>
+                <a class="block py-2 text-gray-700 hover:text-primary" href="services.html">Paslaugos</a>
+                <a class="block py-2 text-gray-700 hover:text-primary" href="doctors.html">Gydytojai</a>
+                <a class="block py-2 text-gray-700 hover:text-primary" href="booking.html">Registruotis</a>
+                <a class="block py-2 text-gray-700 hover:text-primary" href="contact.html">Kontaktai</a>
                 <button class="mt-2 w-full bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary-dark">
                     Susisiekite
                 </button>
@@ -161,19 +146,19 @@
                         Patirkite švelnų, profesionalų odontologijos gydymą patogioje aplinkoje.
                     </p>
                     <div class="flex flex-col sm:flex-row gap-4">
-                        <a href="booking.html"
-                            class="inline-block bg-white text-primary px-8 py-4 rounded-lg font-semibold hover:bg-primary-light transition transform hover:scale-105 text-center">
+                        <a class="inline-block bg-white text-primary px-8 py-4 rounded-lg font-semibold hover:bg-primary-light transition transform hover:scale-105 text-center"
+                            href="booking.html">
                             <i class="fas fa-calendar-check mr-2"></i> Registruotis
                         </a>
-                        <a href="#services"
-                            class="inline-block border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-primary transition text-center">
+                        <a class="inline-block border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-primary transition text-center"
+                            href="#services">
                             <i class="fas fa-info-circle mr-2"></i> Sužinoti daugiau
                         </a>
                     </div>
                 </div>
                 <div class="relative">
-                    <img src="Photos/nuotraukos%20naujos/herro1.jpg" alt="Dental Care"
-                        class="rounded-2xl shadow-2xl float-animation">
+                    <img alt="Dental Care" class="rounded-2xl shadow-2xl float-animation" loading="lazy"
+                        src="Photos/nuotraukos%20naujos/herro1.webp" />
                     <div class="absolute -bottom-4 -right-4 bg-white p-4 rounded-xl shadow-lg">
                         <div class="flex items-center space-x-3">
                             <div class="bg-primary w-12 h-12 rounded-full flex items-center justify-center">
@@ -181,7 +166,7 @@
                             </div>
                             <div>
                                 <div class="font-semibold">Tel. Numeris</div>
-                                <div class="text-sm text-gray-600">+37064195947</div>
+                                <div class="text-sm text-gray-600">+370 612 03030</div>
                             </div>
                         </div>
                     </div>
@@ -209,7 +194,7 @@
         </div>
     </section>
     <!-- Services Preview -->
-    <section id="services" class="py-16 bg-gray-50">
+    <section class="py-16 bg-gray-50" id="services">
         <div class="container mx-auto px-4">
             <div class="text-center mb-12">
                 <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Mūsų Paslaugos</h2>
@@ -217,14 +202,14 @@
             </div>
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="service-card bg-white p-8 rounded-xl shadow-lg hover:shadow-xl">
-                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
-                        <img src="logo lama.png" alt="LamaLocal Logo" class="h-10 w-auto">
+                    <div class="bg-primary-light w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <img alt="LamaLocal Logo" class="h-10 w-auto" loading="lazy" src="logo lama.png" />
                     </div>
                     <h3 class="text-xl font-semibold mb-3 text-center">Bendroji Odontologija</h3>
                     <p class="text-gray-600 text-center mb-4">Reguliarūs patikrinimai, valymas ir profilaktinė priežiūra
                     </p>
                     <div class="text-center">
-                        <a href="paslaugos/dantu-gydymas.html" class="text-blue-500 hover:text-blue-600 font-semibold">
+                        <a class="text-primary hover:text-primary-dark font-semibold" href="paslaugos/dantu-gydymas.html">
                             Sužinoti daugiau <i class="fas fa-arrow-right ml-1"></i>
                         </a>
                     </div>
@@ -236,8 +221,8 @@
                     <h3 class="text-xl font-semibold mb-3 text-center">Estetinė Odontologija</h3>
                     <p class="text-gray-600 text-center mb-4">Paverskite savo šypsena su mūsų estetiniais gydymais</p>
                     <div class="text-center">
-                        <a href="paslaugos/estetinis-plombavimas.html"
-                            class="text-blue-500 hover:text-blue-600 font-semibold">
+                        <a class="text-primary hover:text-primary-dark font-semibold"
+                            href="paslaugos/estetinis-plombavimas.html">
                             Sužinoti daugiau <i class="fas fa-arrow-right ml-1"></i>
                         </a>
                     </div>
@@ -249,16 +234,16 @@
                     <h3 class="text-xl font-semibold mb-3 text-center">Ortodontija</h3>
                     <p class="text-gray-600 text-center mb-4">Ištieskite dantis su modernia ortodontija</p>
                     <div class="text-center">
-                        <a href="paslaugos/ortodontinis-gydymas.html"
-                            class="text-blue-500 hover:text-blue-600 font-semibold">
+                        <a class="text-primary hover:text-primary-dark font-semibold"
+                            href="paslaugos/ortodontinis-gydymas.html">
                             Sužinoti daugiau <i class="fas fa-arrow-right ml-1"></i>
                         </a>
                     </div>
                 </div>
             </div>
             <div class="text-center mt-8">
-                <a href="services.html"
-                    class="inline-block bg-blue-500 text-white px-8 py-3 rounded-lg hover:bg-blue-600 transition">
+                <a class="inline-block bg-primary text-white px-8 py-3 rounded-lg hover:bg-primary-dark transition"
+                    href="services.html">
                     Žiūrėti visas paslaugas
                 </a>
             </div>
@@ -274,8 +259,8 @@
                     <div class="space-y-4">
                         <div class="flex items-start">
                             <div
-                                class="bg-blue-100 w-10 h-10 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
-                                <i class="fas fa-check text-blue-500"></i>
+                                class="bg-primary-light w-10 h-10 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fas fa-check text-primary"></i>
                             </div>
                             <div>
                                 <h3 class="font-semibold text-lg mb-1">Patyrę Profesionalai</h3>
@@ -285,8 +270,8 @@
                         </div>
                         <div class="flex items-start">
                             <div
-                                class="bg-blue-100 w-10 h-10 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
-                                <i class="fas fa-check text-blue-500"></i>
+                                class="bg-primary-light w-10 h-10 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fas fa-check text-primary"></i>
                             </div>
                             <div>
                                 <h3 class="font-semibold text-lg mb-1">Naujausia Technologija</h3>
@@ -295,8 +280,8 @@
                         </div>
                         <div class="flex items-start">
                             <div
-                                class="bg-blue-100 w-10 h-10 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
-                                <i class="fas fa-check text-blue-500"></i>
+                                class="bg-primary-light w-10 h-10 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fas fa-check text-primary"></i>
                             </div>
                             <div>
                                 <h3 class="font-semibold text-lg mb-1">Pacientams Orientuota Priežiūra</h3>
@@ -305,8 +290,8 @@
                         </div>
                         <div class="flex items-start">
                             <div
-                                class="bg-blue-100 w-10 h-10 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
-                                <i class="fas fa-check text-blue-500"></i>
+                                class="bg-primary-light w-10 h-10 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fas fa-check text-primary"></i>
                             </div>
                             <div>
                                 <h3 class="font-semibold text-lg mb-1">Prieinamos Kainos</h3>
@@ -316,8 +301,8 @@
                     </div>
                 </div>
                 <div>
-                    <img src="Photos/nuotraukos%20naujos/dantu%20tiesinimas%20kapomis.jpg" alt="Odontologijos klinika"
-                        class="rounded-2xl shadow-xl">
+                    <img alt="Odontologijos klinika" class="rounded-2xl shadow-xl" loading="lazy"
+                        src="Photos/nuotraukos%20naujos/dantu%20tiesinimas%20kapomis.webp" />
                 </div>
             </div>
         </div>
@@ -339,22 +324,22 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <p class="text-gray-600 mb-6 italic">"Ačiū klinikai 'LamaLocal' už sugrąžintą šypseną! Praradau
-                        dantį per traumą ir labai bijojau implantacijos. Gydytojas viską atliko greitai, profesionaliai
-                        ir visiškai be skausmo. Rezultatas pranoko lūkesčius – dantis atrodo identiškai natūraliems."
+                    <p class="text-gray-600 mb-6 italic">"Nuostabi klinika ir puikus personalas! Labai dziaugiuosi
+                        rezultatu. Tiesinau ne tik dantis, bet ir sukandima. Tiesintis dantis ir susitvarkyti sukandima
+                        pavyko per trumpa perioda (apie 1,5m). Taip pat dariausi estetini dantu plombavima, kuris
+                        paverte mano sypsena nuostabia. Didelis aciu Sigitai ir visam personalui uz nuostabia sypsena!"
                     </p>
                     <div class="flex items-center">
                         <div
-                            class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 font-bold text-xl mr-4">
-                            D
+                            class="w-12 h-12 bg-primary-light rounded-full flex items-center justify-center text-primary-dark font-bold text-xl mr-4">
+                            V
                         </div>
                         <div>
-                            <div class="font-bold text-gray-900">Dovilė M.</div>
-                            <div class="text-xs text-gray-500">Implantacijos pacientė</div>
+                            <div class="font-bold text-gray-900">Viltė S.</div>
+                            <div class="text-xs text-gray-500">Pacientė</div>
                         </div>
                     </div>
                 </div>
-
                 <!-- Review 2 -->
                 <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-100">
                     <div class="flex mb-4 text-yellow-400 text-sm">
@@ -364,21 +349,20 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <p class="text-gray-600 mb-6 italic">"Estetinis plombavimas atliktas tobulybę. Gydytoja turi tikrai
-                        auksines rankas – dantys atrodo natūraliai, o spalva parinkta idealiai. Aptarnavimas aukščiausio
-                        lygio, nuo administratorės pasitikimo iki gydytojo kėdės."</p>
+                    <p class="text-gray-600 mb-6 italic">"Labai džiaugiuosi atradusi šią kliniką! Nuo pat pirmo vizito
+                        visa informacija buvo pateikta labai aiškiai ir visas dantų tiesinimo procesas buvo sklandus ir
+                        malonus. Dar kartą ačiū už puikiai sukonstruotą mano naują šypseną! :)"</p>
                     <div class="flex items-center">
                         <div
                             class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center text-purple-600 font-bold text-xl mr-4">
                             M
                         </div>
                         <div>
-                            <div class="font-bold text-gray-900">Mantas K.</div>
-                            <div class="text-xs text-gray-500">Estetinio plombavimo pacientas</div>
+                            <div class="font-bold text-gray-900">Monika G.</div>
+                            <div class="text-xs text-gray-500">Pacientė</div>
                         </div>
                     </div>
                 </div>
-
                 <!-- Review 3 -->
                 <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-100">
                     <div class="flex mb-4 text-yellow-400 text-sm">
@@ -388,17 +372,18 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <p class="text-gray-600 mb-6 italic">"Vaikų odontologė nuostabi! Dukra anksčiau bijojo net
-                        išsižioti, o dabar klausia, kada vėl eisime pas 'dantukų fėją'. Labai džiaugiamės atradę šią
-                        kliniką. Rekomenduojame visiems tėveliams, ieškantiems kokybiško ir švelnaus gydymo."</p>
+                    <p class="text-gray-600 mb-6 italic">"Esu dėkinga “Alfadenta” kolektyvui už pagalbą dantų tiesinimo
+                        metu. Esu patenkinta rezultatu. Didelis dėmesys skiriamas klientui, atsižvelgiama į jo
+                        poreikius. Lengva suderinti visą procesą gyvenant ne Lietuvoje. 😊 Didžiausios rekomendacijos
+                        👍…."</p>
                     <div class="flex items-center">
                         <div
                             class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center text-green-600 font-bold text-xl mr-4">
-                            J
+                            R
                         </div>
                         <div>
-                            <div class="font-bold text-gray-900">Jurgita P.</div>
-                            <div class="text-xs text-gray-500">Mama</div>
+                            <div class="font-bold text-gray-900">Rasa O.</div>
+                            <div class="text-xs text-gray-500">Pacientė</div>
                         </div>
                     </div>
                 </div>
@@ -409,15 +394,15 @@
     <section class="py-16 gradient-bg">
         <div class="container mx-auto px-4 text-center">
             <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Pasiruošę savo odontologijos vizitui?</h2>
-            <p class="text-xl text-blue-100 mb-8">Prisijunkite prie tūkstančių patenkintų pacientų, kurie patiki mums
+            <p class="text-xl text-primary-light mb-8">Prisijunkite prie tūkstančių patenkintų pacientų, kurie patiki mums
                 savo šypsenas</p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="booking.html"
-                    class="bg-white text-blue-500 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition transform hover:scale-105">
+                <a class="bg-white text-primary px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition transform hover:scale-105"
+                    href="booking.html">
                     <i class="fas fa-calendar-plus mr-2"></i> Registruotis
                 </a>
-                <a href="tel:+37012345678"
-                    class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-500 transition">
+                <a class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-primary transition"
+                    href="tel:+37061203030">
                     <i class="fas fa-phone mr-2"></i> Skambinti dabar
                 </a>
             </div>
@@ -428,96 +413,97 @@
         <div class="container mx-auto px-4">
             <div class="grid md:grid-cols-4 gap-8 mb-8">
                 <div>
-                    <a href="index.html" class="flex items-center space-x-2 mb-4 hover:opacity-80 transition">
-                        <img src="logo lama.png" alt="LamaLocal Logo" class="h-10 w-auto">
-                        <span class="text-xl font-bold">LamaLocal</span>
+                    <a class="flex items-center space-x-2 mb-4 hover:opacity-80 transition" href="index.html">
+                        <img alt="Alfadenta Logo" class="h-10 w-auto" loading="lazy"
+                            src="Photos/Logotipas/alfadenta logotipas.png" />
+                        <span class="text-xl font-bold">Alfadenta</span>
                     </a>
                     <p class="text-gray-400">Jūsų šypsenos priežiūra nuo 1999. Mes kuriame šypsenas, kurios keičia
                         gyvenimus.</p>
                     <div class="flex space-x-4 mt-4">
-                        <a href="https://www.facebook.com/profile.php?id=61586058251633"
-                            class="text-gray-400 hover:text-blue-400"><i class="fab fa-facebook text-xl"></i></a>
+                        <a class="text-gray-400 hover:text-blue-400" href="https://www.facebook.com/alfadentaklinika"><i
+                                class="fab fa-facebook text-xl"></i></a>
+                        <a class="text-gray-400 hover:text-blue-400" href="https://www.instagram.com/alfadenta/"><i
+                                class="fab fa-instagram text-xl"></i></a>
+                        <a class="text-gray-400 hover:text-blue-400" href="#"><i class="fab fa-youtube text-xl"></i></a>
                     </div>
                 </div>
                 <div>
                     <h4 class="text-lg font-semibold mb-4">Paslaugos</h4>
                     <ul class="space-y-1 text-gray-400 text-sm">
-                        <li><a href="paslaugos/nuodugnus-dantu-bukles-istyrimas.html"
-                                class="hover:text-blue-400">Nuodugnus dantų būklės ištyrimas</a></li>
-                        <li><a href="paslaugos/tyrimai-ir-diagnostika.html" class="hover:text-blue-400">Tyrimai ir
+                        <li><a class="hover:text-blue-400"
+                                href="paslaugos/nuodugnus-dantu-bukles-istyrimas.html">Nuodugnus dantų būklės
+                                ištyrimas</a></li>
+                        <li><a class="hover:text-blue-400" href="paslaugos/tyrimai-ir-diagnostika.html">Tyrimai ir
                                 diagnostika</a></li>
-                        <li><a href="paslaugos/issami-vaiku-dantu-patikra.html" class="hover:text-blue-400">Išsami vaikų
+                        <li><a class="hover:text-blue-400" href="paslaugos/issami-vaiku-dantu-patikra.html">Išsami vaikų
                                 dantų patikra</a></li>
-                        <li><a href="paslaugos/burnos-higiena.html" class="hover:text-blue-400">Profesionali burnos
+                        <li><a class="hover:text-blue-400" href="paslaugos/burnos-higiena.html">Profesionali burnos
                                 higiena</a></li>
-                        <li><a href="paslaugos/vaiku-odontologija.html" class="hover:text-blue-400">Vaikų
+                        <li><a class="hover:text-blue-400" href="paslaugos/vaiku-odontologija.html">Vaikų
                                 odontologija</a></li>
-                        <li><a href="paslaugos/dantu-implantavimas.html" class="hover:text-blue-400">Dantų
+                        <li><a class="hover:text-blue-400" href="paslaugos/dantu-implantavimas.html">Dantų
                                 implantacija</a></li>
-                        <li><a href="paslaugos/vienmomete-implantacija.html" class="hover:text-blue-400">Vienmomentė
+                        <li><a class="hover:text-blue-400" href="paslaugos/vienmomete-implantacija.html">Vienmomentė
                                 implantacija</a></li>
-                        <li><a href="paslaugos/dantu-atstatymas-visi-ant-4.html" class="hover:text-blue-400">Dantų
+                        <li><a class="hover:text-blue-400" href="paslaugos/dantu-atstatymas-visi-ant-4.html">Dantų
                                 atstatymas „Visi ant 4" metodu</a></li>
-                        <li><a href="paslaugos/dantu-protezavimas.html" class="hover:text-blue-400">Dantų
+                        <li><a class="hover:text-blue-400" href="paslaugos/dantu-protezavimas.html">Dantų
                                 protezavimas</a></li>
-                        <li><a href="paslaugos/dantu-laminates.html" class="hover:text-blue-400">Dantų atkūrimas
+                        <li><a class="hover:text-blue-400" href="paslaugos/dantu-laminates.html">Dantų atkūrimas
                                 laminatėmis</a></li>
-                        <li><a href="paslaugos/estetinis-plombavimas.html" class="hover:text-blue-400">Estetinis
+                        <li><a class="hover:text-blue-400" href="paslaugos/estetinis-plombavimas.html">Estetinis
                                 plombavimas</a></li>
-                        <li><a href="paslaugos/dantu-tiesinimas-ortopedija.html" class="hover:text-blue-400">Dantų
+                        <li><a class="hover:text-blue-400" href="paslaugos/dantu-tiesinimas-ortopedija.html">Dantų
                                 tiesinimas kapomis</a></li>
-                        <li><a href="paslaugos/dantu-tiesinimas-vaikams.html" class="hover:text-blue-400">Dantų
+                        <li><a class="hover:text-blue-400" href="paslaugos/dantu-tiesinimas-vaikams.html">Dantų
                                 tiesinimas kapomis vaikams</a></li>
-                        <li><a href="paslaugos/ortodontinis-gydymas.html" class="hover:text-blue-400">Ortodontinis
+                        <li><a class="hover:text-blue-400" href="paslaugos/ortodontinis-gydymas.html">Ortodontinis
                                 gydymas</a></li>
-                        <li><a href="paslaugos/dantu-balinimas-lazeriu.html" class="hover:text-blue-400">Dantų balinimas
+                        <li><a class="hover:text-blue-400" href="paslaugos/dantu-balinimas-lazeriu.html">Dantų balinimas
                                 lazeriu</a></li>
                     </ul>
                 </div>
                 <div>
                     <h4 class="text-lg font-semibold mb-4">Naudinga</h4>
                     <ul class="space-y-2 text-gray-400">
-                        <li><a href="index.html" class="hover:text-blue-400">Apie mus</a></li>
-                        <li><a href="doctors.html" class="hover:text-blue-400">Komanda</a></li>
-                        <li><a href="sveikatos-draudimas.html" class="hover:text-blue-400">Sveikatos draudimas</a></li>
-                        <li><a href="#" class="hover:text-blue-400">Kainoraštis</a></li>
-                        <li><a href="privatumo-politika.html" class="hover:text-blue-400">Privatumo politika</a></li>
+                        <li><a class="hover:text-blue-400" href="index.html">Apie mus</a></li>
+                        <li><a class="hover:text-blue-400" href="doctors.html">Komanda</a></li>
+                        <li><a class="hover:text-blue-400" href="sveikatos-draudimas.html">Sveikatos draudimas</a></li>
+                        <li><a class="hover:text-blue-400" href="#">Kainoraštis</a></li>
+                        <li><a class="hover:text-blue-400" href="privatumo-politika.html">Privatumo politika</a></li>
                     </ul>
                 </div>
                 <div>
                     <h4 class="text-lg font-semibold mb-4">Kontaktai</h4>
                     <ul class="space-y-2 text-gray-400 mb-4">
                         <li><strong>Registratūra</strong></li>
-                        <li>I-V: 8:00 - 20:00</li>
-                        <li>VI: 8:00 - 14:00</li>
-                        <li>VII: Nedirbame</li>
+                        <li>I-V: 9:00 – 16:00</li>
+                        <li>VI-VII: Nedirbame</li>
                         <li><strong>Tel. Nr.</strong></li>
-                        <li><i class="fas fa-phone mr-2"></i> +37064195947</li>
+                        <li><i class="fas fa-phone mr-2"></i> +370 612 03030</li>
                         <li><strong>Adresas</strong></li>
-                        <li><i class="fas fa-map-marker-alt mr-2"></i> Arsenalo g. 1, Vilnius, 01143 Vilniaus m. sav.
+                        <li><i class="fas fa-map-marker-alt mr-2"></i> Vytauto pr. 83, Kaunas, 44238 Kauno m. sav.
                         </li>
                         <li><strong>El. paštas</strong></li>
-                        <li><i class="fas fa-envelope mr-2"></i> info@lamalocal.com</li>
+                        <li><i class="fas fa-envelope mr-2"></i> info@alfadenta.lt</li>
                     </ul>
-
                 </div>
             </div>
             <!-- Map Section -->
             <div class="border-t border-gray-800 mt-8 pt-8">
                 <div class="text-center mb-6">
                     <h4 class="text-lg font-semibold text-white mb-2">Raskite mus žemėlapyje</h4>
-                    <p class="text-gray-400">Arsenalo g. 1, Vilnius, 01143 Vilniaus m. sav., Lietuva</p>
+                    <p class="text-gray-400">Vytauto pr. 83, Kaunas, 44238 Kauno m. sav., Lietuva</p>
                 </div>
                 <div class="w-full h-64 rounded-lg overflow-hidden">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2306.2492013916103!2d25.287434713191896!3d54.68764222259485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dd9419fda9d605%3A0x2503d17455c3ef25!2sLNM%20Naujasis%20arsenalas!5e0!3m2!1slt!2slt!4v1770379870373!5m2!1slt!2slt"
-                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
+                    <iframe allowfullscreen="" height="100%" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2294.3901067970974!2d23.922134613200768!3d54.89607487266562!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46e722777b920be7%3A0xca0d319b9b429f03!2sAesthetic%20Dentistry%20Clinic%20Alfadent!5e0!3m2!1sen!2slt!4v1770641257185!5m2!1sen!2slt"
+                        style="border:0;" width="100%"></iframe>
                 </div>
             </div>
             <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
-                <p>&copy; 2024 LamaLocal. Visos teisės saugomos.</p>
+                <p>© 2024 Alfadenta. Visos teisės saugomos.</p>
             </div>
         </div>
     </footer>

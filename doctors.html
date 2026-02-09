@@ -9,21 +9,11 @@
         content="Susipažinkite su mūsų patyrusia ir kvalifikuotais odontologų komanda. Daugiau nei 26 metų patirtis, modernios technologijos ir individualus požiūris į kiekvieną pacientą.">
     <meta name="robots" content="index, follow">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="js/theme-config.js"></script>
+    <link rel="stylesheet" href="css/theme.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="js/admin-shared.js"></script>
     <style>
-        .gradient-bg {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        }
-
-        .doctor-card {
-            transition: all 0.3s ease;
-        }
-
-        .doctor-card:hover {
-            transform: translateY(-5px);
-        }
-
         .img-position-custom {
             object-position: center 15%;
         }
@@ -195,19 +185,19 @@
             <div class="flex justify-between items-center py-4">
                 <a href="index.html" class="flex items-center space-x-2 hover:opacity-80 transition">
                     <img src="Photos/Logotipas/alfadenta logotipas.png" alt="Alfadenta Logo" class="h-10 w-auto">
-
+                    <span class="text-xl font-bold">Alfadenta</span>
                 </a>
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex items-center space-x-6">
-                    <a href="index.html" class="text-gray-700 hover:text-blue-500 transition">Pradžia</a>
-                    <a href="services.html" class="text-gray-700 hover:text-blue-500 transition">Paslaugos</a>
-                    <a href="doctors.html" class="text-blue-500 font-semibold">Gydytojai</a>
+                    <a href="index.html" class="text-gray-700 hover:text-primary transition">Pradžia</a>
+                    <a href="services.html" class="text-gray-700 hover:text-primary transition">Paslaugos</a>
+                    <a href="doctors.html" class="text-primary font-semibold">Gydytojai</a>
 
-                    <a href="booking.html" class="text-gray-700 hover:text-blue-500 transition">Registruotis</a>
-                    <a href="contact.html" class="text-gray-700 hover:text-blue-500 transition">Kontaktai</a>
+                    <a href="booking.html" class="text-gray-700 hover:text-primary transition">Registruotis</a>
+                    <a href="contact.html" class="text-gray-700 hover:text-primary transition">Kontaktai</a>
 
                     <a href="contact.html"
-                        class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition">
+                        class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary-dark transition">
                         Susisiekite
                     </a>
                 </div>
@@ -225,14 +215,14 @@
             </div>
             <!-- Mobile Menu -->
             <div id="mobile-menu" class="hidden md:hidden pb-4">
-                <a href="index.html" class="block py-2 text-gray-700 hover:text-blue-500">Pradžia</a>
-                <a href="services.html" class="block py-2 text-gray-700 hover:text-blue-500">Paslaugos</a>
-                <a href="doctors.html" class="block py-2 text-blue-500 font-semibold">Gydytojai</a>
+                <a href="index.html" class="block py-2 text-gray-700 hover:text-primary">Pradžia</a>
+                <a href="services.html" class="block py-2 text-gray-700 hover:text-primary">Paslaugos</a>
+                <a href="doctors.html" class="block py-2 text-primary font-semibold">Gydytojai</a>
 
-                <a href="booking.html" class="block py-2 text-gray-700 hover:text-blue-500">Registruotis</a>
-                <a href="contact.html" class="block py-2 text-gray-700 hover:text-blue-500">Kontaktai</a>
+                <a href="booking.html" class="block py-2 text-gray-700 hover:text-primary">Registruotis</a>
+                <a href="contact.html" class="block py-2 text-gray-700 hover:text-primary">Kontaktai</a>
 
-                <button class="mt-2 w-full bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">
+                <button class="mt-2 w-full bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary-dark">
                     Susisiekite
                 </button>
             </div>
@@ -242,7 +232,7 @@
     <section class="gradient-bg pt-24 pb-16">
         <div class="container mx-auto px-4 text-center">
             <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Susipažinkite su mūsų ekspertų komanda</h1>
-            <p class="text-xl text-blue-100 max-w-3xl mx-auto">
+            <p class="text-xl text-primary-light max-w-3xl mx-auto">
                 Mūsų aukštos kvalifikacijos odontologijos profesionalai yra pasirengę suteikti jums išskirtinę priežiūrą
                 ir
                 kurti gražias, sveikas šypsenas.
@@ -250,7 +240,7 @@
         </div>
     </section>
     <!-- Admin Dashboard Section (Hidden by default) -->
-    <section id="admin-dashboard" class="hidden py-12 bg-gray-100 border-t-4 border-blue-500">
+    <section id="admin-dashboard" class="hidden py-12 bg-gray-100 border-t-4 border-primary">
         <div class="container mx-auto px-4">
             <div class="flex justify-between items-center mb-8">
                 <h2 class="text-2xl font-bold text-gray-800"><i class="fas fa-user-md mr-2"></i>Gydytojų Valdymas</h2>
@@ -271,38 +261,38 @@
                             <div>
                                 <label class="block text-sm font-medium text-gray-700 mb-1">Vardas Pavardė</label>
                                 <input type="text" id="form-name" required
-                                    class="w-full border rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                                    class="w-full border rounded-lg px-3 py-2 focus:ring-2 focus:ring-primary focus:border-primary">
                             </div>
                             <div>
                                 <label class="block text-sm font-medium text-gray-700 mb-1">Pareigos</label>
                                 <input type="text" id="form-role" required
-                                    class="w-full border rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                                    class="w-full border rounded-lg px-3 py-2 focus:ring-2 focus:ring-primary focus:border-primary">
                             </div>
                             <div>
                                 <label class="block text-sm font-medium text-gray-700 mb-1">Aprašymas</label>
                                 <textarea id="form-description" rows="3" required
-                                    class="w-full border rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"></textarea>
+                                    class="w-full border rounded-lg px-3 py-2 focus:ring-2 focus:ring-primary focus:border-primary"></textarea>
                             </div>
                             <div>
                                 <label class="block text-sm font-medium text-gray-700 mb-1">Nuotraukos URL</label>
                                 <input type="text" id="form-image" required
-                                    class="w-full border rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                                    class="w-full border rounded-lg px-3 py-2 focus:ring-2 focus:ring-primary focus:border-primary">
                             </div>
                             <div>
                                 <label class="block text-sm font-medium text-gray-700 mb-1">Išsilavinimas (kiekvienas
                                     punktas naujoje eilutėje)</label>
                                 <textarea id="form-education" rows="3"
-                                    class="w-full border rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"></textarea>
+                                    class="w-full border rounded-lg px-3 py-2 focus:ring-2 focus:ring-primary focus:border-primary"></textarea>
                             </div>
                             <div>
                                 <label class="block text-sm font-medium text-gray-700 mb-1">Specializacijos (atskirtos
                                     kableliais)</label>
                                 <input type="text" id="form-specialties"
-                                    class="w-full border rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                                    class="w-full border rounded-lg px-3 py-2 focus:ring-2 focus:ring-primary focus:border-primary">
                             </div>
                             <div class="flex gap-2 pt-4">
                                 <button type="submit"
-                                    class="flex-1 bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition">
+                                    class="flex-1 bg-primary-dark text-white py-2 rounded-lg hover:bg-blue-700 transition">
                                     <i class="fas fa-save mr-2"></i>Išsaugoti
                                 </button>
                                 <button type="button" id="reset-btn"
@@ -317,7 +307,7 @@
                 <div class="lg:col-span-2">
                     <div class="bg-white rounded-xl shadow-lg p-6">
                         <h3 class="text-xl font-bold text-gray-800 mb-6 border-b pb-2">
-                            <i class="fas fa-list mr-2 text-blue-500"></i>Gydytojų Sąrašas
+                            <i class="fas fa-list mr-2 text-primary"></i>Gydytojų Sąrašas
                         </h3>
                         <div id="admin-doctors-list" class="space-y-4">
                             <!-- Admin list injected here -->
@@ -335,23 +325,7 @@
                 <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-6">Profesionalumas. Inovacijos.
                     Produktyvumas.</h2>
 
-                <div class="bg-white rounded-xl shadow-lg p-8 mb-8">
-                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Klinika „Alfadenta" – tai:</h3>
-                    <ul class="space-y-3 text-gray-700 text-lg">
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-blue-500 mt-1 mr-3"></i>
-                            <span>profesionalūs, itin atidūs detalėms gydytojai;</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-blue-500 mt-1 mr-3"></i>
-                            <span>inovacijos ir pažangiausi gydymo metodai;</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-blue-500 mt-1 mr-3"></i>
-                            <span>nauda kiekvienam pacientui.</span>
-                        </li>
-                    </ul>
-                </div>
+
 
                 <div class="text-gray-700 text-lg leading-relaxed space-y-4">
                     <p>Klinikoje dirba patyrę gydytojai, o moderni diagnostikos įranga bei gydymo metodika padeda mums
@@ -364,7 +338,8 @@
                         dantenų ligų, bet ir dovanoti tokią šypseną, apie kokią seniai svajojote (o gal net nedrįsote
                         svajoti).</p>
 
-                    <p class="text-xl font-semibold text-blue-600 text-center mt-8">„Alfadenta" – tegul šypsena tampa
+                    <p class="text-xl font-semibold text-primary-dark text-center mt-8">„Alfadenta" – tegul šypsena
+                        tampa
                         Jūsų vizitine kortele! 😊</p>
                 </div>
             </div>
@@ -460,6 +435,46 @@
                     </div>
                 </div>
 
+                <!-- KORNELIJA VIRBUKAITĖ -->
+                <div class="doctor-card blue">
+                    <img src="Photos/Personalas/Kornelija Virbukaite.jpg" alt="Kornelija Virbukaitė"
+                        class="doctor-image">
+
+                    <div class="doctor-info">
+                        <h3 class="doctor-name">Kornelija Virbukaitė</h3>
+                        <div class="doctor-role">Tiesinimo kapomis koordinatorė</div>
+
+                        <div class="doctor-bio">
+                            Kornelija yra neatsiejama mūsų ortodontinės komandos dalis. Kaip tiesinimo kapomis
+                            koordinatorė, ji lydi pacientus kiekviename jų šypsenos transformacijos žingsnyje – nuo
+                            pirminės konsultacijos iki galutinio rezultato. Jos profesionalumas ir atidumas detalėms
+                            užtikrina sklandžią gydymo eigą, malonią patirtį ir geriausius rezultatus.
+                        </div>
+
+                        <div class="doctor-section-title">Išsilavinimas / Info</div>
+                        <ul class="doctor-list">
+                            <li>2022 m. baigė Kauno Kolegiją</li>
+                            <li>Nuolat tobulina žinias estetinės odontologijos ir ortodontijos seminaruose</li>
+                        </ul>
+
+                        <div class="doctor-section-title">Profesinė veikla</div>
+                        <ul class="doctor-list">
+                            <li>Dantų tiesinimo kapomis koordinavimas</li>
+                            <li>Ortodontinis gydymas</li>
+                            <li>Estetinė odontologija</li>
+                            <li>Terapinis gydymas</li>
+                            <li>Licencija Nr. BPL-08463</li>
+                        </ul>
+
+                        <div class="doctor-badges">
+                            <span class="badge">KOORDINAVIMAS</span>
+                            <span class="badge">TIESINIMAS KAPOMIS</span>
+                            <span class="badge">ORTODONTINIS GYDYMAS</span>
+                            <span class="badge">ESTETINĖ ODONTOLOGIJA</span>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -476,8 +491,8 @@
             </div>
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="text-center">
-                    <div class="bg-blue-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-graduation-cap text-blue-500 text-3xl"></i>
+                    <div class="bg-primary-light w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-graduation-cap text-primary text-3xl"></i>
                     </div>
                     <h3 class="text-xl font-semibold mb-3">Aukštos kvalifikacijos</h3>
                     <p class="text-gray-600">Visi mūsų odontologai turi pažangius mokymus ir sertifikatus savo
@@ -506,15 +521,15 @@
     <section class="py-16 gradient-bg">
         <div class="container mx-auto px-4 text-center">
             <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Susitarkite dėl konsultacijos</h2>
-            <p class="text-xl text-blue-100 mb-8">Susipažinkite su mūsų komanda ir pradėkite savo kelionę link
+            <p class="text-xl text-primary-light mb-8">Susipažinkite su mūsų komanda ir pradėkite savo kelionę link
                 sveikesnės šypsenos šiandien</p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href="booking.html"
-                    class="bg-white text-blue-500 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition transform hover:scale-105">
+                    class="bg-white text-primary px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition transform hover:scale-105">
                     <i class="fas fa-calendar-plus mr-2"></i> Registruotis
                 </a>
                 <a href="tel:+37061203030"
-                    class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-500 transition">
+                    class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-primary transition">
                     <i class="fas fa-phone mr-2"></i> Skambinti
                 </a>
             </div>
@@ -523,18 +538,18 @@
     <!-- Footer -->
     <footer class="bg-gray-900 text-white py-12">
         <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
                 <div>
                     <a href="index.html" class="flex items-center space-x-2 mb-4 hover:opacity-80 transition">
                         <img src="Photos/Logotipas/alfadenta logotipas.png" alt="Alfadenta Logo" class="h-10 w-auto">
                         <span class="text-xl font-bold">Alfadenta</span>
                     </a>
-                    <p class="text-gray-400">Teikiame kokybišką odontologijos priežiūrą daugiau nei 26 metų. Jūsų
-                        šypsenos priežiūra nuo 1999. Mes kuriame šypsenas, kurios keičia gyvenimus.</p>
+                    <p class="text-gray-400">Jūsų šypsenos priežiūra nuo 1999. Mes kuriame šypsenas, kurios keičia
+                        gyvenimus.</p>
                     <div class="flex space-x-4 mt-4">
-                        <a href="https://www.facebook.com/profile.php?id=61586058251633"
-                            class="text-gray-400 hover:text-blue-400"><i class="fab fa-facebook text-xl"></i></a>
-                        <a href="https://www.instagram.com/sveiki_dantys" class="text-gray-400 hover:text-blue-400"><i
+                        <a href="https://www.facebook.com/alfadentaklinika" class="text-gray-400 hover:text-blue-400"><i
+                                class="fab fa-facebook text-xl"></i></a>
+                        <a href="https://www.instagram.com/alfadenta/" class="text-gray-400 hover:text-blue-400"><i
                                 class="fab fa-instagram text-xl"></i></a>
                         <a href="#" class="text-gray-400 hover:text-blue-400"><i class="fab fa-youtube text-xl"></i></a>
                     </div>
@@ -542,37 +557,35 @@
                 <div>
                     <h4 class="text-lg font-semibold mb-4">Paslaugos</h4>
                     <ul class="space-y-1 text-gray-400 text-sm">
-                        <li><a href="services/comprehensive-dental-examination.html"
+                        <li><a href="paslaugos/nuodugnus-dantu-bukles-istyrimas.html"
                                 class="hover:text-blue-400">Nuodugnus dantų būklės ištyrimas</a></li>
-                        <li><a href="services/tests-and-diagnostics.html" class="hover:text-blue-400">Tyrimai ir
+                        <li><a href="paslaugos/tyrimai-ir-diagnostika.html" class="hover:text-blue-400">Tyrimai ir
                                 diagnostika</a></li>
-                        <li><a href="services/comprehensive-child-checkup.html" class="hover:text-blue-400">Išsami vaikų
+                        <li><a href="paslaugos/issami-vaiku-dantu-patikra.html" class="hover:text-blue-400">Išsami vaikų
                                 dantų patikra</a></li>
-                        <li><a href="services/oral-hygiene.html" class="hover:text-blue-400">Profesionali burnos
+                        <li><a href="paslaugos/burnos-higiena.html" class="hover:text-blue-400">Profesionali burnos
                                 higiena</a></li>
-                        <li><a href="services/pediatric-dentistry.html" class="hover:text-blue-400">Vaikų
+                        <li><a href="paslaugos/vaiku-odontologija.html" class="hover:text-blue-400">Vaikų
                                 odontologija</a></li>
-                        <li><a href="services/dental-implantation.html" class="hover:text-blue-400">Dantų
+                        <li><a href="paslaugos/dantu-implantavimas.html" class="hover:text-blue-400">Dantų
                                 implantacija</a></li>
-                        <li><a href="services/immediate-implantation.html" class="hover:text-blue-400">Vienmomentė
+                        <li><a href="paslaugos/vienmomete-implantacija.html" class="hover:text-blue-400">Vienmomentė
                                 implantacija</a></li>
-                        <li><a href="services/all-on-4-implants.html" class="hover:text-blue-400">Dantų
+                        <li><a href="paslaugos/dantu-atstatymas-visi-ant-4.html" class="hover:text-blue-400">Dantų
                                 atstatymas „Visi ant 4" metodu</a></li>
-                        <li><a href="services/dental-prosthetics.html" class="hover:text-blue-400">Dantų
+                        <li><a href="paslaugos/dantu-protezavimas.html" class="hover:text-blue-400">Dantų
                                 protezavimas</a></li>
-                        <li><a href="services/dental-veneers.html" class="hover:text-blue-400">Dantų atkūrimas
+                        <li><a href="paslaugos/dantu-laminates.html" class="hover:text-blue-400">Dantų atkūrimas
                                 laminatėmis</a></li>
-                        <li><a href="services/aesthetic-fillings.html" class="hover:text-blue-400">Estetinis
+                        <li><a href="paslaugos/estetinis-plombavimas.html" class="hover:text-blue-400">Estetinis
                                 plombavimas</a></li>
-                        <li><a href="services/teeth-straightening.html" class="hover:text-blue-400">Dantų tiesinimas
-                                kapomis</a></li>
-                        <li><a href="services/teeth-straightening-children.html" class="hover:text-blue-400">Dantų
+                        <li><a href="paslaugos/dantu-tiesinimas-ortopedija.html" class="hover:text-blue-400">Dantų
+                                tiesinimas kapomis</a></li>
+                        <li><a href="paslaugos/dantu-tiesinimas-vaikams.html" class="hover:text-blue-400">Dantų
                                 tiesinimas kapomis vaikams</a></li>
-                        <li><a href="services/orthodontic-treatment.html" class="hover:text-blue-400">Ortodontinis
+                        <li><a href="paslaugos/ortodontinis-gydymas.html" class="hover:text-blue-400">Ortodontinis
                                 gydymas</a></li>
-                        <li><a href="services/orthodontic-treatment.html" class="hover:text-blue-400">Ortodontinis
-                                gydymas</a></li>
-                        <li><a href="services/laser-teeth-whitening.html" class="hover:text-blue-400">Dantų balinimas
+                        <li><a href="paslaugos/dantu-balinimas-lazeriu.html" class="hover:text-blue-400">Dantų balinimas
                                 lazeriu</a></li>
                     </ul>
                 </div>
@@ -582,7 +595,6 @@
                         <li><a href="index.html" class="hover:text-blue-400">Apie mus</a></li>
                         <li><a href="doctors.html" class="hover:text-blue-400">Komanda</a></li>
                         <li><a href="sveikatos-draudimas.html" class="hover:text-blue-400">Sveikatos draudimas</a></li>
-
                         <li><a href="#" class="hover:text-blue-400">Kainoraštis</a></li>
                         <li><a href="privatumo-politika.html" class="hover:text-blue-400">Privatumo politika</a></li>
                     </ul>
@@ -591,9 +603,8 @@
                     <h4 class="text-lg font-semibold mb-4">Kontaktai</h4>
                     <ul class="space-y-2 text-gray-400 mb-4">
                         <li><strong>Registratūra</strong></li>
-                        <li>I-V: 8:00 - 20:00</li>
-                        <li>VI: 8:00 - 14:00</li>
-                        <li>VII: Nedirbame</li>
+                        <li>I-V: 9:00 – 16:00</li>
+                        <li>VI-VII: Nedirbame</li>
                         <li><strong>Tel. Nr.</strong></li>
                         <li><i class="fas fa-phone mr-2"></i> +370 612 03030</li>
                         <li><strong>Adresas</strong></li>
@@ -603,15 +614,19 @@
                         <li><i class="fas fa-envelope mr-2"></i> info@alfadenta.lt</li>
                     </ul>
 
-                    <!-- Google Maps Embed -->
-                    <div class="mt-4">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2294.3901067970974!2d23.922134613200768!3d54.89607487266562!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46e722777b920be7%3A0xca0d319b9b429f03!2sAesthetic%20Dentistry%20Clinic%20Alfadent!5e0!3m2!1sen!2slt!4v1770631863145!5m2!1sen!2slt"
-                            width="100%" height="200" style="border:0; border-radius: 8px;" allowfullscreen=""
-                            loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-                        </iframe>
-                    </div>
-
+                </div>
+            </div>
+            <!-- Map Section -->
+            <div class="border-t border-gray-800 mt-8 pt-8">
+                <div class="text-center mb-6">
+                    <h4 class="text-lg font-semibold text-white mb-2">Raskite mus žemėlapyje</h4>
+                    <p class="text-gray-400">Vytauto pr. 83, Kaunas, 44238 Kauno m. sav., Lietuva</p>
+                </div>
+                <div class="w-full h-64 rounded-lg overflow-hidden">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2294.3901067970974!2d23.922134613200768!3d54.89607487266562!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46e722777b920be7%3A0xca0d319b9b429f03!2sAesthetic%20Dentistry%20Clinic%20Alfadent!5e0!3m2!1sen!2slt!4v1770641257185!5m2!1sen!2slt"
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
             <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
@@ -730,7 +745,7 @@
                     <img src="${doctor.image}" alt="${doctor.name}" class="w-full h-64 object-cover ${doctor.imgCustomClass || ''}">
                     <div class="p-6">
                         <h3 class="text-2xl font-bold text-gray-800 mb-1">${doctor.name}</h3>
-                        <p class="text-blue-500 font-semibold mb-3">${doctor.role}</p>
+                        <p class="text-primary font-semibold mb-3">${doctor.role}</p>
                         <p class="text-gray-600 mb-4">${doctor.description}</p>
                         <div class="mb-4">
                             <p class="text-sm text-gray-500 mb-2">Išsilavinimas / Info:</p>
@@ -742,8 +757,8 @@
                             <div class="flex flex-wrap gap-2">${specialties}</div>
                         </div>
                         <div class="flex justify-center space-x-4">
-                              <a href="#" class="text-gray-400 hover:text-blue-500 transition"><i class="fas fa-envelope text-xl"></i></a>
-                            <a href="booking.html" class="text-gray-400 hover:text-blue-500 transition"><i class="fas fa-calendar text-xl"></i></a>
+                              <a href="#" class="text-gray-400 hover:text-primary transition"><i class="fas fa-envelope text-xl"></i></a>
+                            <a href="booking.html" class="text-gray-400 hover:text-primary transition"><i class="fas fa-calendar text-xl"></i></a>
                         </div>
                     </div>
                 </div>`;
@@ -761,7 +776,7 @@
                         </div>
                     </div>
                     <div class="flex space-x-2">
-                        <button onclick="editDoctor(${index})" class="text-blue-500 hover:text-blue-700 bg-white p-2 rounded-full shadow-sm">
+                        <button onclick="editDoctor(${index})" class="text-primary hover:text-blue-700 bg-white p-2 rounded-full shadow-sm">
                             <i class="fas fa-edit"></i>
                         </button>
                         <button onclick="deleteDoctor(${index})" class="text-red-500 hover:text-red-700 bg-white p-2 rounded-full shadow-sm">
@@ -849,7 +864,7 @@
         }
         resetBtn.addEventListener('click', resetForm);
         // Init
-        // renderDoctors();
+        renors();
         checkAuth();
     </script>
 </body>

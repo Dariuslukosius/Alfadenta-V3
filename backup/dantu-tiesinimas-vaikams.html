@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="lt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dantų tiesinimas vaikams | LamaLocal</title>
+    <meta name="description"
+        content="Dantų tiesinimas vaikams LamaLocal klinikoje. Modernios kapų sistemos, patyrę ortodontai, draugiška aplinka. Užtikrinkite savo vaikui tiesią ir gražią šypseną. Registruokitės konsultacijai dabar!">
+    <meta name="robots" content="index, follow">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .service-card {
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white shadow-lg z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-2">
+                    <img src="../logo lama.png" alt="LamaLocal Logo" class="h-10 w-auto">
+
+                </div>
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="../index.html" class="text-gray-700 hover:text-blue-500 transition">Pradžia</a>
+                    <a href="../services.html" class="text-gray-700 hover:text-blue-500 transition">Paslaugos</a>
+                    <a href="../doctors.html" class="text-gray-700 hover:text-blue-500 transition">Gydytojai</a>
+                    <a href="../booking.html" class="text-gray-700 hover:text-blue-500 transition">Registruotis</a>
+                    <a href="../contact.html" class="text-gray-700 hover:text-blue-500 transition">Kontaktai</a>
+
+                </div>
+                <!-- Mobile Call & Menu Buttons -->
+                <div class="md:hidden flex items-center space-x-3">
+                    <a href="tel:+370 612 03030"
+                        class="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition flex items-center space-x-2">
+                        <i class="fas fa-phone"></i>
+                        <span class="font-semibold">Skambinti</span>
+                    </a>
+                    <button id="mobile-menu-btn" class="text-gray-700">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden pb-4">
+                <a href="../index.html" class="block py-2 text-gray-700 hover:text-blue-500">Pradžia</a>
+                <a href="../services.html" class="block py-2 text-gray-700 hover:text-blue-500">Paslaugos</a>
+                <a href="../doctors.html" class="block py-2 text-gray-700 hover:text-blue-500">Gydytojai</a>
+                <a href="../booking.html" class="block py-2 text-gray-700 hover:text-blue-500">Registruotis</a>
+                <a href="../contact.html" class="block py-2 text-gray-700 hover:text-blue-500">Kontaktai</a>
+
+            </div>
+        </div>
+    </nav>
+    <!-- Hero Section -->
+    <section class="gradient-bg pt-20 pb-16">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="text-white">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-4">
+                        Dantų tiesinimas vaikams
+                    </h1>
+                    <p class="text-xl mb-8 text-blue-100 leading-relaxed">
+                        Dantų tiesinimas vaikams – tai kur kas daugiau nei tik graži šypsena. Tai investicija į
+                        taisyklingą žandikaulio vystymąsi, kokybišką kramtymą ir vaiko pasitikėjimą savimi. Mūsų
+                        klinikoje taikome pažangiausius metodus: nuo spalvotų plokštelių iki nematomų kapų, kad gydymas
+                        taptų smagiu ir lengvu nuotykiu.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="../booking.html?service=children-orthodontics"
+                            class="bg-white text-blue-500 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition transform hover:scale-105">
+                            <i class="fas fa-calendar-plus mr-2"></i> Registruoti vaiką
+                        </a>
+                        <a href="tel:+370 612 03030"
+                            class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-500 transition">
+                            <i class="fas fa-phone mr-2"></i> Skambinti dabar
+                        </a>
+                    </div>
+                </div>
+                <div class="relative">
+                    <img src="../Photos/nuotraukos naujos/Vaiku odontologija.jpg" alt="Children's Orthodontics"
+                        class="rounded-3xl shadow-2xl w-full h-auto object-cover transform hover:scale-[1.02] transition duration-500">
+                </div>
+            </div>
+        </div>
+    </section>
+    </section>
+    <!-- Why Early Treatment -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Kodėl ankstyvas gydymas svarbus?</h2>
+                <p class="text-lg text-gray-600">Optimalus laikas dantų tiesinimui</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="bg-gray-50 p-8 rounded-xl">
+                    <h3 class="text-2xl font-bold mb-4 text-blue-600">
+                        <i class="fas fa-clock mr-3"></i>Teisingas laikas
+                    </h3>
+                    <p class="text-gray-600 mb-6">
+                        Pirmoji konsultacija pas ortodontą rekomenduojama 7-8 metų amžiaus.
+                        Šiuo laikotarpiu galima identifikuoti problemas ir pradėti gydymą optimaliu metu.
+                    </p>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <span class="text-gray-700">7-8 m. – pirma konsultacija</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <span class="text-gray-700">9-12 m. – pirmasis gydymo etapas</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <span class="text-gray-700">12-16 m. – pagrindinis gydymas</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-blue-50 p-8 rounded-xl">
+                    <h3 class="text-2xl font-bold mb-4 text-purple-600">
+                        <i class="fas fa-star mr-3"></i>Privalumai
+                    </h3>
+                    <p class="text-gray-600 mb-6">
+                        Ankstyvas gydymas leidžia pasiekti geresnių rezultatų per trumpesnį laiką ir su mažesnėmis
+                        pastangomis.
+                    </p>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <span class="text-gray-700">Trumpesnis gydymo laikas</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <span class="text-gray-700">Mažesnės kainos</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <span class="text-gray-700">Geresnis estetinis rezultatas</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Treatment Methods -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Dantų tiesinimo metodai vaikams</h2>
+                <p class="text-lg text-gray-600">Šiuolaikiški ir vaikams pritaikyti sprendimai</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="service-card bg-white p-6 rounded-xl shadow-lg flex flex-col">
+                    <div class="bg-pink-100 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-palette text-pink-500 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-center">Spalvoti breketai</h3>
+                    <p class="text-gray-600 text-center mb-4 flex-grow">Vaikams ir paaugliams leidžiame patiems
+                        pasirinkti mėgstamiausių spalvų elastines gumeles. Tai paverčia gydymą žaismingu procesu ir
+                        leidžia vaikui išreikšti savo asmenybę.</p>
+                </div>
+                <div class="service-card bg-white p-6 rounded-xl shadow-lg flex flex-col">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-invisible text-blue-500 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-center">Nematomos kapos (Invisalign)</h3>
+                    <p class="text-gray-600 text-center mb-4 flex-grow">Vyresniems vaikams ir paaugliams siūlome
+                        tiesinimą skaidriomis, išimamomis kapomis. Jos beveik nematomos, netrukdo valgyti ir užtikrina
+                        puikią burnos higieną, nes jas lengva išsiimti.</p>
+                </div>
+                <div class="service-card bg-white p-6 rounded-xl shadow-lg flex flex-col">
+                    <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-adjust text-green-500 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-center">Išimamos plokštelės</h3>
+                    <p class="text-gray-600 text-center mb-4 flex-grow">Klasikinis ir efektyvus metodas augantiems
+                        žandikauliams koreguoti. Plokštelę galima išsiimti valgant ar valantis dantis. Dažnai naudojama
+                        kaip pirmasis gydymo etapas 7-10 metų vaikams.</p>
+                </div>
+                <div class="service-card bg-white p-6 rounded-xl shadow-lg flex flex-col">
+                    <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-expand-arrows-alt text-purple-500 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-center">Žandikaulio plėtimo aparatai</h3>
+                    <p class="text-gray-600 text-center mb-4 flex-grow">Jei viršutinis žandikaulis per siauras,
+                        naudojame specialius plėtikus. Tai padeda sukurti vietą visiems dygstantiems nuolatiniams
+                        dantims ir išvengti dantų rovimo ateityje.</p>
+                </div>
+                <div class="service-card bg-white p-6 rounded-xl shadow-lg flex flex-col">
+                    <div class="bg-yellow-100 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-mask text-yellow-500 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-center">Funkciniai aparatai</h3>
+                    <p class="text-gray-600 text-center mb-4 flex-grow">Skirti koreguoti netaisyklingą žandikaulių
+                        augimą (pvz., kai apatinis žandikaulis per daug atsikišęs arba atsitraukęs). Jie veikia
+                        panaudodami natūralią raumenų jėgą.</p>
+                </div>
+                <div class="service-card bg-white p-6 rounded-xl shadow-lg flex flex-col">
+                    <div class="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-microchip text-red-500 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-center">Skaitmeninis šypsenos planavimas</h3>
+                    <p class="text-gray-600 text-center mb-4 flex-grow">Naudojame 3D intraoralinius skenerius vietoje
+                        nemalonių atspaudų. Tai leidžia vaikui ekrane pamatyti savo būsimą šypseną dar prieš pradedant
+                        gydymą.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Problems We Treat -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Problemos, kurias sprendžiame</h2>
+                <p class="text-lg text-gray-600">Dauguma dantų padėties ir sąkandžio problemų gali būti sėkmingai
+                    išspręstos</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-gray-50 p-6 rounded-xl text-center">
+                    <i class="fas fa-exchange-alt text-blue-500 text-3xl mb-4"></i>
+                    <h3 class="font-semibold text-lg mb-2">Kryžminis sąkandis</h3>
+                    <p class="text-gray-600">Viršutiniai dantys kanda vidinėje apatinių dantų pusėje</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-xl text-center">
+                    <i class="fas fa-compress text-green-500 text-3xl mb-4"></i>
+                    <h3 class="font-semibold text-lg mb-2">Dantų susigrūdimas</h3>
+                    <p class="text-gray-600">Dantų lanke trūksta vietos taisyklingai dantų padėčiai</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-xl text-center">
+                    <i class="fas fa-expand text-purple-500 text-3xl mb-4"></i>
+                    <h3 class="font-semibold text-lg mb-2">Tarpai tarp dantų</h3>
+                    <p class="text-gray-600">Per dideli tarpai tarp dantų (diastemos)</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-xl text-center">
+                    <i class="fas fa-arrow-up text-red-500 text-3xl mb-4"></i>
+                    <h3 class="font-semibold text-lg mb-2">Retinuoti dantys</h3>
+                    <p class="text-gray-600">Dantys, kurie negali savarankiškai išdygti</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-xl text-center">
+                    <i class="fas fa-align-center text-yellow-500 text-3xl mb-4"></i>
+                    <h3 class="font-semibold text-lg mb-2">Asimetrija</h3>
+                    <p class="text-gray-600">Dantų lankų centro neatitikimas veido vidurio linijai</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-xl text-center">
+                    <i class="fas fa-child text-indigo-500 text-3xl mb-4"></i>
+                    <h3 class="font-semibold text-lg mb-2">Netaisyklingas sąkandis</h3>
+                    <p class="text-gray-600">Žandikaulių santykio sutrikimai</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Treatment Process -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Gydymo procesas</h2>
+                <p class="text-lg text-gray-600">Kaip vyksta dantų tiesinimas</p>
+            </div>
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div
+                        class="bg-blue-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-white text-2xl font-bold">
+                        1</div>
+                    <h3 class="font-semibold mb-2">Konsultacija</h3>
+                    <p class="text-gray-600">Diagnostika ir gydymo planas</p>
+                </div>
+                <div class="text-center">
+                    <div
+                        class="bg-blue-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-white text-2xl font-bold">
+                        2</div>
+                    <h3 class="font-semibold mb-2">Aparatų dėjimas</h3>
+                    <p class="text-gray-600">Tiesinimo priemonių sumontavimas</p>
+                </div>
+                <div class="text-center">
+                    <div
+                        class="bg-blue-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-white text-2xl font-bold">
+                        3</div>
+                    <h3 class="font-semibold mb-2">Aktyvus gydymas</h3>
+                    <p class="text-gray-600">Reguliarūs apžiūrėjimai (kas 4-6 sav.)</p>
+                </div>
+                <div class="text-center">
+                    <div
+                        class="bg-blue-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-white text-2xl font-bold">
+                        4</div>
+                    <h3 class="font-semibold mb-2">Fiksavimas</h3>
+                    <p class="text-gray-600">Rezultatų fiksavimo laikotarpis</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Tips for Parents -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Patarimai tėvams</h2>
+                <p class="text-lg text-gray-600">Kaip padėti vaikui gydymo metu</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-blue-50 p-6 rounded-xl">
+                    <div class="bg-blue-100 w-14 h-14 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-toothbrush text-blue-500 text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-3">Higiena</h3>
+                    <p class="text-gray-600">Specialūs šepetėliai ir skalavimo skysčiai dantų priežiūrai su aparatais
+                    </p>
+                </div>
+                <div class="bg-green-50 p-6 rounded-xl">
+                    <div class="bg-green-100 w-14 h-14 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-utensils text-green-500 text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-3">Mityba</h3>
+                    <p class="text-gray-600">Vengti kieto, lipnaus maisto, galinčio pažeisti aparatą</p>
+                </div>
+                <div class="bg-purple-50 p-6 rounded-xl">
+                    <div class="bg-purple-100 w-14 h-14 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-calendar-check text-purple-500 text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-3">Reguliarumas</h3>
+                    <p class="text-gray-600">Laiku atvykti į planuojamas apžiūras ir reguliavimus</p>
+                </div>
+                <div class="bg-yellow-50 p-6 rounded-xl">
+                    <div class="bg-yellow-100 w-14 h-14 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-comments text-yellow-500 text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-3">Bendrauti</h3>
+                    <p class="text-gray-600">Kalbėtis su vaiku apie jausmus ir rūpesčius</p>
+                </div>
+                <div class="bg-red-50 p-6 rounded-xl">
+                    <div class="bg-red-100 w-14 h-14 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-heart text-red-500 text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-3">Palaikymas</h3>
+                    <p class="text-gray-600">Užtikrinti emocinį palaikymą ir teigiamą požiūrį</p>
+                </div>
+                <div class="bg-indigo-50 p-6 rounded-xl">
+                    <div class="bg-indigo-100 w-14 h-14 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-phone text-indigo-500 text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-3">Konsultacija</h3>
+                    <p class="text-gray-600">Kilus klausimams nedelsiant kreiptis į gydytoją</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- FAQ -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Dažniausiai užduodami klausimai</h2>
+                <p class="text-lg text-gray-600">Atsakymai į populiariausius klausimus</p>
+            </div>
+            <div class="max-w-3xl mx-auto space-y-6">
+                <div class="bg-white p-6 rounded-xl shadow-lg">
+                    <h3 class="text-xl font-semibold mb-3 text-blue-600">
+                        <i class="fas fa-question-circle mr-2"></i>Kada reikia vesti vaiką pas ortodontą?
+                    </h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Pirmoji apžiūra rekomenduojama <strong>7–8 metų</strong> amžiaus. Šiuo laikotarpiu pradeda kist
+                        dantų lankai, dygsta pirmieji nuolatiniai krūminiai dantys. Ankstyva diagnozė leidžia pastebėti
+                        tokias problemas kaip žandikaulio siaurumas, netaisyklingas sąkandis ar vietos trūkumas, ir jas
+                        išspręsti paprastesnėmis priemonėmis (pvz., plokštelėmis), išvengiant sudėtingo gydymo
+                        paauglystėje.
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg">
+                    <h3 class="text-xl font-semibold mb-3 text-blue-600">
+                        <i class="fas fa-question-circle mr-2"></i>Ar skauda dėti breketus ar plokštelę?
+                    </h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Pats aparatų uždėjimas yra <strong>visiškai neskausmingas</strong>. Pirmąsias 3–5 dienas po
+                        uždėjimo ar aktyvavimo vaikas gali jausti dantų maudimą, tempimą, kartais dantys tampa jautresni
+                        kietam maistui. Tai normalu – rodo, kad dantys pradeda judėti. Nemaloniems pojūčiams sumažinti
+                        galima naudoti įprastus nuskausminamuosius.
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg">
+                    <h3 class="text-xl font-semibold mb-3 text-blue-600">
+                        <i class="fas fa-question-circle mr-2"></i>Kiek trunka gydymas?
+                    </h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Gydymo trukmė labai individuali ir priklauso nuo problemos sunkumo. Gydymas plokštelėmis
+                        paprastai trunka 1–1.5 metų. Breketų gydymas dažniausiai užtrunka 1.5–2.5 metų. Svarbu pabrėžti,
+                        kad sėkmė labai priklauso ir nuo paciento bendradarbiavimo: ar sąžiningai nešiojama plokštelė,
+                        ar laikomasi higienos ir mitybos rekomendacijų.
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg">
+                    <h3 class="text-xl font-semibold mb-3 text-blue-600">
+                        <i class="fas fa-question-circle mr-2"></i>Ar vaikų ortodontinis gydymas kompensuojamas?
+                    </h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Taip, Privalomojo sveikatos draudimo fondas (PSDF) kompensuoja dalį ortodontinių aparatų kainos
+                        vaikams. Mūsų klinikoje suteiksime visą informaciją apie galimybes pasinaudoti šiomis
+                        kompensacijomis gaminant dantų plokšteles ar kitus aparatus.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- CTA Section -->
+    <section class="py-16 gradient-bg">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Suteikite vaikui gražią šypseną</h2>
+            <p class="text-xl text-blue-100 mb-8">Užsiregistruokite konsultacijai ir sužinokite daugiau apie dantų
+                tiesinimą</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="../booking.html?service=children-orthodontics"
+                    class="bg-white text-blue-500 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition transform hover:scale-105">
+                    <i class="fas fa-calendar-plus mr-2"></i> Registruoti vaiką
+                </a>
+                <a href="tel:+370 612 03030"
+                    class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-500 transition">
+                    <i class="fas fa-phone mr-2"></i> Konsultacija
+                </a>
+            </div>
+        </div>
+    </section>
+    </section>
+    <!-- About Clinic Info Block -->
+    <section class="py-12 bg-gray-50 border-t border-gray-200">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <div
+                    class="inline-flex items-center justify-center w-16 h-16 bg-white rounded-full shadow-md mb-6 text-blue-600">
+                    <i class="fas fa-clinic-medical text-2xl"></i>
+                </div>
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Apie kliniką LamaLocal</h2>
+                <p class="text-xl text-gray-600 mb-8 leading-relaxed">
+                    Odontologijos klinika Vilniuje, veikianti nuo 1999 metų. Specializuojamės implantologijoje, kaulo
+                    atkūrime ir sudėtinguose protezavimo atvejuose.
+                </p>
+                <div class="flex flex-col md:flex-row justify-center items-center gap-6 text-gray-700">
+                    <div class="flex items-center bg-white px-6 py-3 rounded-full shadow-sm">
+                        <i class="fas fa-map-marker-alt text-blue-500 mr-3"></i>
+                        <span class="font-medium">Vytauto pr. 83, Kaunas, 44238 Kauno m. sav.</span>
+                    </div>
+                    <a href="tel:+370 612 03030"
+                        class="flex items-center bg-white px-6 py-3 rounded-full shadow-sm hover:text-blue-600 transition">
+                        <i class="fas fa-phone text-blue-500 mr-3"></i>
+                        <span class="font-bold">+370 612 03030</span>
+                    </a>
+                    <a href="mailto:info@alfadenta.lt"
+                        class="flex items-center bg-white px-6 py-3 rounded-full shadow-sm hover:text-blue-600 transition">
+                        <i class="fas fa-envelope text-blue-500 mr-3"></i>
+                        <span class="font-medium">info@alfadenta.lt</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <a href="../index.html" class="flex items-center space-x-2 mb-4 hover:opacity-80 transition">
+                        <img src="../Photos/Logotipas/alfadenta logotipas.png" alt="Alfadenta Logo" class="h-10 w-auto">
+                        <span class="text-xl font-bold">Alfadenta</span>
+                    </a>
+                    <p class="text-gray-400">Jūsų šypsenos priežiūra nuo 1999. Mes kuriame šypsenas, kurios keičia
+                        gyvenimus.</p>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="https://www.facebook.com/alfadentaklinika"
+                            class="text-gray-400 hover:text-blue-400"><i class="fab fa-facebook text-xl"></i></a>
+                        <a href="https://www.instagram.com/alfadenta/" class="text-gray-400 hover:text-blue-400"><i
+                                class="fab fa-instagram text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-blue-400"><i class="fab fa-youtube text-xl"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Paslaugos</h4>
+                    <ul class="space-y-1 text-gray-400 text-sm">
+                        <li><a href="nuodugnus-dantu-bukles-istyrimas.html"
+                                class="hover:text-blue-400">Nuodugnus dantų būklės ištyrimas</a></li>
+                        <li><a href="tyrimai-ir-diagnostika.html" class="hover:text-blue-400">Tyrimai ir
+                                diagnostika</a></li>
+                        <li><a href="issami-vaiku-dantu-patikra.html" class="hover:text-blue-400">Išsami vaikų
+                                dantų patikra</a></li>
+                        <li><a href="burnos-higiena.html" class="hover:text-blue-400">Profesionali burnos
+                                higiena</a></li>
+                        <li><a href="vaiku-odontologija.html" class="hover:text-blue-400">Vaikų
+                                odontologija</a></li>
+                        <li><a href="dantu-implantavimas.html" class="hover:text-blue-400">Dantų
+                                implantacija</a></li>
+                        <li><a href="vienmomete-implantacija.html" class="hover:text-blue-400">Vienmomentė
+                                implantacija</a></li>
+                        <li><a href="dantu-atstatymas-visi-ant-4.html" class="hover:text-blue-400">Dantų
+                                atstatymas „Visi ant 4" metodu</a></li>
+                        <li><a href="dantu-protezavimas.html" class="hover:text-blue-400">Dantų
+                                protezavimas</a></li>
+                        <li><a href="dantu-laminates.html" class="hover:text-blue-400">Dantų atkūrimas
+                                laminatėmis</a></li>
+                        <li><a href="estetinis-plombavimas.html" class="hover:text-blue-400">Estetinis
+                                plombavimas</a></li>
+                        <li><a href="dantu-tiesinimas-ortopedija.html" class="hover:text-blue-400">Dantų
+                                tiesinimas kapomis</a></li>
+                        <li><a href="dantu-tiesinimas-vaikams.html" class="hover:text-blue-400">Dantų
+                                tiesinimas kapomis vaikams</a></li>
+                        <li><a href="ortodontinis-gydymas.html" class="hover:text-blue-400">Ortodontinis
+                                gydymas</a></li>
+                        <li><a href="dantu-balinimas-lazeriu.html" class="hover:text-blue-400">Dantų balinimas
+                                lazeriu</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Naudinga</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="../index.html" class="hover:text-blue-400">Apie mus</a></li>
+                        <li><a href="../doctors.html" class="hover:text-blue-400">Komanda</a></li>
+                        <li><a href="../sveikatos-draudimas.html" class="hover:text-blue-400">Sveikatos draudimas</a></li>
+                        <li><a href="#" class="hover:text-blue-400">Kainoraštis</a></li>
+                        <li><a href="../privatumo-politika.html" class="hover:text-blue-400">Privatumo politika</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Kontaktai</h4>
+                    <ul class="space-y-2 text-gray-400 mb-4">
+                        <li><strong>Registratūra</strong></li>
+                        <li>I-V: 9:00 – 16:00</li>
+                        <li>VI-VII: Nedirbame</li>
+                        <li><strong>Tel. Nr.</strong></li>
+                        <li><i class="fas fa-phone mr-2"></i> +370 612 03030</li>
+                        <li><strong>Adresas</strong></li>
+                        <li><i class="fas fa-map-marker-alt mr-2"></i> Vytauto pr. 83, Kaunas, 44238 Kauno m. sav.
+                        </li>
+                        <li><strong>El. paštas</strong></li>
+                        <li><i class="fas fa-envelope mr-2"></i> info@alfadenta.lt</li>
+                    </ul>
+
+                </div>
+            </div>
+            <!-- Map Section -->
+            <div class="border-t border-gray-800 mt-8 pt-8">
+                <div class="text-center mb-6">
+                    <h4 class="text-lg font-semibold text-white mb-2">Raskite mus žemėlapyje</h4>
+                    <p class="text-gray-400">Vytauto pr. 83, Kaunas, 44238 Kauno m. sav., Lietuva</p>
+                </div>
+                <div class="w-full h-64 rounded-lg overflow-hidden">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2294.3901067970974!2d23.922134613200768!3d54.89607487266562!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46e722777b920be7%3A0xca0d319b9b429f03!2sAesthetic%20Dentistry%20Clinic%20Alfadent!5e0!3m2!1sen!2slt!4v1770641257185!5m2!1sen!2slt" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Alfadenta. Visos teisės saugomos.</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+
+</html>
