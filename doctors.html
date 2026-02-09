@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="lt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mūsų Gydytojai - Alfadenta</title>
+    <meta name="description"
+        content="Susipažinkite su mūsų patyrusia ir kvalifikuotais odontologų komanda. Daugiau nei 26 metų patirtis, modernios technologijos ir individualus požiūris į kiekvieną pacientą.">
+    <meta name="robots" content="index, follow">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="js/admin-shared.js"></script>
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .doctor-card {
+            transition: all 0.3s ease;
+        }
+
+        .doctor-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .img-position-custom {
+            object-position: center 15%;
+        }
+
+        .doctors-section-header {
+            margin-top: 60px;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .doctors-section-header h2 {
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 700;
+            color: #333;
+            font-size: 32px;
+            margin: 0;
+        }
+
+        .doctor-cards-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .doctor-card {
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+            width: 100%;
+            max-width: 480px;
+            display: flex;
+            flex-direction: column;
+            transition: transform .3s ease;
+        }
+
+        .doctor-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .doctor-image {
+            width: 100%;
+            height: 420px;
+            object-fit: cover;
+            object-position: top center;
+            border-bottom: 5px solid transparent;
+        }
+
+        .doctor-card.blue .doctor-image {
+            border-bottom-color: #4a90e2;
+        }
+
+        .doctor-card.green .doctor-image {
+            border-bottom-color: #2ecc71;
+        }
+
+        .doctor-info {
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .doctor-name {
+            font-size: 26px;
+            font-weight: 700;
+            margin: 0 0 5px;
+        }
+
+        .doctor-role {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .doctor-card.blue .doctor-role {
+            color: #4a90e2;
+        }
+
+        .doctor-card.green .doctor-role {
+            color: #2ecc71;
+        }
+
+        .doctor-bio {
+            font-size: 15px;
+            line-height: 1.6;
+            color: #666;
+            margin-bottom: 25px;
+        }
+
+        .experience-text {
+            font-weight: 800;
+            color: #333;
+            display: block;
+            margin-top: 10px;
+        }
+
+        .doctor-section-title {
+            font-size: 14px;
+            text-transform: uppercase;
+            color: #999;
+            margin-bottom: 10px;
+            font-weight: 600;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 5px;
+        }
+
+        .doctor-list {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 20px;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .doctor-list li {
+            margin-bottom: 5px;
+            padding-left: 15px;
+            position: relative;
+        }
+
+        .doctor-list li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #ccc;
+        }
+
+        .doctor-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: auto;
+        }
+
+        .badge {
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .doctor-card.blue .badge {
+            background: #e6f2ff;
+            color: #4a90e2;
+        }
+
+        .doctor-card.green .badge {
+            background: #e6fffa;
+            color: #2ecc71;
+        }
+
+        @media (min-width: 992px) {
+            .doctor-card {
+                width: calc(50% - 15px);
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white shadow-lg z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <a href="index.html" class="flex items-center space-x-2 hover:opacity-80 transition">
+                    <img src="Photos/Logotipas/alfadenta logotipas.png" alt="Alfadenta Logo" class="h-10 w-auto">
+
+                </a>
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="index.html" class="text-gray-700 hover:text-blue-500 transition">Pradžia</a>
+                    <a href="services.html" class="text-gray-700 hover:text-blue-500 transition">Paslaugos</a>
+                    <a href="doctors.html" class="text-blue-500 font-semibold">Gydytojai</a>
+
+                    <a href="booking.html" class="text-gray-700 hover:text-blue-500 transition">Registruotis</a>
+                    <a href="contact.html" class="text-gray-700 hover:text-blue-500 transition">Kontaktai</a>
+
+                    <a href="contact.html"
+                        class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition">
+                        Susisiekite
+                    </a>
+                </div>
+                <!-- Mobile Call & Menu Buttons -->
+                <div class="md:hidden flex items-center space-x-3">
+                    <a href="tel:+37061203030"
+                        class="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition flex items-center space-x-2">
+                        <i class="fas fa-phone"></i>
+                        <span class="font-semibold">Skambinti</span>
+                    </a>
+                    <button id="mobile-menu-btn" class="text-gray-700">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden pb-4">
+                <a href="index.html" class="block py-2 text-gray-700 hover:text-blue-500">Pradžia</a>
+                <a href="services.html" class="block py-2 text-gray-700 hover:text-blue-500">Paslaugos</a>
+                <a href="doctors.html" class="block py-2 text-blue-500 font-semibold">Gydytojai</a>
+
+                <a href="booking.html" class="block py-2 text-gray-700 hover:text-blue-500">Registruotis</a>
+                <a href="contact.html" class="block py-2 text-gray-700 hover:text-blue-500">Kontaktai</a>
+
+                <button class="mt-2 w-full bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">
+                    Susisiekite
+                </button>
+            </div>
+        </div>
+    </nav>
+    <!-- Hero Section -->
+    <section class="gradient-bg pt-24 pb-16">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Susipažinkite su mūsų ekspertų komanda</h1>
+            <p class="text-xl text-blue-100 max-w-3xl mx-auto">
+                Mūsų aukštos kvalifikacijos odontologijos profesionalai yra pasirengę suteikti jums išskirtinę priežiūrą
+                ir
+                kurti gražias, sveikas šypsenas.
+            </p>
+        </div>
+    </section>
+    <!-- Admin Dashboard Section (Hidden by default) -->
+    <section id="admin-dashboard" class="hidden py-12 bg-gray-100 border-t-4 border-blue-500">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center mb-8">
+                <h2 class="text-2xl font-bold text-gray-800"><i class="fas fa-user-md mr-2"></i>Gydytojų Valdymas</h2>
+                <button onclick="AdminShared.logout()"
+                    class="text-red-500 hover:text-red-700 font-semibold bg-white px-4 py-2 rounded shadow">
+                    <i class="fas fa-sign-out-alt mr-2"></i>Atsijungti
+                </button>
+            </div>
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- Form Column -->
+                <div class="lg:col-span-1">
+                    <div class="bg-white rounded-xl shadow-lg p-6 sticky top-24">
+                        <h3 class="text-xl font-bold text-gray-800 mb-6 border-b pb-2">
+                            <i class="fas fa-plus-circle mr-2 text-green-500"></i>Pridėti / Redaguoti
+                        </h3>
+                        <form id="doctor-form" class="space-y-4">
+                            <input type="hidden" id="doctor-id">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Vardas Pavardė</label>
+                                <input type="text" id="form-name" required
+                                    class="w-full border rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Pareigos</label>
+                                <input type="text" id="form-role" required
+                                    class="w-full border rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Aprašymas</label>
+                                <textarea id="form-description" rows="3" required
+                                    class="w-full border rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"></textarea>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Nuotraukos URL</label>
+                                <input type="text" id="form-image" required
+                                    class="w-full border rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Išsilavinimas (kiekvienas
+                                    punktas naujoje eilutėje)</label>
+                                <textarea id="form-education" rows="3"
+                                    class="w-full border rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"></textarea>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Specializacijos (atskirtos
+                                    kableliais)</label>
+                                <input type="text" id="form-specialties"
+                                    class="w-full border rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                            </div>
+                            <div class="flex gap-2 pt-4">
+                                <button type="submit"
+                                    class="flex-1 bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition">
+                                    <i class="fas fa-save mr-2"></i>Išsaugoti
+                                </button>
+                                <button type="button" id="reset-btn"
+                                    class="px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 text-gray-600">
+                                    <i class="fas fa-times"></i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- List Column (Admin View) -->
+                <div class="lg:col-span-2">
+                    <div class="bg-white rounded-xl shadow-lg p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-6 border-b pb-2">
+                            <i class="fas fa-list mr-2 text-blue-500"></i>Gydytojų Sąrašas
+                        </h3>
+                        <div id="admin-doctors-list" class="space-y-4">
+                            <!-- Admin list injected here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-6">Profesionalumas. Inovacijos.
+                    Produktyvumas.</h2>
+
+                <div class="bg-white rounded-xl shadow-lg p-8 mb-8">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Klinika „Alfadenta" – tai:</h3>
+                    <ul class="space-y-3 text-gray-700 text-lg">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-500 mt-1 mr-3"></i>
+                            <span>profesionalūs, itin atidūs detalėms gydytojai;</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-500 mt-1 mr-3"></i>
+                            <span>inovacijos ir pažangiausi gydymo metodai;</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-500 mt-1 mr-3"></i>
+                            <span>nauda kiekvienam pacientui.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="text-gray-700 text-lg leading-relaxed space-y-4">
+                    <p>Klinikoje dirba patyrę gydytojai, o moderni diagnostikos įranga bei gydymo metodika padeda mums
+                        išlikti tarp sėkmingiausiųjų. Mūsų klinikoje teikiamos plataus spektro paslaugos.</p>
+
+                    <p>Iš visų jėgų, negailėdami laiko ir nebijodami iššūkių, stengiamės, kad Jūsų dantys būtų sveiki, o
+                        šypsena – spindinti ir suteikianti dar daugiau pasitikėjimo savimi.</p>
+
+                    <p>Tikime, kad šiuolaikinės odontologijos tikslas – ne tik padėti Jums išvengti dantų skausmo bei
+                        dantenų ligų, bet ir dovanoti tokią šypseną, apie kokią seniai svajojote (o gal net nedrįsote
+                        svajoti).</p>
+
+                    <p class="text-xl font-semibold text-blue-600 text-center mt-8">„Alfadenta" – tegul šypsena tampa
+                        Jūsų vizitine kortele! 😊</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Doctors Section -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+
+
+
+            <div class="doctor-cards-container">
+
+                <!-- SIGITA MORKUVIENĖ -->
+                <div class="doctor-card blue">
+                    <img src="Photos/Personalas/Sigita_Morkuviene.jpg" alt="Gyd. Sigita Morkuvienė"
+                        class="doctor-image">
+
+                    <div class="doctor-info">
+                        <h3 class="doctor-name">Gyd. Sigita Morkuvienė</h3>
+                        <div class="doctor-role">Klinikos vadovė</div>
+
+                        <div class="doctor-bio">
+                            Gydytoja odontologė, specializuojasi dantų tiesinime kapomis. Didelę patirtį turinti
+                            specialistė, orientuota į individualių gydymo planų sudarymą, estetiką ir ilgalaikius gydymo
+                            rezultatus.
+                            <span class="experience-text">30 metų klinikinė patirtis.</span>
+                        </div>
+
+                        <div class="doctor-section-title">Išsilavinimas / Info</div>
+                        <ul class="doctor-list">
+                            <li>1995 m. baigė KMA, įgijo gydytojo odontologo kvalifikaciją</li>
+                            <li>Nuolatinis tobulinimasis (2000–2026 m.) – kursai ir seminarai Amerikoje, Europoje,
+                                Japonijoje, JAE, Kanadoje</li>
+                            <li>2024 m. LSMU baigtas profesinės kvalifikacijos tobulinimo kursas „Ortodontinių anomalijų
+                                gydymas“</li>
+                        </ul>
+
+                        <div class="doctor-section-title">Profesinė veikla</div>
+                        <ul class="doctor-list">
+                            <li>Klinikos vadovė</li>
+                            <li>Aktyvi Lietuvos Odontologų Rūmų narė</li>
+                            <li>Licencija Nr. OPL-02852</li>
+                        </ul>
+
+                        <div class="doctor-badges">
+                            <span class="badge">Dantų tiesinimas kapomis</span>
+                            <span class="badge">Ortodontinis gydymas</span>
+                            <span class="badge">Estetinė odontologija</span>
+                            <span class="badge">Terapinis gydymas</span>
+                            <span class="badge">Individualūs planai</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AGNĖ ŠIRVINSKAITĖ -->
+                <div class="doctor-card green">
+                    <img src="Photos/Personalas/Doktor.png" alt="Agnė Širvinskaitė" class="doctor-image">
+
+                    <div class="doctor-info">
+                        <h3 class="doctor-name">Agnė Širvinskaitė</h3>
+                        <div class="doctor-role">Burnos higienistė</div>
+
+                        <div class="doctor-bio">
+                            Burnos higienistė, didelį dėmesį skirianti profilaktikai, estetinei burnos priežiūrai bei
+                            ilgalaikiams rezultatams. Dirba glaudžiai bendradarbiaudama su gydytojais odontologais,
+                            užtikrinant aukštą paslaugų kokybę ir pacientų komfortą.
+                        </div>
+
+                        <div class="doctor-section-title">Išsilavinimas / Info</div>
+                        <ul class="doctor-list">
+                            <li>Baigė Lietuvos sveikatos mokslų universitetą (LSMU)</li>
+                            <li>Kvalifikacija: burnos higienistė</li>
+                        </ul>
+
+                        <div class="doctor-section-title">Profesinė veikla</div>
+                        <ul class="doctor-list">
+                            <li>Profesionalios burnos higienos procedūros</li>
+                            <li>Dantų balinimas</li>
+                            <li>Profilaktinė burnos sveikatos priežiūra</li>
+                            <li>Pacientų konsultavimas ir burnos higienos edukacija</li>
+                            <li>Licencijos Nr. BPL-07871</li>
+                        </ul>
+
+                        <div class="doctor-badges">
+                            <span class="badge">Profesionali burnos higiena</span>
+                            <span class="badge">Dantų balinimas</span>
+                            <span class="badge">Profilaktinė priežiūra</span>
+                            <span class="badge">Dantenų ligų prevencija</span>
+                            <span class="badge">Edukacija</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- Why Choose Our Team Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Kodėl rinktis mūsų odontologijos komandą?
+                </h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    Mūsų komanda derina profesionalumą ir pažangias technologijas, kad užtikrintų išskirtinę
+                    odontologijos priežiūrą.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="bg-blue-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-graduation-cap text-blue-500 text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Aukštos kvalifikacijos</h3>
+                    <p class="text-gray-600">Visi mūsų odontologai turi pažangius mokymus ir sertifikatus savo
+                        atitinkamose specializacijose</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-green-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-heart text-green-500 text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Orientuoti į pacientus</h3>
+                    <p class="text-gray-600">Mes skiriame laiko suprasti jūsų poreikius ir kuriame individualius gydymo
+                        planus</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-purple-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-microscope text-purple-500 text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Pažangi technologija</h3>
+                    <p class="text-gray-600">Mes naudojame modernią įrangą tiksliai diagnostikai ir efektyviam gydymui
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- CTA Section -->
+    <section class="py-16 gradient-bg">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Susitarkite dėl konsultacijos</h2>
+            <p class="text-xl text-blue-100 mb-8">Susipažinkite su mūsų komanda ir pradėkite savo kelionę link
+                sveikesnės šypsenos šiandien</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="booking.html"
+                    class="bg-white text-blue-500 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition transform hover:scale-105">
+                    <i class="fas fa-calendar-plus mr-2"></i> Registruotis
+                </a>
+                <a href="tel:+37061203030"
+                    class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-500 transition">
+                    <i class="fas fa-phone mr-2"></i> Skambinti
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <a href="index.html" class="flex items-center space-x-2 mb-4 hover:opacity-80 transition">
+                        <img src="Photos/Logotipas/alfadenta logotipas.png" alt="Alfadenta Logo" class="h-10 w-auto">
+                        <span class="text-xl font-bold">Alfadenta</span>
+                    </a>
+                    <p class="text-gray-400">Teikiame kokybišką odontologijos priežiūrą daugiau nei 26 metų. Jūsų
+                        šypsenos priežiūra nuo 1999. Mes kuriame šypsenas, kurios keičia gyvenimus.</p>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="https://www.facebook.com/profile.php?id=61586058251633"
+                            class="text-gray-400 hover:text-blue-400"><i class="fab fa-facebook text-xl"></i></a>
+                        <a href="https://www.instagram.com/sveiki_dantys" class="text-gray-400 hover:text-blue-400"><i
+                                class="fab fa-instagram text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-blue-400"><i class="fab fa-youtube text-xl"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Paslaugos</h4>
+                    <ul class="space-y-1 text-gray-400 text-sm">
+                        <li><a href="services/comprehensive-dental-examination.html"
+                                class="hover:text-blue-400">Nuodugnus dantų būklės ištyrimas</a></li>
+                        <li><a href="services/tests-and-diagnostics.html" class="hover:text-blue-400">Tyrimai ir
+                                diagnostika</a></li>
+                        <li><a href="services/comprehensive-child-checkup.html" class="hover:text-blue-400">Išsami vaikų
+                                dantų patikra</a></li>
+                        <li><a href="services/oral-hygiene.html" class="hover:text-blue-400">Profesionali burnos
+                                higiena</a></li>
+                        <li><a href="services/pediatric-dentistry.html" class="hover:text-blue-400">Vaikų
+                                odontologija</a></li>
+                        <li><a href="services/dental-implantation.html" class="hover:text-blue-400">Dantų
+                                implantacija</a></li>
+                        <li><a href="services/immediate-implantation.html" class="hover:text-blue-400">Vienmomentė
+                                implantacija</a></li>
+                        <li><a href="services/all-on-4-implants.html" class="hover:text-blue-400">Dantų
+                                atstatymas „Visi ant 4" metodu</a></li>
+                        <li><a href="services/dental-prosthetics.html" class="hover:text-blue-400">Dantų
+                                protezavimas</a></li>
+                        <li><a href="services/dental-veneers.html" class="hover:text-blue-400">Dantų atkūrimas
+                                laminatėmis</a></li>
+                        <li><a href="services/aesthetic-fillings.html" class="hover:text-blue-400">Estetinis
+                                plombavimas</a></li>
+                        <li><a href="services/teeth-straightening.html" class="hover:text-blue-400">Dantų tiesinimas
+                                kapomis</a></li>
+                        <li><a href="services/teeth-straightening-children.html" class="hover:text-blue-400">Dantų
+                                tiesinimas kapomis vaikams</a></li>
+                        <li><a href="services/orthodontic-treatment.html" class="hover:text-blue-400">Ortodontinis
+                                gydymas</a></li>
+                        <li><a href="services/orthodontic-treatment.html" class="hover:text-blue-400">Ortodontinis
+                                gydymas</a></li>
+                        <li><a href="services/laser-teeth-whitening.html" class="hover:text-blue-400">Dantų balinimas
+                                lazeriu</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Naudinga</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="index.html" class="hover:text-blue-400">Apie mus</a></li>
+                        <li><a href="doctors.html" class="hover:text-blue-400">Komanda</a></li>
+                        <li><a href="sveikatos-draudimas.html" class="hover:text-blue-400">Sveikatos draudimas</a></li>
+
+                        <li><a href="#" class="hover:text-blue-400">Kainoraštis</a></li>
+                        <li><a href="privatumo-politika.html" class="hover:text-blue-400">Privatumo politika</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Kontaktai</h4>
+                    <ul class="space-y-2 text-gray-400 mb-4">
+                        <li><strong>Registratūra</strong></li>
+                        <li>I-V: 8:00 - 20:00</li>
+                        <li>VI: 8:00 - 14:00</li>
+                        <li>VII: Nedirbame</li>
+                        <li><strong>Tel. Nr.</strong></li>
+                        <li><i class="fas fa-phone mr-2"></i> +370 612 03030</li>
+                        <li><strong>Adresas</strong></li>
+                        <li><i class="fas fa-map-marker-alt mr-2"></i> Vytauto pr. 83, Kaunas, 44238 Kauno m. sav.
+                        </li>
+                        <li><strong>El. paštas</strong></li>
+                        <li><i class="fas fa-envelope mr-2"></i> info@alfadenta.lt</li>
+                    </ul>
+
+                    <!-- Google Maps Embed -->
+                    <div class="mt-4">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2294.3901067970974!2d23.922134613200768!3d54.89607487266562!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46e722777b920be7%3A0xca0d319b9b429f03!2sAesthetic%20Dentistry%20Clinic%20Alfadent!5e0!3m2!1sen!2slt!4v1770631863145!5m2!1sen!2slt"
+                            width="100%" height="200" style="border:0; border-radius: 8px;" allowfullscreen=""
+                            loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Alfadenta. Visos teisės saugomos.</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        // --- DOCTORS DATA & MANAGEMENT ---
+        const defaultDoctors = [
+            {
+                name: "Jonas Jonas",
+                role: "Klinikos vadovas",
+                description: "Gydytojas odontologas, gydytojas odontologas ortopedas<br>Specializacija: burnos chirurgija, implantologija, protezavimas.<br><strong>30 metų klinikinė patirtis.</strong>",
+                image: "Doktor.png",
+                education: [
+                    "• 1996 m. baigė KMA, įgijo odontologo kvalifikaciją",
+                    "• 2002 m. įgijo odontologo ortopedo kvalifikaciją",
+                    "• <strong>Nuolatinis tobulinimasis (2002–2025):</strong> seminarai Vokietijoje, Šveicarijoje, JAV."
+                ],
+                experience: [
+                    "• Nuo 2002 m. – gydytojas odontologas ortopedas (24+ m.)",
+                    "• Aktyvus Lietuvos Odontologų Rūmų narys",
+                    "• Licencija Nr. 000000000"
+                ],
+                specialties: ["Burnos Chirurgija", "Implantologija", "Protezavimas", "Ortopedinė Odontologija", "Estetinė Odontologija", "Dantų Atkūrimas Po Traumų", "Vaikų Odontologija"],
+                specialtyColor: "blue"
+            },
+            {
+                name: "Janina Janina",
+                role: "Gyd. odontologė",
+                description: "Gydytoja odontologė. Specializacija: terapinė odontologija, protezavimas.<br><strong>24 metų patirtis.</strong>",
+                image: "Doktor.png",
+                education: [
+                    "• 2002 m. baigė KMU, įgyjo odontologo kvalifikaciją",
+                    "• <strong>Kvalifikacijos kėlimas (2003–2025):</strong> estetinio plombavimo ir protezavimo kursai."
+                ],
+                experience: [
+                    "• Nuo 2003 m. – bendrosios praktikos gydytoja",
+                    "• Specializacija: sudėtingas terapinis gydymas",
+                    "• Licencija Nr. 000000000"
+                ],
+                specialties: ["Terapinė Odontologija", "Protezavimas", "Bendroji Praktika", "Profilaktinė Burnos Higiena", "Vaikų Odontologija"],
+                specialtyColor: "green"
+            },
+            {
+                name: "Janina Janina",
+                role: "Odontologo asistentė",
+                description: "Janina – rūpestinga ir šilta odontologo asistentė, kurios dėmesys detalėms ir nuoširdus bendravimas padeda pacientams jaustis jaukiai kiekvieno vizito metu. Ji padeda gydytojui visų procedūrų metu, pasirūpina tvarka ir sterilumu kabinete bei užtikrina, kad gydymo procesas vyktų sklandžiai ir profesionaliai.",
+                image: "Doktor.png",
+                education: [
+                    "• Asistuoja gydytojui odontologinių procedūrų metu",
+                    "• Rūpinasi sterilumu ir instrumentų paruošimu",
+                    "• Padeda pacientams pasiruošti vizitui bei atsako į rūpimus klausimus",
+                    "• Nuolat tobulina žinias odontologijos srityje"
+                ],
+                experience: [
+                    "• Licencija Nr. 000000000"
+                ],
+                specialties: ["Odontologo Asistavimas", "Pacientų Priežiūra", "Kabineto Higiena", "Instrumentų Sterilizacija"],
+                specialtyColor: "yellow",
+                imgCustomClass: "img-position-custom"
+            }
+        ];
+        // Initialize localStorage if empty or wrong version
+        // Version check:
+        const CURRENT_VERSION = 'doctorsData_v9';
+        // Clear old versions if they exist
+        if (localStorage.getItem('doctorsData_v2')) {
+            localStorage.removeItem('doctorsData_v2');
+        }
+        if (localStorage.getItem('doctorsData_v3')) {
+            localStorage.removeItem('doctorsData_v3');
+        }
+        if (localStorage.getItem('doctorsData_v4')) {
+            localStorage.removeItem('doctorsData_v4');
+        }
+        if (localStorage.getItem('doctorsData_v5')) {
+            localStorage.removeItem('doctorsData_v5');
+        }
+        if (localStorage.getItem('doctorsData_v6')) {
+            localStorage.removeItem('doctorsData_v6');
+        }
+        if (localStorage.getItem('doctorsData_v7')) {
+            localStorage.removeItem('doctorsData_v7');
+        }
+        if (localStorage.getItem('doctorsData_v8')) {
+            localStorage.removeItem('doctorsData_v8');
+        }
+        if (!localStorage.getItem(CURRENT_VERSION)) {
+            localStorage.setItem(CURRENT_VERSION, JSON.stringify(defaultDoctors));
+        }
+        let doctors = JSON.parse(localStorage.getItem(CURRENT_VERSION));
+        // --- RENDER FUNCTIONS ---
+        function renderDoctors() {
+            const container = document.getElementById('doctors-container');
+            container.innerHTML = doctors.map(doctor => {
+                const eduList = doctor.education ? doctor.education.map(item => `<li>${item}</li>`).join('') : '';
+                const expList = doctor.experience ? `
+                    <div class="mb-4">
+                        <p class="text-sm text-gray-500 mb-2">Profesinė patirtis:</p>
+                        <ul class="text-sm text-gray-600 space-y-1">${doctor.experience.map(item => `<li>${item}</li>`).join('')}</ul>
+                    </div>` : '';
+                const color = doctor.specialtyColor || 'blue';
+                const specialties = doctor.specialties ? doctor.specialties.map(s =>
+                    `<span class="bg-${color}-100 text-${color}-600 px-3 py-1 rounded-full text-xs">${s}</span>`
+                ).join('') : '';
+                return `
+                <div class="doctor-card bg-white rounded-2xl shadow-lg overflow-hidden">
+                    <img src="${doctor.image}" alt="${doctor.name}" class="w-full h-64 object-cover ${doctor.imgCustomClass || ''}">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-1">${doctor.name}</h3>
+                        <p class="text-blue-500 font-semibold mb-3">${doctor.role}</p>
+                        <p class="text-gray-600 mb-4">${doctor.description}</p>
+                        <div class="mb-4">
+                            <p class="text-sm text-gray-500 mb-2">Išsilavinimas / Info:</p>
+                            <ul class="text-sm text-gray-600 space-y-1">${eduList}</ul>
+                        </div>
+                        ${expList}
+                        <div class="mb-4">
+                            <p class="text-sm text-gray-500 mb-2">Specializacijos:</p>
+                            <div class="flex flex-wrap gap-2">${specialties}</div>
+                        </div>
+                        <div class="flex justify-center space-x-4">
+                              <a href="#" class="text-gray-400 hover:text-blue-500 transition"><i class="fas fa-envelope text-xl"></i></a>
+                            <a href="booking.html" class="text-gray-400 hover:text-blue-500 transition"><i class="fas fa-calendar text-xl"></i></a>
+                        </div>
+                    </div>
+                </div>`;
+            }).join('');
+        }
+        function renderAdminList() {
+            const list = document.getElementById('admin-doctors-list');
+            list.innerHTML = doctors.map((doctor, index) => `
+                <div class="border rounded-lg p-4 hover:shadow-md transition bg-gray-50 flex justify-between items-center">
+                    <div class="flex items-center space-x-4">
+                        <img src="${doctor.image}" class="w-12 h-12 rounded-full object-cover">
+                        <div>
+                            <h4 class="font-bold text-gray-800">${doctor.name}</h4>
+                            <p class="text-sm text-gray-500">${doctor.role}</p>
+                        </div>
+                    </div>
+                    <div class="flex space-x-2">
+                        <button onclick="editDoctor(${index})" class="text-blue-500 hover:text-blue-700 bg-white p-2 rounded-full shadow-sm">
+                            <i class="fas fa-edit"></i>
+                        </button>
+                        <button onclick="deleteDoctor(${index})" class="text-red-500 hover:text-red-700 bg-white p-2 rounded-full shadow-sm">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </div>
+                </div>
+            `).join('');
+        }
+        // --- ADMIN LOGIC ---
+        const adminDashboard = document.getElementById('admin-dashboard');
+        const doctorForm = document.getElementById('doctor-form');
+        const resetBtn = document.getElementById('reset-btn');
+        // Listen for login event from shared script
+        document.addEventListener('adminLoggedIn', () => {
+            checkAuth();
+        });
+        // Listen for trigger click
+        document.addEventListener('adminTriggerClicked', () => {
+            adminDashboard.classList.remove('hidden');
+            adminDashboard.scrollIntoView({ behavior: 'smooth' });
+        });
+        function checkAuth() {
+            if (AdminShared.isLoggedIn()) {
+                adminDashboard.classList.remove('hidden');
+                renderAdminList();
+            } else {
+                adminDashboard.classList.add('hidden');
+            }
+        }
+        function saveDoctors() {
+            localStorage.setItem(CURRENT_VERSION, JSON.stringify(doctors));
+            renderDoctors();
+            renderAdminList();
+        }
+        doctorForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const id = document.getElementById('doctor-id').value;
+            const educationText = document.getElementById('form-education').value;
+            const education = educationText ? educationText.split('\n').filter(line => line.trim() !== '') : [];
+            const specialtiesText = document.getElementById('form-specialties').value;
+            const specialties = specialtiesText ? specialtiesText.split(',').map(s => s.trim()) : [];
+            const newDoctor = {
+                name: document.getElementById('form-name').value,
+                role: document.getElementById('form-role').value,
+                description: document.getElementById('form-description').value,
+                image: document.getElementById('form-image').value,
+                education: education,
+                specialties: specialties,
+                specialtyColor: "blue" // Default to blue for new ones
+            };
+            if (id) {
+                // Preserve existing fields not in form if any (like experience or custom class)
+                const existing = doctors[parseInt(id)];
+                newDoctor.experience = existing.experience;
+                newDoctor.imgCustomClass = existing.imgCustomClass;
+                newDoctor.specialtyColor = existing.specialtyColor;
+                doctors[parseInt(id)] = newDoctor;
+            } else {
+                doctors.push(newDoctor);
+            }
+            saveDoctors();
+            resetForm();
+        });
+        window.editDoctor = (index) => {
+            const doc = doctors[index];
+            document.getElementById('doctor-id').value = index;
+            document.getElementById('form-name').value = doc.name;
+            document.getElementById('form-role').value = doc.role;
+            document.getElementById('form-description').value = doc.description.replace(/<br>/g, '\n');
+            document.getElementById('form-image').value = doc.image;
+            document.getElementById('form-education').value = doc.education ? doc.education.join('\n') : '';
+            document.getElementById('form-specialties').value = doc.specialties ? doc.specialties.join(', ') : '';
+            document.getElementById('doctor-form').scrollIntoView({ behavior: 'smooth' });
+        };
+        window.deleteDoctor = (index) => {
+            if (confirm('Ar tikrai norite ištrinti šį gydytoją?')) {
+                doctors.splice(index, 1);
+                saveDoctors();
+            }
+        };
+        function resetForm() {
+            doctorForm.reset();
+            document.getElementById('doctor-id').value = '';
+        }
+        resetBtn.addEventListener('click', resetForm);
+        // Init
+        // renderDoctors();
+        checkAuth();
+    </script>
+</body>
+
+</html>
