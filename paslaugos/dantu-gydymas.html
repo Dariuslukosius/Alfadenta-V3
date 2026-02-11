@@ -30,7 +30,9 @@
     <meta content="LamaLocal" property="og:site_name" />
     <meta content="lt_LT" property="og:locale" />
     <!-- Styles -->
-    <script src="https://cdn.tailwindcss.com"><script src="../js/theme-config.js"></script><link rel="stylesheet" href="../css/theme.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../assets/js/theme-config.js"></script>
+    <link rel="stylesheet" href="../assets/css/theme.css">
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
     <!-- Schema.org Structured Data -->
@@ -62,7 +64,7 @@
         <div class="container mx-auto px-4">
             <div class="flex justify-between items-center py-4">
                 <a class="flex items-center space-x-2 hover:opacity-80 transition" href="../index.html">
-                    <img alt="Alfadenta Logo" class="h-10 w-auto" src="../Photos/Logotipas/alfadenta logotipas.png" />
+                    <img src="../assets/images/global/alfadenta-logotipas.webp" alt="Alfadenta Logo" class="h-14 w-auto">
                     <span class="text-xl font-bold">
                         Alfadenta
                     </span>
@@ -78,8 +80,10 @@
                     <a class="text-gray-700 hover:text-primary transition" href="../doctors.html">
                         Gydytojai
                     </a>
-                    <a class="text-gray-700 hover:text-primary transition"
-                        href="../booking.html?service=dantu-gydymas">
+                    <a class="text-gray-700 hover:text-primary transition" href="../gallery.html">
+                        Galerija
+                    </a>
+                    <a class="text-gray-700 hover:text-primary transition" href="../booking.html?service=dantu-gydymas">
                         Registruotis
                     </a>
                     <a class="text-gray-700 hover:text-primary transition" href="../contact.html">
@@ -119,6 +123,9 @@
                 <a class="block py-2 text-gray-700 hover:text-primary" href="../doctors.html">
                     Gydytojai
                 </a>
+                <a class="block py-2 text-gray-700 hover:text-primary" href="../gallery.html">
+                    Galerija
+                </a>
                 <a class="block py-2 text-gray-700 hover:text-primary" href="../booking.html">
                     Registruotis
                 </a>
@@ -135,7 +142,7 @@
         </div>
     </nav>
     <!-- Breadcrumbs -->
-    <nav class="bg-white border-b border-gray-200 pt-20 pb-4">
+    <nav class="bg-primary border-b border-gray-200 pt-20 pb-4">
         <div class="container mx-auto px-4">
             <ol class="flex items-center space-x-2 text-sm text-gray-600">
                 <li>
@@ -170,7 +177,7 @@
                 <div>
                     <img alt="Terapinis Dantų Gydymas – Išsaugokite Savo Natūralius Dantis"
                         class="rounded-2xl shadow-2xl w-full h-auto hover:shadow-3xl transition duration-300"
-                        src="../Photos/nuotraukos 1/Kruminiu dantu plombavimas.png" />
+                        src="../assets/images/services/kruminiu-dantu-plombavimas.webp" />
                 </div>
                 <!-- Right: Content -->
                 <div>
@@ -234,6 +241,133 @@
             </div>
         </div>
     </section>
+
+    <!-- Main Content -->
+    <main class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <!-- Terapinis gydymas -->
+                <div class="bg-white rounded-2xl shadow-lg p-8 mb-12" id="terapinis-gydymas">
+                    <div class="flex items-center mb-6">
+                        <div
+                            class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-primary mr-4">
+                            <i class="fas fa-tooth text-2xl">
+                            </i>
+                        </div>
+                        <h2 class="text-3xl font-bold text-gray-800">
+                            Terapinis Dantų Gydymas
+                        </h2>
+                    </div>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Tai dažniausia odontologinė procedūra, kurios metu išvalomi pažeisti danties audiniai ir
+                        atkuriama danties forma bei funkcija plombinėmis medžiagomis.
+                    </p>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="bg-gray-50 p-6 rounded-xl">
+                            <h3 class="font-bold text-gray-800 mb-3 flex items-center">
+                                <i class="fas fa-microscope text-primary mr-2">
+                                </i>
+                                Mikroskopinis gydymas
+                            </h3>
+                            <p class="text-sm text-gray-600">
+                                Esant poreikiui, naudojame mikroskopą maksimaliam tikslumui užtikrinti.
+                            </p>
+                        </div>
+                        <div class="bg-gray-50 p-6 rounded-xl">
+                            <h3 class="font-bold text-gray-800 mb-3 flex items-center">
+                                <i class="fas fa-shield-alt text-primary mr-2">
+                                </i>
+                                Aukščiausia kokybė
+                            </h3>
+                            <p class="text-sm text-gray-600">
+                                Naudojame tik sertifikuotas, ilgaamžes plombines medžiagas.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lazeris -->
+                <div class="bg-white rounded-2xl shadow-lg p-8 mb-12" id="lazeris">
+                    <div class="flex items-center mb-6">
+                        <div
+                            class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center text-red-600 mr-4">
+                            <i class="fas fa-crosshairs text-2xl"></i>
+                        </div>
+                        <h2 class="text-3xl font-bold text-gray-800">
+                            Gydymas Lazeriu
+                        </h2>
+                    </div>
+                    <div class="flex flex-col md:flex-row gap-8 items-center mb-6">
+                        <div class="flex-1">
+                            <p class="text-gray-600 mb-4 leading-relaxed">
+                                Lazerinė odontologija – tai modernus, mažiau skausmingas ir greitesnis būdas gydyti
+                                įvairias dantų ir dantenų ligas.
+                            </p>
+                            <ul class="space-y-2 mb-4">
+                                <li class="flex items-center text-gray-700">
+                                    <i class="fas fa-check text-green-500 mr-2"></i> Sterilus ir bekontaktis gydymas
+                                </li>
+                                <li class="flex items-center text-gray-700">
+                                    <i class="fas fa-check text-green-500 mr-2"></i> Greitesnis gijimas
+                                </li>
+                                <li class="flex items-center text-gray-700">
+                                    <i class="fas fa-check text-green-500 mr-2"></i> Mažesnis diskomfortas
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="flex-1">
+                            <img src="../assets/images/services/lazeris-1.webp" alt="Gydymas lazeriu"
+                                class="rounded-xl shadow-md w-full h-auto object-cover">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Herpes gydymas lazeriu -->
+                <div class="bg-white rounded-2xl shadow-lg p-8" id="herpes-gydymas">
+                    <div class="flex items-center mb-6">
+                        <div
+                            class="w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center text-pink-600 mr-4">
+                            <i class="fas fa-virus-slash text-2xl"></i>
+                        </div>
+                        <h2 class="text-3xl font-bold text-gray-800">
+                            Herpes (Pūslelinės) Gydymas Lazeriu
+                        </h2>
+                    </div>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Pajautėte pirmuosius pūslelinės požymius? Lazerio pagalba galime sustabdyti bėrimo plitimą ir
+                        pagreitinti gijimą vos per kelias minutes!
+                    </p>
+                    <div
+                        class="bg-gray-50 p-6 rounded-xl border-l-4 border-pink-500 flex flex-col md:flex-row gap-6 items-center">
+                        <div class="flex-1">
+                            <h4 class="font-bold text-gray-800 mb-2">Procedūros privalumai:</h4>
+                            <ul class="space-y-2">
+                                <li class="flex items-center text-sm text-gray-700">
+                                    <i class="fas fa-dot-circle text-pink-500 mr-2 text-xs"></i> Procedūra trunka tik
+                                    kelias
+                                    minutes
+                                </li>
+                                <li class="flex items-center text-sm text-gray-700">
+                                    <i class="fas fa-dot-circle text-pink-500 mr-2 text-xs"></i> Sumažina skausmą ir
+                                    niežulį
+                                    iškart
+                                </li>
+                                <li class="flex items-center text-sm text-gray-700">
+                                    <i class="fas fa-dot-circle text-pink-500 mr-2 text-xs"></i> Neleidžia susidaryti
+                                    šašui
+                                    (jei atvykstate laiku)
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="w-full md:w-1/3">
+                            <img src="../assets/images/services/herpes-gydymas-lazeriu.webp" alt="Herpes gydymas"
+                                class="rounded-xl shadow-md w-full h-32 object-cover">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
     <!-- Our Orthodontists Section -->
     <section class="py-16 bg-white">
         <div class="container mx-auto px-4">
@@ -250,7 +384,7 @@
                 <div
                     class="flex items-center bg-gradient-to-r from-primary-light to-white rounded-xl shadow-lg hover:shadow-xl transition duration-300 overflow-hidden">
                     <img alt="Gyd. Kornelija Virbukaitė" class="w-32 h-32 object-cover"
-                        src="../Photos/Personalas/Kornelija Virbukaite.jpg" />
+                        src="../assets/images/doctors/kornelija-virbukaite.webp" />
                     <div class="p-6 flex-1">
                         <h3 class="text-2xl font-bold text-gray-800">
                             Gyd. Kornelija Virbukaitė
@@ -369,7 +503,7 @@
                 <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
                     Investuokite į savo šypseną
                 </h2>
-                <p class="text-xl text-primary-light mb-8">
+                <p class="text-xl text-white mb-8">
                     Užsiregistruokite konsultacijai šiandien ir ženkite pirmąjį žingsnį link svajonių šypsenos.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center">
@@ -386,7 +520,7 @@
                         Skambinti
                     </a>
                 </div>
-                <div class="mt-8 text-primary-light flex justify-center items-center flex-wrap gap-4 text-sm">
+                <div class="mt-8 text-white flex justify-center items-center flex-wrap gap-4 text-sm">
                     <span>
                         <i class="fas fa-clock mr-2">
                         </i>
@@ -410,14 +544,13 @@
             <div class="grid md:grid-cols-4 gap-8 mb-8">
                 <div>
                     <a class="flex items-center space-x-2 mb-4 hover:opacity-80 transition" href="../index.html">
-                        <img alt="Alfadenta Logo" class="h-10 w-auto"
-                            src="../Photos/Logotipas/alfadenta logotipas.png" />
+                        <img src="../assets/images/global/alfadenta-logo-white-text.webp" alt="Alfadenta Logo" class="h-40 w-auto">
                         <span class="text-xl font-bold">
                             Alfadenta
                         </span>
                     </a>
                     <p class="text-gray-400">
-                        Jūsų šypsenos priežiūra nuo 1999. Mes kuriame šypsenas, kurios keičia
+                        Jūsų šypsenos priežiūra nuo 2014. Mes kuriame šypsenas, kurios keičia
                         gyvenimus.
                     </p>
                     <div class="flex space-x-4 mt-4">
@@ -547,8 +680,6 @@
                             </a>
                         </li>
                         <li>
-                            <a class="hover:text-blue-400" href="../sveikatos-draudimas.html">
-                                Sveikatos draudimas
                             </a>
                         </li>
                         <li>
@@ -561,6 +692,7 @@
                                 Privatumo politika
                             </a>
                         </li>
+                        <li><a class="hover:text-blue-400" href="../svetaines-informacija.html">Svetainės informacija</a></li>
                     </ul>
                 </div>
                 <div>
@@ -669,6 +801,6 @@
             });
         });
 
-</body>
+</body >
 
-</html>
+</html >

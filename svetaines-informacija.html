@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="lt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Svetainės informacija - LamaLocal</title>
+    <meta name="description"
+        content="Informacija apie Alfadenta klinikos svetainę. Techninis optimizavimas, modernūs sprendimai ir pritaikymas įvairiems įrenginiams.">
+    <meta name="robots" content="index, follow">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .section-padding {
+            padding: 5rem 0;
+        }
+
+        .text-content {
+            line-height: 1.7;
+        }
+
+        .text-content p {
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white shadow-lg z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center space-x-2">
+                        <img src="assets/images/global/alfadenta-logotipas.webp" alt="Alfadenta Logo"
+                            class="h-10 w-auto">
+                    </a>
+                </div>
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="index.html" class="text-gray-700 hover:text-blue-500 transition">Pagrindinis</a>
+                    <a href="services.html" class="text-gray-700 hover:text-blue-500 transition">Paslaugos</a>
+                    <a href="doctors.html" class="text-gray-700 hover:text-blue-500 transition">Gydytojai</a>
+                    <a href="gallery.html" class="text-gray-700 hover:text-blue-500 transition">Galerija</a>
+                    <a href="booking.html" class="text-gray-700 hover:text-blue-500 transition">Registracija</a>
+                    <a href="contact.html" class="text-gray-700 hover:text-blue-500 transition">Kontaktai</a>
+
+                    <a href="contact.html"
+                        class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition">
+                        Susisiekite
+                    </a>
+                </div>
+                <!-- Mobile Call & Menu Buttons -->
+                <div class="md:hidden flex items-center space-x-3">
+                    <a href="tel:+37061203030"
+                        class="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition flex items-center space-x-2">
+                        <i class="fas fa-phone"></i>
+                        <span class="font-semibold">Skambinti</span>
+                    </a>
+                    <button id="mobile-menu-btn" class="text-gray-700">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-t">
+            <div class="container mx-auto px-4 py-4 space-y-3">
+                <a href="index.html" class="block py-2 text-gray-700 hover:text-blue-500 transition">Pagrindinis</a>
+                <a href="services.html" class="block py-2 text-gray-700 hover:text-blue-500 transition">Paslaugos</a>
+                <a href="doctors.html" class="block py-2 text-gray-700 hover:text-blue-500 transition">Gydytojai</a>
+                <a href="gallery.html" class="block py-2 text-gray-700 hover:text-blue-500 transition">Galerija</a>
+                <a href="booking.html" class="block py-2 text-gray-700 hover:text-blue-500 transition">Registracija</a>
+                <a href="contact.html" class="block py-2 text-gray-700 hover:text-blue-500 transition">Kontaktai</a>
+
+                <a href="contact.html"
+                    class="mt-2 w-full bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 block text-center">
+                    Susisiekite
+                </a>
+            </div>
+        </div>
+    </nav>
+    <!-- Hero Section -->
+    <section class="gradient-bg text-white section-padding pt-32">
+        <div class="container mx-auto px-4">
+            <div class="text-center">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">Svetainės informacija</h1>
+            </div>
+        </div>
+    </section>
+    <!-- Content -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-content text-gray-700">
+                    <p>Ši svetainė sukurta odontologijos klinikai Alfadenta, siekiant užtikrinti aiškų informacijos
+                        pateikimą, patogų naršymą ir gerą pasiekiamumą paieškos sistemose. Kuriant svetainę buvo
+                        laikomasi šiuolaikinių interneto sprendimų ir techninio optimizavimo principų.</p>
+                    <p>Svetainė pritaikyta naudotis įvairiuose įrenginiuose, užtikrinant sklandų veikimą tiek
+                        mobiliuosiuose telefonuose, tiek kompiuteriuose. Didelis dėmesys skirtas paslaugų struktūrai,
+                        informacijos aiškumui ir greitam puslapių krovimui.</p>
+                    <p>Svetainės kūrimo ir techninio optimizavimo darbus atliko <a href="https://lamalocal.lt/"
+                            target="_blank" class="text-blue-500 hover:text-blue-700 font-semibold">LamaLocal</a> –
+                        svetainių kūrimo ir vietinio
+                        SEO sprendimus teikianti komanda Lietuvoje.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <a href="index.html" class="flex items-center space-x-2 mb-4 hover:opacity-80 transition">
+                        <img src="assets/images/global/alfadenta-logo-white-text.webp" alt="Alfadenta Logo"
+                            class="h-40 w-auto">
+
+                    </a>
+                    <p class="text-gray-400">Jūsų šypsenos priežiūra nuo 2014. Mes kuriame šypsenas, kurios keičia
+                        gyvenimus.</p>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="https://www.facebook.com/alfadentaklinika" class="text-gray-400 hover:text-blue-400"><i
+                                class="fab fa-facebook text-xl"></i></a>
+                        <a href="https://www.instagram.com/alfadenta/" class="text-gray-400 hover:text-blue-400"><i
+                                class="fab fa-instagram text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-blue-400"><i class="fab fa-youtube text-xl"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Paslaugos</h4>
+                    <ul class="space-y-1 text-gray-400 text-sm">
+                        <li><a href="paslaugos/nuodugnus-dantu-bukles-istyrimas.html"
+                                class="hover:text-blue-400">Nuodugnus dantų būklės ištyrimas</a></li>
+                        <li><a href="paslaugos/tyrimai-ir-diagnostika.html" class="hover:text-blue-400">Tyrimai ir
+                                diagnostika</a></li>
+                        <li><a href="paslaugos/issami-vaiku-dantu-patikra.html" class="hover:text-blue-400">Išsami vaikų
+                                dantų patikra</a></li>
+                        <li><a href="paslaugos/burnos-higiena.html" class="hover:text-blue-400">Profesionali burnos
+                                higiena</a></li>
+                        <li><a href="paslaugos/vaiku-odontologija.html" class="hover:text-blue-400">Vaikų
+                                odontologija</a></li>
+                        <li><a href="paslaugos/dantu-implantavimas.html" class="hover:text-blue-400">Dantų
+                                implantacija</a></li>
+                        <li><a href="paslaugos/vienmomete-implantacija.html" class="hover:text-blue-400">Vienmomentė
+                                implantacija</a></li>
+                        <li><a href="paslaugos/dantu-atstatymas-visi-ant-4.html" class="hover:text-blue-400">Dantų
+                                atstatymas „Visi ant 4" metodu</a></li>
+                        <li><a href="paslaugos/dantu-protezavimas.html" class="hover:text-blue-400">Dantų
+                                protezavimas</a></li>
+                        <li><a href="paslaugos/dantu-laminates.html" class="hover:text-blue-400">Dantų atkūrimas
+                                laminatėmis</a></li>
+                        <li><a href="paslaugos/estetinis-plombavimas.html" class="hover:text-blue-400">Estetinis
+                                plombavimas</a></li>
+                        <li><a href="paslaugos/dantu-tiesinimas-ortopedija.html" class="hover:text-blue-400">Dantų
+                                tiesinimas kapomis</a></li>
+                        <li><a href="paslaugos/dantu-tiesinimas-vaikams.html" class="hover:text-blue-400">Dantų
+                                tiesinimas kapomis vaikams</a></li>
+                        <li><a href="paslaugos/ortodontinis-gydymas.html" class="hover:text-blue-400">Ortodontinis
+                                gydymas</a></li>
+                        <li><a href="paslaugos/dantu-balinimas-lazeriu.html" class="hover:text-blue-400">Dantų balinimas
+                                lazeriu</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Naudinga</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="index.html" class="hover:text-blue-400">Apie mus</a></li>
+                        <li><a href="doctors.html" class="hover:text-blue-400">Komanda</a></li>
+                        <li><a href="#" class="hover:text-blue-400">Kainoraštis</a></li>
+                        <li><a href="privatumo-politika.html" class="hover:text-blue-400">Privatumo politika</a></li>
+                        <li><a href="svetaines-informacija.html" class="hover:text-blue-400">Svetainės informacija</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Kontaktai</h4>
+                    <ul class="space-y-2 text-gray-400 mb-4">
+                        <li><strong>Registratūra</strong></li>
+                        <li>I-V: 9:00 – 16:00</li>
+                        <li>VI-VII: Nedirbame</li>
+                        <li><strong>Tel. Nr.</strong></li>
+                        <li><i class="fas fa-phone mr-2"></i> +370 612 03030</li>
+                        <li><strong>Adresas</strong></li>
+                        <li><i class="fas fa-map-marker-alt mr-2"></i> Vytauto pr. 83, Kaunas, 44238 Kauno m. sav.
+                        </li>
+                        <li><strong>El. paštas</strong></li>
+                        <li><i class="fas fa-envelope mr-2"></i> info@alfadenta.lt</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Map Section -->
+            <div class="border-t border-gray-800 mt-8 pt-8">
+                <div class="text-center mb-6">
+                    <h4 class="text-lg font-semibold text-white mb-2">Raskite mus žemėlapyje</h4>
+                    <p class="text-gray-400">Vytauto pr. 83, Kaunas, 44238 Kauno m. sav., Lietuva</p>
+                </div>
+                <div class="w-full h-64 rounded-lg overflow-hidden">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2294.3901067970974!2d23.922134613200768!3d54.89607487266562!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46e722777b920be7%3A0xca0d319b9b429f03!2sAesthetic%20Dentistry%20Clinic%20Alfadent!5e0!3m2!1sen!2slt!4v1770641257185!5m2!1sen!2slt"
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Alfadenta. Visos teisės saugomos.</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+
+</html>

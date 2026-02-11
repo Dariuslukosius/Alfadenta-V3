@@ -1,0 +1,65 @@
+/* Background System Styles */
+#background-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    /* Behind everything */
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.bg-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    /* Hardware acceleration for smoother transitions */
+    will-change: opacity;
+    transform: translateZ(0);
+}
+
+.bg-layer.active {
+    opacity: 1;
+}
+
+/* Overlay for contrast */
+#background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Completely transparent overlay */
+    background: transparent;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Semi-transparent sections to show background */
+/* Override specific section backgrounds if needed */
+.bg-glass {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px);
+}
+
+.bg-glass-light {
+    background-color: rgba(249, 250, 251, 0.05) !important;
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px);
+}
+
+/* Ensure text is readable on top */
+section {
+    position: relative;
+    z-index: 10;
+}

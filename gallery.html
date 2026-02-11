@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="lt">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Galerija | Odontologijos klinika LamaLocal</title>
+    <meta content="Peržiūrėkite mūsų darbų galeriją ir klinikos nuotraukas." name="description" />
+    <meta content="index, follow" name="robots" />
+    <link href="https://svytintysdantys.lt/gallery.html" rel="canonical" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="assets/js/theme-config.js"></script>
+    <link rel="stylesheet" href="assets/css/theme.css">
+    <link rel="stylesheet" href="assets/css/background-system.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+    <style>
+        .gallery-item {
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.02);
+        }
+
+        /* Lightbox styles */
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90vh;
+            border-radius: 8px;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: white;
+            font-size: 40px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body class="flex flex-col min-h-screen">
+    <!-- Background System -->
+    <div id="background-container">
+        <div class="bg-layer active" style="background-image: url('assets/images/backgrounds/bg-1.webp');"></div>
+        <div class="bg-layer" style="background-image: url('assets/images/backgrounds/bg-2.webp');"></div>
+        <div class="bg-layer" style="background-image: url('assets/images/backgrounds/bg-3.webp');"></div>
+        <div id="background-overlay"></div>
+    </div>
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white shadow-lg z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <a class="flex items-center space-x-2 hover:opacity-80 transition" href="index.html">
+                    <img src="assets/images/global/alfadenta-logotipas.webp" alt="Alfadenta Logo" class="h-14 w-auto">
+
+                </a>
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-6">
+                    <a class="text-gray-700 hover:text-primary transition" href="index.html">Pradžia</a>
+                    <a class="text-gray-700 hover:text-primary transition" href="services.html">Paslaugos</a>
+                    <a class="text-gray-700 hover:text-primary transition" href="doctors.html">Gydytojai</a>
+                    <a class="text-primary font-semibold" href="gallery.html">Galerija</a>
+                    <a class="text-gray-700 hover:text-primary transition" href="booking.html">Registruotis</a>
+                    <a class="text-gray-700 hover:text-primary transition" href="contact.html">Kontaktai</a>
+                    <a class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary-dark transition"
+                        href="contact.html">
+                        Susisiekite
+                    </a>
+                </div>
+                <!-- Mobile Call & Menu Buttons -->
+                <div class="md:hidden flex items-center space-x-3">
+                    <a class="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition flex items-center space-x-2"
+                        href="tel:+37061203030">
+                        <i class="fas fa-phone"></i>
+                        <span class="font-semibold">Skambinti</span>
+                    </a>
+                    <button class="text-gray-700" id="mobile-menu-btn">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- Mobile Menu -->
+            <div class="hidden md:hidden pb-4" id="mobile-menu">
+                <a class="block py-2 text-gray-700 hover:text-primary" href="index.html">Pradžia</a>
+                <a class="block py-2 text-gray-700 hover:text-primary" href="services.html">Paslaugos</a>
+                <a class="block py-2 text-gray-700 hover:text-primary" href="doctors.html">Gydytojai</a>
+                <a class="block py-2 text-primary font-semibold" href="gallery.html">Galerija</a>
+                <a class="block py-2 text-gray-700 hover:text-primary" href="booking.html">Registruotis</a>
+                <a class="block py-2 text-gray-700 hover:text-primary" href="contact.html">Kontaktai</a>
+                <a class="mt-2 w-full bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary-dark block text-center"
+                    href="contact.html">
+                    Susisiekite
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg pt-32 pb-16" data-bg-index="0">
+        <div class="container mx-auto px-4 text-center text-gray-800">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Galerija</h1>
+            <p class="text-xl text-gray-700">Mūsų atlikti darbai ir klinikos akimirkos</p>
+        </div>
+    </section>
+
+    <!-- Gallery Grid -->
+    <section class="py-16 bg-glass flex-grow" data-bg-index="1">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Gallery Items -->
+                <div class="gallery-item rounded-xl overflow-hidden shadow-lg" onclick="openLightbox(this)">
+                    <img src="assets/images/gallery/dantu-tiesinimo-kapos-ortodontine-sistema-1.webp"
+                        alt="Dantų tiesinimo kapos" class="w-full h-auto object-contain">
+                </div>
+                <div class="gallery-item rounded-xl overflow-hidden shadow-lg" onclick="openLightbox(this)">
+                    <img src="assets/images/gallery/dantu-tiesinimo-kapos-ortodontine-sistema-2.webp"
+                        alt="Dantų tiesinimo kapos" class="w-full h-auto object-contain">
+                </div>
+                <div class="gallery-item rounded-xl overflow-hidden shadow-lg" onclick="openLightbox(this)">
+                    <img src="assets/images/gallery/dantu-tiesinimo-kapos-ortodontine-sistema-3.webp"
+                        alt="Dantų tiesinimo kapos" class="w-full h-auto object-contain">
+                </div>
+                <div class="gallery-item rounded-xl overflow-hidden shadow-lg" onclick="openLightbox(this)">
+                    <img src="assets/images/gallery/dantu-tiesinimo-kapos-ortodontine-sistema-4.webp"
+                        alt="Dantų tiesinimo kapos" class="w-full h-auto object-contain">
+                </div>
+                <div class="gallery-item rounded-xl overflow-hidden shadow-lg" onclick="openLightbox(this)">
+                    <img src="assets/images/gallery/dantu-tiesinimo-kapos-ortodontine-sistema-5.webp"
+                        alt="Dantų tiesinimo kapos" class="w-full h-auto object-contain">
+                </div>
+                <div class="gallery-item rounded-xl overflow-hidden shadow-lg" onclick="openLightbox(this)">
+                    <img src="assets/images/gallery/dantu-tiesinimo-kapos-ortodontine-sistema-6.webp"
+                        alt="Dantų tiesinimo kapos" class="w-full h-auto object-contain">
+                </div>
+                <div class="gallery-item rounded-xl overflow-hidden shadow-lg" onclick="openLightbox(this)">
+                    <img src="assets/images/gallery/dantu-tiesinimo-kapos-ortodontine-sistema-7.webp"
+                        alt="Dantų tiesinimo kapos" class="w-full h-auto object-contain">
+                </div>
+                <div class="gallery-item rounded-xl overflow-hidden shadow-lg" onclick="openLightbox(this)">
+                    <img src="assets/images/gallery/dantu-tiesinimo-kapos-ortodontine-sistema-8.webp"
+                        alt="Dantų tiesinimo kapos" class="w-full h-auto object-contain">
+                </div>
+                <div class="gallery-item rounded-xl overflow-hidden shadow-lg" onclick="openLightbox(this)">
+                    <img src="assets/images/gallery/dantu-tiesinimo-kapos-ortodontine-sistema-9.webp"
+                        alt="Dantų tiesinimo kapos" class="w-full h-auto object-contain">
+                </div>
+                <div class="gallery-item rounded-xl overflow-hidden shadow-lg" onclick="openLightbox(this)">
+                    <img src="assets/images/gallery/dantu-tiesinimo-kapos-ortodontine-sistema-10.webp"
+                        alt="Dantų tiesinimo kapos" class="w-full h-auto object-contain">
+                </div>
+                <div class="gallery-item rounded-xl overflow-hidden shadow-lg" onclick="openLightbox(this)">
+                    <img src="assets/images/gallery/dantu-tiesinimo-kapos-ortodontine-sistema-11.webp"
+                        alt="Dantų tiesinimo kapos" class="w-full h-auto object-contain">
+                </div>
+                <div class="gallery-item rounded-xl overflow-hidden shadow-lg" onclick="openLightbox(this)">
+                    <img src="assets/images/gallery/dantu-tiesinimo-kapos-ortodontine-sistema-12.webp"
+                        alt="Dantų tiesinimo kapos" class="w-full h-auto object-contain">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <!-- CTA Section -->
+    <section class="py-16 gradient-bg" data-bg-index="2">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Pasiruošę savo odontologijos vizitui?</h2>
+            <p class="text-xl text-gray-700 mb-8">Prisijunkite prie tūkstančių patenkintų pacientų, kurie patiki mums
+                savo šypsenas</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a class="bg-primary text-white px-8 py-4 rounded-lg font-semibold hover:bg-primary-dark transition transform hover:scale-105"
+                    href="booking.html">
+                    <i class="fas fa-calendar-plus mr-2"></i> Registruotis
+                </a>
+                <a class="border-2 border-primary text-primary px-8 py-4 rounded-lg font-semibold hover:bg-primary hover:text-white transition"
+                    href="tel:+37061203030">
+                    <i class="fas fa-phone mr-2"></i> Skambinti dabar
+                </a>
+            </div>
+        </div>
+    </section>
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <a class="flex items-center space-x-2 mb-4 hover:opacity-80 transition" href="index.html">
+                        <img src="assets/images/global/alfadenta-logo-white-text.webp" alt="Alfadenta Logo"
+                            class="h-40 w-auto">
+
+                    </a>
+                    <p class="text-gray-400">Jūsų šypsenos priežiūra nuo 2014. Mes kuriame šypsenas, kurios keičia
+                        gyvenimus.</p>
+                    <div class="flex space-x-4 mt-4">
+                        <a class="text-gray-400 hover:text-blue-400" href="https://www.facebook.com/alfadentaklinika"><i
+                                class="fab fa-facebook text-xl"></i></a>
+                        <a class="text-gray-400 hover:text-blue-400" href="https://www.instagram.com/alfadenta/"><i
+                                class="fab fa-instagram text-xl"></i></a>
+                        <a class="text-gray-400 hover:text-blue-400" href="#"><i class="fab fa-youtube text-xl"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Paslaugos</h4>
+                    <ul class="space-y-1 text-gray-400 text-sm">
+                        <li><a class="hover:text-blue-400"
+                                href="paslaugos/nuodugnus-dantu-bukles-istyrimas.html">Nuodugnus dantų būklės
+                                ištyrimas</a></li>
+                        <li><a class="hover:text-blue-400" href="paslaugos/tyrimai-ir-diagnostika.html">Tyrimai ir
+                                diagnostika</a></li>
+                        <li><a class="hover:text-blue-400" href="paslaugos/issami-vaiku-dantu-patikra.html">Išsami vaikų
+                                dantų patikra</a></li>
+                        <li><a class="hover:text-blue-400" href="paslaugos/burnos-higiena.html">Profesionali burnos
+                                higiena</a></li>
+                        <li><a class="hover:text-blue-400" href="paslaugos/vaiku-odontologija.html">Vaikų
+                                odontologija</a></li>
+                        <li><a class="hover:text-blue-400" href="paslaugos/dantu-implantavimas.html">Dantų
+                                implantacija</a></li>
+                        <li><a class="hover:text-blue-400" href="paslaugos/vienmomete-implantacija.html">Vienmomentė
+                                implantacija</a></li>
+                        <li><a class="hover:text-blue-400" href="paslaugos/dantu-atstatymas-visi-ant-4.html">Dantų
+                                atstatymas „Visi ant 4" metodu</a></li>
+                        <li><a class="hover:text-blue-400" href="paslaugos/dantu-protezavimas.html">Dantų
+                                protezavimas</a></li>
+                        <li><a class="hover:text-blue-400" href="paslaugos/dantu-laminates.html">Dantų atkūrimas
+                                laminatėmis</a></li>
+                        <li><a class="hover:text-blue-400" href="paslaugos/estetinis-plombavimas.html">Estetinis
+                                plombavimas</a></li>
+                        <li><a class="hover:text-blue-400" href="paslaugos/dantu-tiesinimas-ortopedija.html">Dantų
+                                tiesinimas kapomis</a></li>
+                        <li><a class="hover:text-blue-400" href="paslaugos/dantu-tiesinimas-vaikams.html">Dantų
+                                tiesinimas kapomis vaikams</a></li>
+                        <li><a class="hover:text-blue-400" href="paslaugos/ortodontinis-gydymas.html">Ortodontinis
+                                gydymas</a></li>
+                        <li><a class="hover:text-blue-400" href="paslaugos/dantu-balinimas-lazeriu.html">Dantų balinimas
+                                lazeriu</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Naudinga</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a class="hover:text-blue-400" href="index.html">Apie mus</a></li>
+                        <li><a class="hover:text-blue-400" href="doctors.html">Komanda</a></li>
+                        <li><a class="hover:text-blue-400" href="#">Kainoraštis</a></li>
+                        <li><a class="hover:text-blue-400" href="privatumo-politika.html">Privatumo politika</a></li>
+                        <li><a class="hover:text-blue-400" href="svetaines-informacija.html">Svetainės informacija</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Kontaktai</h4>
+                    <ul class="space-y-2 text-gray-400 mb-4">
+                        <li><strong>Registratūra</strong></li>
+                        <li>I-V: 9:00 – 16:00</li>
+                        <li>VI-VII: Nedirbame</li>
+                        <li><strong>Tel. Nr.</strong></li>
+                        <li><i class="fas fa-phone mr-2"></i> +370 612 03030</li>
+                        <li><strong>Adresas</strong></li>
+                        <li><i class="fas fa-map-marker-alt mr-2"></i> Vytauto pr. 83, Kaunas, 44238 Kauno m. sav.
+                        </li>
+                        <li><strong>El. paštas</strong></li>
+                        <li><i class="fas fa-envelope mr-2"></i> info@alfadenta.lt</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Map Section -->
+            <div class="border-t border-gray-800 mt-8 pt-8">
+                <div class="text-center mb-6">
+                    <h4 class="text-lg font-semibold text-white mb-2">Raskite mus žemėlapyje</h4>
+                    <p class="text-gray-400">Vytauto pr. 83, Kaunas, 44238 Kauno m. sav., Lietuva</p>
+                </div>
+                <div class="w-full h-64 rounded-lg overflow-hidden">
+                    <iframe allowfullscreen="" height="100%" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2294.3901067970974!2d23.922134613200768!3d54.89607487266562!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46e722777b920be7%3A0xca0d319b9b429f03!2sAesthetic%20Dentistry%20Clinic%20Alfadent!5e0!3m2!1sen!2slt!4v1770641257185!5m2!1sen!2slt"
+                        style="border:0;" width="100%"></iframe>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
+                <p>© 2024 Alfadenta. Visos teisės saugomos.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+        <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+        <img id="lightbox-img" src="">
+    </div>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Lightbox functionality
+        function openLightbox(element) {
+            const imgSrc = element.querySelector('img').src;
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+
+            lightboxImg.src = imgSrc;
+            lightbox.style.display = 'flex';
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').style.display = 'none';
+        }
+
+        // Close lightbox on escape key
+        document.addEventListener('keydown', function (event) {
+            if (event.key === "Escape") {
+                closeLightbox();
+            }
+        });
+    </script>
+    <script src="assets/js/background-system.js"></script>
+    }
+    });
+    </script>
+</body>
+
+</html>

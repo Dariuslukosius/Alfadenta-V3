@@ -9,8 +9,9 @@
         content="Registruokitės vizitą LamaLocal klinikoje internetu. Pasirinkite patogų laiką ir paslaugą, gaukite patvirtinimą el. paštu. Greitas ir patogus registracijos procesas.">
     <meta name="robots" content="index, follow">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="js/theme-config.js"></script>
-    <link rel="stylesheet" href="css/theme.css">
+    <script src="assets/js/theme-config.js"></script>
+    <link rel="stylesheet" href="assets/css/theme.css">
+    <link rel="stylesheet" href="assets/css/background-system.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         .form-input {
@@ -43,20 +44,28 @@
     </script>
 </head>
 
-<body class="bg-gray-50">
+<body class="">
+    <!-- Background System -->
+    <div id="background-container">
+        <div class="bg-layer active" style="background-image: url('assets/images/backgrounds/bg-1.webp');"></div>
+        <div class="bg-layer" style="background-image: url('assets/images/backgrounds/bg-2.webp');"></div>
+        <div class="bg-layer" style="background-image: url('assets/images/backgrounds/bg-3.webp');"></div>
+        <div id="background-overlay"></div>
+    </div>
     <!-- Navigation -->
     <nav class="fixed top-0 w-full bg-white shadow-lg z-50">
         <div class="container mx-auto px-4">
             <div class="flex justify-between items-center py-4">
                 <a href="index.html" class="flex items-center space-x-2 hover:opacity-80 transition">
-                    <img src="Photos/Logotipas/alfadenta logotipas.png" alt="Alfadenta Logo" class="h-10 w-auto">
-                    <span class="text-xl font-bold">Alfadenta</span>
+                    <img src="assets/images/global/alfadenta-logotipas.webp" alt="Alfadenta Logo" class="h-14 w-auto">
+
                 </a>
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex items-center space-x-6">
                     <a href="index.html" class="text-gray-700 hover:text-primary transition">Pradžia</a>
                     <a href="services.html" class="text-gray-700 hover:text-primary transition">Paslaugos</a>
                     <a href="doctors.html" class="text-gray-700 hover:text-primary transition">Gydytojai</a>
+                    <a href="gallery.html" class="text-gray-700 hover:text-primary transition">Galerija</a>
 
                     <a href="booking.html" class="text-primary font-semibold">Registruotis</a>
                     <a href="contact.html" class="text-gray-700 hover:text-primary transition">Kontaktai</a>
@@ -83,6 +92,7 @@
                 <a href="index.html" class="block py-2 text-gray-700 hover:text-primary">Pradžia</a>
                 <a href="services.html" class="block py-2 text-gray-700 hover:text-primary">Paslaugos</a>
                 <a href="doctors.html" class="block py-2 text-gray-700 hover:text-primary">Gydytojai</a>
+                <a href="gallery.html" class="block py-2 text-gray-700 hover:text-primary">Galerija</a>
 
                 <a href="booking.html" class="block py-2 text-primary font-semibold">Registruotis</a>
                 <a href="contact.html" class="block py-2 text-gray-700 hover:text-primary">Kontaktai</a>
@@ -95,16 +105,16 @@
         </div>
     </nav>
     <!-- Hero Section -->
-    <section class="gradient-bg pt-24 pb-16">
+    <section class="gradient-bg pt-24 pb-16" data-bg-index="0">
         <div class="container mx-auto px-4 text-center">
-            <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Registruokitės vizitui</h1>
-            <p class="text-xl text-primary-light max-w-3xl mx-auto">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Registruokitės vizitui</h1>
+            <p class="text-xl text-gray-700 max-w-3xl mx-auto">
                 Susiplanuokite savo odontologijos vizitą patogiai. Pasirinkite pageidaujamą datą, laiką ir paslaugą.
             </p>
         </div>
     </section>
     <!-- Booking Form Section -->
-    <section class="py-16">
+    <section class="py-16" data-bg-index="1">
         <div class="container mx-auto px-4 max-w-6xl">
             <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
                 <div class="grid lg:grid-cols-3">
@@ -307,15 +317,34 @@
         </div>
     </div>
     <!-- Footer -->
+    <!-- CTA Section -->
+    <section class="py-16 gradient-bg" data-bg-index="2">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Pasiruošę savo odontologijos vizitui?</h2>
+            <p class="text-xl text-gray-700 mb-8">Prisijunkite prie tūkstančių patenkintų pacientų, kurie patiki mums
+                savo šypsenas</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a class="bg-primary text-white px-8 py-4 rounded-lg font-semibold hover:bg-primary-dark transition transform hover:scale-105"
+                    href="booking.html">
+                    <i class="fas fa-calendar-plus mr-2"></i> Registruotis
+                </a>
+                <a class="border-2 border-primary text-primary px-8 py-4 rounded-lg font-semibold hover:bg-primary hover:text-white transition"
+                    href="tel:+37061203030">
+                    <i class="fas fa-phone mr-2"></i> Skambinti dabar
+                </a>
+            </div>
+        </div>
+    </section>
     <footer class="bg-gray-900 text-white py-12">
         <div class="container mx-auto px-4">
             <div class="grid md:grid-cols-4 gap-8 mb-8">
                 <div>
                     <a href="index.html" class="flex items-center space-x-2 mb-4 hover:opacity-80 transition">
-                        <img src="Photos/Logotipas/alfadenta logotipas.png" alt="Alfadenta Logo" class="h-10 w-auto">
-                        <span class="text-xl font-bold">Alfadenta</span>
+                        <img src="assets/images/global/alfadenta-logo-white-text.webp" alt="Alfadenta Logo"
+                            class="h-40 w-auto">
+
                     </a>
-                    <p class="text-gray-400">Jūsų šypsenos priežiūra nuo 1999. Mes kuriame šypsenas, kurios keičia
+                    <p class="text-gray-400">Jūsų šypsenos priežiūra nuo 2014. Mes kuriame šypsenas, kurios keičia
                         gyvenimus.</p>
                     <div class="flex space-x-4 mt-4">
                         <a href="https://www.facebook.com/alfadentaklinika" class="text-gray-400 hover:text-blue-400"><i
@@ -365,9 +394,9 @@
                     <ul class="space-y-2 text-gray-400">
                         <li><a href="index.html" class="hover:text-blue-400">Apie mus</a></li>
                         <li><a href="doctors.html" class="hover:text-blue-400">Komanda</a></li>
-                        <li><a href="sveikatos-draudimas.html" class="hover:text-blue-400">Sveikatos draudimas</a></li>
                         <li><a href="#" class="hover:text-blue-400">Kainoraštis</a></li>
                         <li><a href="privatumo-politika.html" class="hover:text-blue-400">Privatumo politika</a></li>
+                        <li><a class="hover:text-blue-400" href="svetaines-informacija.html">Svetainės informacija</a></li>
                     </ul>
                 </div>
                 <div>
@@ -477,6 +506,7 @@
                 });
         });
     </script>
+    <script src="assets/js/background-system.js"></script>
 </body>
 
 </html>

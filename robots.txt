@@ -1,5 +1,3 @@
 User-agent: *
 Allow: /
-Disallow: /admin.html
-Disallow: /admin-login
 Sitemap: https://svytintysdantys.lt/sitemap.xml
