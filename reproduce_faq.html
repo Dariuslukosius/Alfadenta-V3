@@ -1,0 +1,57 @@
+<!-- Reproduction HTML -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ Test</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="max-w-3xl mx-auto space-y-4 p-10">
+        <div class="bg-white rounded-lg p-6 shadow-md">
+            <button class="w-full text-left flex justify-between items-center faq-toggle" data-target="faq1">
+                <h3 class="font-bold text-gray-800">Question 1</h3>
+                <i class="fas fa-chevron-down text-primary transition-transform"></i>
+            </button>
+            <div class="hidden mt-4 text-gray-600 leading-relaxed border-t pt-4 border-gray-200" id="faq1">
+                <p>Answer 1</p>
+            </div>
+        </div>
+        <div class="bg-white rounded-lg p-6 shadow-md">
+            <button class="w-full text-left flex justify-between items-center faq-toggle" data-target="faq2">
+                <h3 class="font-bold text-gray-800">Question 2</h3>
+                <i class="fas fa-chevron-down text-primary transition-transform"></i>
+            </button>
+            <div class="hidden mt-4 text-gray-600 leading-relaxed border-t pt-4 border-gray-200" id="faq2">
+                <p>Answer 2</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        console.log('FAQ script loaded');
+        const faqButtons = document.querySelectorAll('.faq-toggle');
+        console.log('Found FAQ buttons:', faqButtons.length);
+
+        faqButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                console.log('FAQ button clicked');
+                const targetId = button.getAttribute('data-target');
+                const targetContent = document.getElementById(targetId);
+                const icon = button.querySelector('i');
+                if (targetContent) {
+                    targetContent.classList.toggle('hidden');
+                    icon.classList.toggle('rotate-180');
+                } else {
+                    console.error('Target content not found:', targetId);
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
