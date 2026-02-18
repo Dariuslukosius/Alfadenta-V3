@@ -174,7 +174,8 @@
                                 <!-- Left: Image -->
                                 <div>
                                         <img alt="Higienos Apmokymai"
-                                                class="rounded-2xl shadow-2xl w-full h-auto hover:shadow-3xl transition duration-300"
+                                                class="rounded-2xl shadow-2xl w-full h-80 object-cover hover:shadow-3xl transition duration-300"
+                                                style="object-position: 50% 20%;"
                                                 src="../assets/images/services/korteles%20nuoptraukos/Dantu%20balinimas.webp" />
                                 </div>
                                 <!-- Right: Content -->
@@ -358,9 +359,9 @@
                                                         <!-- Doctor Card 1 -->
                                                         <div
                                                                 class="flex items-center bg-gradient-to-r from-primary-light to-white rounded-xl shadow-lg hover:shadow-xl transition duration-300 overflow-hidden">
-                                                                <img src="../assets/images/doctors/doctor-2.webp"
+                                                                <img src="../assets/images/doctors/Agne%20daktare.webp"
                                                                         alt="Gyd. Agnė Širvinskaitė"
-                                                                        class="w-full h-full object-cover">
+                                                                        class="w-32 h-32 object-cover">
                                                                 <div class="p-6 flex-1">
                                                                         <h3 class="text-2xl font-bold text-gray-800">
                                                                                 Gyd. Agnė Širvinskaitė
@@ -429,7 +430,8 @@
                                                                 </div>
                                                         </div>
                                                         <div class="bg-white rounded-lg p-6 shadow-md">
-                                                                <button class="w-full text-left flex justify-between items-center faq-toggle"
+                                                                <button type="button"
+                                                                        class="w-full text-left flex justify-between items-center faq-toggle"
                                                                         data-target="faq2">
                                                                         <h3 class="font-bold text-gray-800">
                                                                                 Ar procedūra skaudi?
@@ -450,7 +452,8 @@
                                                                 </div>
                                                         </div>
                                                         <div class="bg-white rounded-lg p-6 shadow-md">
-                                                                <button class="w-full text-left flex justify-between items-center faq-toggle"
+                                                                <button type="button"
+                                                                        class="w-full text-left flex justify-between items-center faq-toggle"
                                                                         data-target="faq3">
                                                                         <h3 class="font-bold text-gray-800">
                                                                                 Ar galima valgyti po procedūros?
@@ -493,10 +496,11 @@
                                                                 </div>
                                                         </div>
                                                         <div class="bg-white rounded-lg p-6 shadow-md">
-                                                                <button class="w-full text-left flex justify-between items-center faq-toggle"
+                                                                <button type="button"
+                                                                        class="w-full text-left flex justify-between items-center faq-toggle"
                                                                         data-target="faq5">
                                                                         <h3 class="font-bold text-gray-800">
-                                                                                Ar balinsis dantys po higienos?
+                                                                                Ar pabals dantys?
                                                                         </h3>
                                                                         <i
                                                                                 class="fas fa-chevron-down text-primary transition-transform">
@@ -506,7 +510,7 @@
                                                                         id="faq5">
                                                                         <p>
                                                                                 Taip, pašalinus dantų akmenį ir apnašus,
-                                                                                dantys tampa švieresni
+                                                                                dantys tampa šviesesni
                                                                                 ir grąžinamas natūralus atspalvis. Tai
                                                                                 nėra dantų balinimas, bet
                                                                                 estetinis pagerėjimas yra akivaizdus.
@@ -516,36 +520,41 @@
                                                 </div>
                                         </div>
                                 </section>
-                                        <!-- CTA Section -->
-        <section class="py-16 gradient-bg">
-            <div class="container mx-auto px-4 text-center">
-                <div class="max-w-3xl mx-auto">
-                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
-                        Investuokite į savo šypseną
-                    </h2>
-                    <p class="text-xl text-gray-700 mb-8">
-                        Užsiregistruokite konsultacijai šiandien ir ženkite pirmąjį žingsnį link svajonių šypsenos.
-                    </p>
-                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                        <a href="../booking.html?service=burnos-higiena"
-                            class="bg-primary text-white px-8 py-4 rounded-lg font-semibold hover:bg-primary-dark transition transform hover:scale-105 shadow-xl">
-                            <i class="fas fa-calendar-check mr-2"></i> Registruotis Vizitui
-                        </a>
-                        <a href="tel:+370 612 03030"
-                            class="border-2 border-primary text-primary px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-primary-dark transition transform hover:scale-105">
-                            <i class="fas fa-phone mr-2"></i> Skambinti
-                        </a>
-                    </div>
-                    <div class="mt-8 text-gray-800 flex justify-center items-center flex-wrap gap-4 text-sm">
-                        <span><i class="fas fa-clock mr-2"></i>I-V: 9:00 – 16:00</span>
-                        <span class="hidden sm:inline">|</span>
-                        <span><i class="fas fa-map-marker-alt mr-2"></i>Vytauto pr. 83, Kaunas</span>
-                    </div>
-                </div>
-            </div>
-        </section>
+                                <!-- CTA Section -->
+                                <section class="py-16 gradient-bg">
+                                        <div class="container mx-auto px-4 text-center">
+                                                <div class="max-w-3xl mx-auto">
+                                                        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+                                                                Investuokite į savo šypseną
+                                                        </h2>
+                                                        <p class="text-xl text-gray-700 mb-8">
+                                                                Užsiregistruokite konsultacijai šiandien ir ženkite
+                                                                pirmąjį žingsnį link svajonių šypsenos.
+                                                        </p>
+                                                        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                                                                <a href="../booking.html?service=burnos-higiena"
+                                                                        class="bg-primary text-white px-8 py-4 rounded-lg font-semibold hover:bg-primary-dark transition transform hover:scale-105 shadow-xl">
+                                                                        <i class="fas fa-calendar-check mr-2"></i>
+                                                                        Registruotis Vizitui
+                                                                </a>
+                                                                <a href="tel:+370 612 03030"
+                                                                        class="border-2 border-primary text-primary px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-primary-dark transition transform hover:scale-105">
+                                                                        <i class="fas fa-phone mr-2"></i> Skambinti
+                                                                </a>
+                                                        </div>
+                                                        <div
+                                                                class="mt-8 text-gray-800 flex justify-center items-center flex-wrap gap-4 text-sm">
+                                                                <span><i class="fas fa-clock mr-2"></i>I-V: 9:00 –
+                                                                        16:00</span>
+                                                                <span class="hidden sm:inline">|</span>
+                                                                <span><i class="fas fa-map-marker-alt mr-2"></i>Vytauto
+                                                                        pr. 83, Kaunas</span>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </section>
 
-        <!-- Footer -->
+                                <!-- Footer -->
                                 <footer class="bg-gray-900 text-white py-12">
                                         <div class="container mx-auto px-4">
                                                 <div class="grid md:grid-cols-4 gap-8 mb-8">
@@ -638,13 +647,7 @@
                                                                                         atstatymas „Visi ant 4" metodu
                                                                                 </a>
                                                                         </li>
-                                                                        <li>
-                                                                                <a class="hover:text-blue-400"
-                                                                                        href="dantu-protezavimas.html">
-                                                                                        Dantų
-                                                                                        protezavimas
-                                                                                </a>
-                                                                        </li>
+                                                                        
                                                                         <li>
                                                                                 <a class="hover:text-blue-400"
                                                                                         href="dantu-laminates.html">
@@ -783,9 +786,9 @@
                                                                                 <li>UAB Alfadenta</li>
 
                                                                                 <li>Įm. k.: 303415894</li>
-
-                                                                                <li>Bankas: Luminor</li>
-
+                                                                                <li>PVM mokėtojas: ne PVM mokėtojas</li>
+                                                                                <li>Bankas: Luminor bankas</li>
+                                                                                <li>SWIFT: AGBLLT2X</li>
                                                                                 <li>A.s.: LT87 4010 0510 0217 6965</li>
 
                                                                         </ul>

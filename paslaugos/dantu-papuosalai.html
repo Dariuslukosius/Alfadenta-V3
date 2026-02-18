@@ -304,426 +304,521 @@
         </div>
     </section>
 
-    <!-- FAQ Section -->
-    <section class="py-16 bg-gray-50">
+    <!-- Our Specialists Section -->
+    <section class="py-16 bg-white">
         <div class="container mx-auto px-4">
             <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-gray-800 mb-4">
-                    Dažniausiai užduodami klausimai
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                    Mūsų specialistai
                 </h2>
-                <p class="text-gray-600 max-w-3xl mx-auto">
-                    Atsakome į populiariausius klausimus apie dantų papuošalus.
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Patyrę specialistai, pasirengę padėti jums pasiekti tobulą šypseną
                 </p>
             </div>
-            <div class="max-w-3xl mx-auto space-y-4">
-                <div class="bg-white rounded-lg p-6 shadow-md">
-                    <button class="w-full text-left flex justify-between items-center faq-toggle" data-target="faq1">
-                        <h3 class="font-bold text-gray-800">
-                            Ar dantų papuošalai kenkia dantims?
+            <div class="max-w-4xl mx-auto space-y-6">
+                <!-- Doctor Card 1 -->
+                <div
+                    class="flex items-center bg-gradient-to-r from-primary-light to-white rounded-xl shadow-lg hover:shadow-xl transition duration-300 overflow-hidden">
+                    <img alt="Gyd. Sigita Morkuvienė" class="w-32 h-32 object-cover"
+                        src="../assets/images/doctors/sigita-morkuviene.webp" />
+                    <div class="p-6 flex-1">
+                        <h3 class="text-2xl font-bold text-gray-800">
+                            Gyd. Sigita Morkuvienė
                         </h3>
-                        <i class="fas fa-chevron-down text-primary transition-transform">
-                        </i>
-                    </button>
-                    <div class="hidden mt-4 text-gray-600 leading-relaxed border-t pt-4 border-gray-200" id="faq1">
-                        <p>
-                            Ne, jei procedūra atliekama profesionaliai. Danties audinys nėra gręžiamas ar kitaip
-                            pažeidžiamas. Papuošalas klijuojamas specialiais, odontologijoje naudojamais klijais, kurie
-                            nekenkia emaliui.
+                        <p class="text-primary-dark font-semibold text-lg mb-2">
+                            Gydytoja odontologė, Klinikos Vadovė
                         </p>
+                        <p class="text-gray-600">
+                            Specializuojasi estetinėje odontologijoje ir dantų puošyboje.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mt-3">
+                            <span class="bg-primary-light text-indigo-700 px-3 py-1 rounded-full text-xs font-semibold">
+                                Dantų papuošalai
+                            </span>
+                        </div>
                     </div>
                 </div>
-                <div class="bg-white rounded-lg p-6 shadow-md">
-                    <button class="w-full text-left flex justify-between items-center faq-toggle" data-target="faq2">
-                        <h3 class="font-bold text-gray-800">
-                            Kiek laiko laikosi dantų papuošalas?
+                <!-- Doctor Card 2 -->
+                <div
+                    class="flex items-center bg-gradient-to-r from-primary-light to-white rounded-xl shadow-lg hover:shadow-xl transition duration-300 overflow-hidden">
+                    <img alt="Gyd. Agnė Širvinskaitė" class="w-32 h-32 object-cover"
+                        src="../assets/images/doctors/Agne%20daktare.webp" />
+                    <div class="p-6 flex-1">
+                        <h3 class="text-2xl font-bold text-gray-800">
+                            Gyd. Agnė Širvinskaitė
                         </h3>
-                        <i class="fas fa-chevron-down text-primary transition-transform">
-                        </i>
-                    </button>
-                    <div class="hidden mt-4 text-gray-600 leading-relaxed border-t pt-4 border-gray-200" id="faq2">
-                        <p>
-                            Priklausomai nuo klijavimo vietos ir Jūsų mitybos bei higienos įpročių, papuošalas gali
-                            laikytis nuo kelių mėnesių iki kelerių metų.
+                        <p class="text-primary-dark font-semibold text-lg mb-2">
+                            Burnos higienistė
                         </p>
-                    </div>
-                </div>
-                <div class="bg-white rounded-lg p-6 shadow-md">
-                    <button class="w-full text-left flex justify-between items-center faq-toggle" data-target="faq3">
-                        <h3 class="font-bold text-gray-800">
-                            Ar procedūra skausminga?
-                        </h3>
-                        <i class="fas fa-chevron-down text-primary transition-transform">
-                        </i>
-                    </button>
-                    <div class="hidden mt-4 text-gray-600 leading-relaxed border-t pt-4 border-gray-200" id="faq3">
-                        <p>
-                            Visiškai neskausminga. Tai neinvazinė procedūra, kurios metu nenaudojama vietinė nejautra,
-                            nes dantis nėra gręžiamas.
+                        <p class="text-gray-600">
+                            Atlieka dantų puošybos procedūras su Swarovski kristalais.
                         </p>
-                    </div>
-                </div>
-                <div class="bg-white rounded-lg p-6 shadow-md">
-                    <button class="w-full text-left flex justify-between items-center faq-toggle" data-target="faq4">
-                        <h3 class="font-bold text-gray-800">
-                            Ar galima papuošalą nuimti?
-                        </h3>
-                        <i class="fas fa-chevron-down text-primary transition-transform">
-                        </i>
-                    </button>
-                    <div class="hidden mt-4 text-gray-600 leading-relaxed border-t pt-4 border-gray-200" id="faq4">
-                        <p>
-                            Taip, gydytojas odontologas gali lengvai ir saugiai nuimti papuošalą bet kuriuo metu. Po
-                            nuėmimo danties paviršius nupoliruojamas, kad neliktų klijų likučių.
-                        </p>
-                    </div>
-                </div>
-                <div class="bg-white rounded-lg p-6 shadow-md">
-                    <button class="w-full text-left flex justify-between items-center faq-toggle" data-target="faq5">
-                        <h3 class="font-bold text-gray-800">
-                            Ar papuošalas trukdo valytis dantis?
-                        </h3>
-                        <i class="fas fa-chevron-down text-primary transition-transform">
-                        </i>
-                    </button>
-                    <div class="hidden mt-4 text-gray-600 leading-relaxed border-t pt-4 border-gray-200" id="faq5">
-                        <p>
-                            Ne, papuošalas yra plokščias ir glotnus, todėl netrukdo nei valytis dantų šepetėliu, nei
-                            naudoti dantų siūlą (jei jis neklijuojamas tarpdančiuose). Tačiau aplink papuošalą reikėtų
-                            valyti kruopščiau.
-                        </p>
+                        <div class="flex flex-wrap gap-2 mt-3">
+                            <span class="bg-primary-light text-indigo-700 px-3 py-1 rounded-full text-xs font-semibold">
+                                Dantų papuošalai
+                            </span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-            <!-- CTA Section -->
-        <section class="py-16 gradient-bg">
-            <div class="container mx-auto px-4 text-center">
-                <div class="max-w-3xl mx-auto">
-                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
-                        Investuokite į savo šypseną
-                    </h2>
-                    <p class="text-xl text-gray-700 mb-8">
-                        Užsiregistruokite konsultacijai šiandien ir ženkite pirmąjį žingsnį link svajonių šypsenos.
-                    </p>
-                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                        <a href="../booking.html?service=dantu-papuosalai"
-                            class="bg-primary text-white px-8 py-4 rounded-lg font-semibold hover:bg-primary-dark transition transform hover:scale-105 shadow-xl">
-                            <i class="fas fa-calendar-check mr-2"></i> Registruotis Vizitui
-                        </a>
-                        <a href="tel:+370 612 03030"
-                            class="border-2 border-primary text-primary px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-primary-dark transition transform hover:scale-105">
-                            <i class="fas fa-phone mr-2"></i> Skambinti
-                        </a>
-                    </div>
-                    <div class="mt-8 text-gray-800 flex justify-center items-center flex-wrap gap-4 text-sm">
-                        <span><i class="fas fa-clock mr-2"></i>I-V: 9:00 – 16:00</span>
-                        <span class="hidden sm:inline">|</span>
-                        <span><i class="fas fa-map-marker-alt mr-2"></i>Vytauto pr. 83, Kaunas</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
+    <!-- Pricing Section -->
+    <section class="py-16 bg-gray-50">
         <div class="container mx-auto px-4">
-            <div class="grid md:grid-cols-4 gap-8 mb-8">
-                <div>
-                    <a class="flex items-center space-x-2 mb-4 hover:opacity-80 transition" href="../index.html">
-                        <img src="../assets/images/global/alfadenta-logo-white-text.webp" alt="Alfadenta Logo"
-                            class="h-40 w-auto">
-                        <span class="text-xl font-bold">
-                            Alfadenta
-                        </span>
-                    </a>
-                    <p class="text-gray-400">
-                        Jūsų šypsenos priežiūra nuo 2014. Mes kuriame šypsenas, kurios keičia
-                        gyvenimus.
-                    </p>
-                    <div class="flex space-x-4 mt-4">
-                        <a class="text-gray-400 hover:text-blue-400" href="https://www.facebook.com/alfadentaklinika">
-                            <i class="fab fa-facebook text-xl">
-                            </i>
-                        </a>
-                        <a class="text-gray-400 hover:text-blue-400" href="https://www.instagram.com/alfadenta/">
-                            <i class="fab fa-instagram text-xl">
-                            </i>
-                        </a>
-
-                    </div>
-                </div>
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">
-                        Paslaugos
-                    </h4>
-                    <ul class="space-y-1 text-gray-400 text-sm">
-                        <li>
-                            <a class="hover:text-blue-400" href="nuodugnus-dantu-bukles-istyrimas.html">
-                                Nuodugnus dantų būklės ištyrimas
-                            </a>
-                        </li>
-                        <li>
-                            <a class="hover:text-blue-400" href="tyrimai-ir-diagnostika.html">
-                                Tyrimai ir
-                                diagnostika
-                            </a>
-                        </li>
-                        <li>
-                            <a class="hover:text-blue-400" href="issami-vaiku-dantu-patikra.html">
-                                Išsami vaikų
-                                dantų patikra
-                            </a>
-                        </li>
-                        <li>
-                            <a class="hover:text-blue-400" href="burnos-higiena.html">
-                                Profesionali burnos
-                                higiena
-                            </a>
-                        </li>
-                        <li>
-                            <a class="hover:text-blue-400" href="vaiku-odontologija.html">
-                                Vaikų
-                                odontologija
-                            </a>
-                        </li>
-                        <li>
-                            <a class="hover:text-blue-400" href="dantu-implantavimas.html">
-                                Dantų
-                                implantacija
-                            </a>
-                        </li>
-                        <li>
-                            <a class="hover:text-blue-400" href="vienmomete-implantacija.html">
-                                Vienmomentė
-                                implantacija
-                            </a>
-                        </li>
-                        <li>
-                            <a class="hover:text-blue-400" href="dantu-atstatymas-visi-ant-4.html">
-                                Dantų
-                                atstatymas „Visi ant 4" metodu
-                            </a>
-                        </li>
-                        <li>
-                            <a class="hover:text-blue-400" href="dantu-protezavimas.html">
-                                Dantų
-                                protezavimas
-                            </a>
-                        </li>
-                        <li>
-                            <a class="hover:text-blue-400" href="dantu-laminates.html">
-                                Dantų atkūrimas
-                                laminatėmis
-                            </a>
-                        </li>
-                        <li>
-                            <a class="hover:text-blue-400" href="estetinis-plombavimas.html">
-                                Estetinis
-                                plombavimas
-                            </a>
-                        </li>
-                        <li>
-                            <a class="hover:text-blue-400" href="dantu-papuosalai.html">
-                                Dantų
-                                papuošalai
-                            </a>
-                        </li>
-                        <li>
-                            <a class="hover:text-blue-400" href="dantu-tiesinimas-ortopedija.html">
-                                Dantų
-                                tiesinimas kapomis
-                            </a>
-                        </li>
-                        <li>
-                            <a class="hover:text-blue-400" href="dantu-tiesinimas-vaikams.html">
-                                Dantų
-                                tiesinimas kapomis vaikams
-                            </a>
-                        </li>
-                        <li>
-                            <a class="hover:text-blue-400" href="ortodontinis-gydymas.html">
-                                Ortodontinis
-                                gydymas
-                            </a>
-                        </li>
-                        <li>
-                            <a class="hover:text-blue-400" href="dantu-balinimas-beyond-polus.html">
-                                Dantų balinimas
-                                lazeriu
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">
-                        Naudinga
-                    </h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li>
-                            <a class="hover:text-blue-400" href="../index.html">
-                                Apie mus
-                            </a>
-                        </li>
-                        <li>
-                            <a class="hover:text-blue-400" href="../doctors.html">
-                                Komanda
-                            </a>
-                        </li>
-                        <li>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="hover:text-blue-400" href="#">
-                                Kainoraštis
-                            </a>
-                        </li>
-                        <li>
-                            <a class="hover:text-blue-400" href="../privatumo-politika.html">
-                                Privatumo politika
-                            </a>
-                        </li>
-                        <li><a class="hover:text-blue-400" href="../svetaines-informacija.html">Svetainės
-                                informacija</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">
-                        Kontaktai
-                    </h4>
-                    <ul class="space-y-2 text-gray-400 mb-4">
-                        <li>
-                            <strong>
-                                Registratūra
-                            </strong>
-                        </li>
-                        <li>
-                            I-V: 9:00 – 16:00
-                        </li>
-                        <li>
-                            VI-VII: Nedirbame
-                        </li>
-                        <li>
-                            <strong>
-                                Tel. Nr.
-                            </strong>
-                        </li>
-                        <li>
-                            <i class="fas fa-phone mr-2">
-                            </i>
-                            +370 612 03030
-                        </li>
-                        <li>
-                            <strong>
-                                Adresas
-                            </strong>
-                        </li>
-                        <li>
-                            <i class="fas fa-map-marker-alt mr-2">
-                            </i>
-                            Vytauto pr. 83, Kaunas, 44238 Kauno m. sav.
-                        </li>
-                        <li>
-                            <strong>
-                                El. paštas
-                            </strong>
-                        </li>
-                        <li>
-                            <i class="fas fa-envelope mr-2">
-                            </i>
-                            info@alfadenta.lt
-                        </li>
-                    </ul>
-                    <div class="mt-4 pt-4 border-t border-gray-800">
-
-                        <h5 class="text-md font-semibold mb-2">Rekvizitai</h5>
-
-                        <ul class="space-y-1 text-gray-400 text-sm">
-
-                            <li>UAB Alfadenta</li>
-
-                            <li>Įm. k.: 303415894</li>
-
-                            <li>Bankas: Luminor</li>
-
-                            <li>A.s.: LT87 4010 0510 0217 6965</li>
-
-                        </ul>
-
-                    </div>
-
-                    <div class="mt-4 pt-4 border-t border-gray-800">
-
-                        <a href="https://epos.inbank.lt/lt/ALFADENTA" target="_blank"
-                            class="flex items-center space-x-2 text-gray-400 hover:text-white transition">
-
-                            <i class="fas fa-credit-card"></i>
-
-                            <span>Paslaugos išsimokėtinai</span>
-
-                        </a>
-
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">
+                    Kainos
+                </h2>
+            </div>
+            <div class="max-w-3xl mx-auto bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100">
+                <div class="divide-y divide-gray-100">
+                    <div class="p-6 hover:bg-gray-50 transition">
+                        <div class="flex justify-between items-start mb-2">
+                            <span class="font-medium text-gray-700">Dantų papuošalas (su klijavimu)</span>
+                            <span class="font-bold text-primary-dark">80 Eur</span>
+                        </div>
+                        <p class="text-sm text-gray-500">Swarovski kristalas arba aukso papuošaliukas</p>
                     </div>
                 </div>
             </div>
-            <!-- Map Section -->
-            <div class="border-t border-gray-800 mt-8 pt-8">
-                <div class="text-center mb-6">
-                    <h4 class="text-lg font-semibold text-white mb-2">
-                        Raskite mus žemėlapyje
-                    </h4>
-                    <p class="text-gray-400">
-                        Vytauto pr. 83, Kaunas, 44238 Kauno m. sav., Lietuva
-                    </p>
-                </div>
-                <div class="w-full h-64 rounded-lg overflow-hidden">
-                    <iframe allowfullscreen="" height="100%" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2294.3901067970974!2d23.922134613200768!3d54.89607487266562!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46e722777b920be7%3A0xca0d319b9b429f03!2sAesthetic%20Dentistry%20Clinic%20Alfadent!5e0!3m2!1sen!2slt!4v1770641257185!5m2!1sen!2slt"
-                        style="border:0;" width="100%">
-                    </iframe>
-                </div>
-            </div>
-            <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
-                <p>
-                    © 2024 Alfadenta. Visos teisės saugomos.
-                </p>
-            </div>
-        </div>
-    </footer>
-    <script>
-        // Mobile menu toggle
-        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        mobileMenuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
 
-        // FAQ Accordion
-        document.querySelectorAll('.faq-toggle').forEach(button => {
-            button.addEventListener('click', () => {
-                const targetId = button.getAttribute('data-target');
-                const targetContent = document.getElementById(targetId);
-                const icon = button.querySelector('i');
-                targetContent.classList.toggle('hidden');
-                icon.classList.toggle('rotate-180');
-            });
-        });
+            <!-- FAQ Section -->
+            <section class="py-16 bg-gray-50">
+                <div class="container mx-auto px-4">
+                    <div class="text-center mb-12">
+                        <h2 class="text-3xl font-bold text-gray-800 mb-4">
+                            Dažniausiai užduodami klausimai
+                        </h2>
+                        <p class="text-gray-600 max-w-3xl mx-auto">
+                            Atsakome į populiariausius klausimus apie dantų papuošalus.
+                        </p>
+                    </div>
+                    <div class="max-w-3xl mx-auto space-y-4">
+                        <div class="bg-white rounded-lg p-6 shadow-md">
+                            <button class="w-full text-left flex justify-between items-center faq-toggle"
+                                data-target="faq1">
+                                <h3 class="font-bold text-gray-800">
+                                    Ar dantų papuošalai kenkia dantims?
+                                </h3>
+                                <i class="fas fa-chevron-down text-primary transition-transform">
+                                </i>
+                            </button>
+                            <div class="hidden mt-4 text-gray-600 leading-relaxed border-t pt-4 border-gray-200"
+                                id="faq1">
+                                <p>
+                                    Ne, jei procedūra atliekama profesionaliai. Danties audinys nėra gręžiamas ar kitaip
+                                    pažeidžiamas. Papuošalas klijuojamas specialiais, odontologijoje naudojamais
+                                    klijais, kurie
+                                    nekenkia emaliui.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-lg p-6 shadow-md">
+                            <button class="w-full text-left flex justify-between items-center faq-toggle"
+                                data-target="faq2">
+                                <h3 class="font-bold text-gray-800">
+                                    Kiek laiko laikosi dantų papuošalas?
+                                </h3>
+                                <i class="fas fa-chevron-down text-primary transition-transform">
+                                </i>
+                            </button>
+                            <div class="hidden mt-4 text-gray-600 leading-relaxed border-t pt-4 border-gray-200"
+                                id="faq2">
+                                <p>
+                                    Priklausomai nuo klijavimo vietos ir Jūsų mitybos bei higienos įpročių, papuošalas
+                                    gali
+                                    laikytis nuo kelių mėnesių iki kelerių metų.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-lg p-6 shadow-md">
+                            <button class="w-full text-left flex justify-between items-center faq-toggle"
+                                data-target="faq3">
+                                <h3 class="font-bold text-gray-800">
+                                    Ar procedūra skausminga?
+                                </h3>
+                                <i class="fas fa-chevron-down text-primary transition-transform">
+                                </i>
+                            </button>
+                            <div class="hidden mt-4 text-gray-600 leading-relaxed border-t pt-4 border-gray-200"
+                                id="faq3">
+                                <p>
+                                    Visiškai neskausminga. Tai neinvazinė procedūra, kurios metu nenaudojama vietinė
+                                    nejautra,
+                                    nes dantis nėra gręžiamas.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-lg p-6 shadow-md">
+                            <button class="w-full text-left flex justify-between items-center faq-toggle"
+                                data-target="faq4">
+                                <h3 class="font-bold text-gray-800">
+                                    Ar galima papuošalą nuimti?
+                                </h3>
+                                <i class="fas fa-chevron-down text-primary transition-transform">
+                                </i>
+                            </button>
+                            <div class="hidden mt-4 text-gray-600 leading-relaxed border-t pt-4 border-gray-200"
+                                id="faq4">
+                                <p>
+                                    Taip, gydytojas odontologas gali lengvai ir saugiai nuimti papuošalą bet kuriuo
+                                    metu. Po
+                                    nuėmimo danties paviršius nupoliruojamas, kad neliktų klijų likučių.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-lg p-6 shadow-md">
+                            <button class="w-full text-left flex justify-between items-center faq-toggle"
+                                data-target="faq5">
+                                <h3 class="font-bold text-gray-800">
+                                    Ar papuošalas trukdo valytis dantis?
+                                </h3>
+                                <i class="fas fa-chevron-down text-primary transition-transform">
+                                </i>
+                            </button>
+                            <div class="hidden mt-4 text-gray-600 leading-relaxed border-t pt-4 border-gray-200"
+                                id="faq5">
+                                <p>
+                                    Ne, papuošalas yra plokščias ir glotnus, todėl netrukdo nei valytis dantų šepetėliu,
+                                    nei
+                                    naudoti dantų siūlą (jei jis neklijuojamas tarpdančiuose). Tačiau aplink papuošalą
+                                    reikėtų
+                                    valyti kruopščiau.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
+            <!-- CTA Section -->
+            <section class="py-16 gradient-bg">
+                <div class="container mx-auto px-4 text-center">
+                    <div class="max-w-3xl mx-auto">
+                        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+                            Investuokite į savo šypseną
+                        </h2>
+                        <p class="text-xl text-gray-700 mb-8">
+                            Užsiregistruokite konsultacijai šiandien ir ženkite pirmąjį žingsnį link svajonių šypsenos.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                            <a href="../booking.html?service=dantu-papuosalai"
+                                class="bg-primary text-white px-8 py-4 rounded-lg font-semibold hover:bg-primary-dark transition transform hover:scale-105 shadow-xl">
+                                <i class="fas fa-calendar-check mr-2"></i> Registruotis Vizitui
+                            </a>
+                            <a href="tel:+370 612 03030"
+                                class="border-2 border-primary text-primary px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-primary-dark transition transform hover:scale-105">
+                                <i class="fas fa-phone mr-2"></i> Skambinti
+                            </a>
+                        </div>
+                        <div class="mt-8 text-gray-800 flex justify-center items-center flex-wrap gap-4 text-sm">
+                            <span><i class="fas fa-clock mr-2"></i>I-V: 9:00 – 16:00</span>
+                            <span class="hidden sm:inline">|</span>
+                            <span><i class="fas fa-map-marker-alt mr-2"></i>Vytauto pr. 83, Kaunas</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Footer -->
+            <footer class="bg-gray-900 text-white py-12">
+                <div class="container mx-auto px-4">
+                    <div class="grid md:grid-cols-4 gap-8 mb-8">
+                        <div>
+                            <a class="flex items-center space-x-2 mb-4 hover:opacity-80 transition"
+                                href="../index.html">
+                                <img src="../assets/images/global/alfadenta-logo-white-text.webp" alt="Alfadenta Logo"
+                                    class="h-40 w-auto">
+                                <span class="text-xl font-bold">
+                                    Alfadenta
+                                </span>
+                            </a>
+                            <p class="text-gray-400">
+                                Jūsų šypsenos priežiūra nuo 2014. Mes kuriame šypsenas, kurios keičia
+                                gyvenimus.
+                            </p>
+                            <div class="flex space-x-4 mt-4">
+                                <a class="text-gray-400 hover:text-blue-400"
+                                    href="https://www.facebook.com/alfadentaklinika">
+                                    <i class="fab fa-facebook text-xl">
+                                    </i>
+                                </a>
+                                <a class="text-gray-400 hover:text-blue-400"
+                                    href="https://www.instagram.com/alfadenta/">
+                                    <i class="fab fa-instagram text-xl">
+                                    </i>
+                                </a>
+
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-semibold mb-4">
+                                Paslaugos
+                            </h4>
+                            <ul class="space-y-1 text-gray-400 text-sm">
+                                <li>
+                                    <a class="hover:text-blue-400" href="nuodugnus-dantu-bukles-istyrimas.html">
+                                        Nuodugnus dantų būklės ištyrimas
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="hover:text-blue-400" href="tyrimai-ir-diagnostika.html">
+                                        Tyrimai ir
+                                        diagnostika
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="hover:text-blue-400" href="issami-vaiku-dantu-patikra.html">
+                                        Išsami vaikų
+                                        dantų patikra
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="hover:text-blue-400" href="burnos-higiena.html">
+                                        Profesionali burnos
+                                        higiena
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="hover:text-blue-400" href="vaiku-odontologija.html">
+                                        Vaikų
+                                        odontologija
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="hover:text-blue-400" href="dantu-implantavimas.html">
+                                        Dantų
+                                        implantacija
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="hover:text-blue-400" href="vienmomete-implantacija.html">
+                                        Vienmomentė
+                                        implantacija
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="hover:text-blue-400" href="dantu-atstatymas-visi-ant-4.html">
+                                        Dantų
+                                        atstatymas „Visi ant 4" metodu
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a class="hover:text-blue-400" href="dantu-laminates.html">
+                                        Dantų atkūrimas
+                                        laminatėmis
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="hover:text-blue-400" href="estetinis-plombavimas.html">
+                                        Estetinis
+                                        plombavimas
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="hover:text-blue-400" href="dantu-papuosalai.html">
+                                        Dantų
+                                        papuošalai
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="hover:text-blue-400" href="dantu-tiesinimas-ortopedija.html">
+                                        Dantų
+                                        tiesinimas kapomis
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="hover:text-blue-400" href="dantu-tiesinimas-vaikams.html">
+                                        Dantų
+                                        tiesinimas kapomis vaikams
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="hover:text-blue-400" href="ortodontinis-gydymas.html">
+                                        Ortodontinis
+                                        gydymas
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="hover:text-blue-400" href="dantu-balinimas-beyond-polus.html">
+                                        Dantų balinimas
+                                        lazeriu
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-semibold mb-4">
+                                Naudinga
+                            </h4>
+                            <ul class="space-y-2 text-gray-400">
+                                <li>
+                                    <a class="hover:text-blue-400" href="../index.html">
+                                        Apie mus
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="hover:text-blue-400" href="../doctors.html">
+                                        Komanda
+                                    </a>
+                                </li>
+                                <li>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="hover:text-blue-400" href="#">
+                                        Kainoraštis
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="hover:text-blue-400" href="../privatumo-politika.html">
+                                        Privatumo politika
+                                    </a>
+                                </li>
+                                <li><a class="hover:text-blue-400" href="../svetaines-informacija.html">Svetainės
+                                        informacija</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-semibold mb-4">
+                                Kontaktai
+                            </h4>
+                            <ul class="space-y-2 text-gray-400 mb-4">
+                                <li>
+                                    <strong>
+                                        Registratūra
+                                    </strong>
+                                </li>
+                                <li>
+                                    I-V: 9:00 – 16:00
+                                </li>
+                                <li>
+                                    VI-VII: Nedirbame
+                                </li>
+                                <li>
+                                    <strong>
+                                        Tel. Nr.
+                                    </strong>
+                                </li>
+                                <li>
+                                    <i class="fas fa-phone mr-2">
+                                    </i>
+                                    +370 612 03030
+                                </li>
+                                <li>
+                                    <strong>
+                                        Adresas
+                                    </strong>
+                                </li>
+                                <li>
+                                    <i class="fas fa-map-marker-alt mr-2">
+                                    </i>
+                                    Vytauto pr. 83, Kaunas, 44238 Kauno m. sav.
+                                </li>
+                                <li>
+                                    <strong>
+                                        El. paštas
+                                    </strong>
+                                </li>
+                                <li>
+                                    <i class="fas fa-envelope mr-2">
+                                    </i>
+                                    info@alfadenta.lt
+                                </li>
+                            </ul>
+                            <div class="mt-4 pt-4 border-t border-gray-800">
+
+                                <h5 class="text-md font-semibold mb-2">Rekvizitai</h5>
+
+                                <ul class="space-y-1 text-gray-400 text-sm">
+
+                                    <li>UAB Alfadenta</li>
+
+                                    <li>Įm. k.: 303415894</li>
+                                        <li>PVM mokėtojas: ne PVM mokėtojas</li>
+                                        <li>Bankas: Luminor bankas</li>
+                                        <li>SWIFT: AGBLLT2X</li>
+                                        <li>A.s.: LT87 4010 0510 0217 6965</li>
+
+                                </ul>
+
+                            </div>
+
+                            <div class="mt-4 pt-4 border-t border-gray-800">
+
+                                <a href="https://epos.inbank.lt/lt/ALFADENTA" target="_blank"
+                                    class="flex items-center space-x-2 text-gray-400 hover:text-white transition">
+
+                                    <i class="fas fa-credit-card"></i>
+
+                                    <span>Paslaugos išsimokėtinai</span>
+
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Map Section -->
+                    <div class="border-t border-gray-800 mt-8 pt-8">
+                        <div class="text-center mb-6">
+                            <h4 class="text-lg font-semibold text-white mb-2">
+                                Raskite mus žemėlapyje
+                            </h4>
+                            <p class="text-gray-400">
+                                Vytauto pr. 83, Kaunas, 44238 Kauno m. sav., Lietuva
+                            </p>
+                        </div>
+                        <div class="w-full h-64 rounded-lg overflow-hidden">
+                            <iframe allowfullscreen="" height="100%" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2294.3901067970974!2d23.922134613200768!3d54.89607487266562!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46e722777b920be7%3A0xca0d319b9b429f03!2sAesthetic%20Dentistry%20Clinic%20Alfadent!5e0!3m2!1sen!2slt!4v1770641257185!5m2!1sen!2slt"
+                                style="border:0;" width="100%">
+                            </iframe>
+                        </div>
+                    </div>
+                    <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
+                        <p>
+                            © 2024 Alfadenta. Visos teisės saugomos.
+                        </p>
+                    </div>
+                </div>
+            </footer>
+            <script>
+                // Mobile menu toggle
+                const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+                const mobileMenu = document.getElementById('mobile-menu');
+                mobileMenuBtn.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                });
+
+                // FAQ Accordion
+                document.querySelectorAll('.faq-toggle').forEach(button => {
+                    button.addEventListener('click', () => {
+                        const targetId = button.getAttribute('data-target');
+                        const targetContent = document.getElementById(targetId);
+                        const icon = button.querySelector('i');
+                        targetContent.classList.toggle('hidden');
+                        icon.classList.toggle('rotate-180');
                     });
-                }
-            });
-        });
-    </script>
+                });
+
+                // Smooth scrolling for anchor links
+                document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                    anchor.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        const target = document.querySelector(this.getAttribute('href'));
+                        if (target) {
+                            target.scrollIntoView({
+                                behavior: 'smooth',
+                                block: 'start'
+                            });
+                        }
+                    });
+                });
+            </script>
 </body>
 
 </html>
