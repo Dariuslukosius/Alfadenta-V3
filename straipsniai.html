@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="lt">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Straipsniai | Alfadenta – Odontologijos klinika Kaune</title>
+    <meta
+        content="Naudingi straipsniai apie dantų priežiūrą, odontologijos naujienas ir sveikos šypsenos patarimus iš Alfadenta specialistų."
+        name="description" />
+    <meta content="index, follow" name="robots" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="assets/js/theme-config.js"></script>
+    <link rel="stylesheet" href="assets/css/theme.css">
+    <link rel="stylesheet" href="assets/css/background-system.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+</head>
+
+<body class="flex flex-col min-h-screen bg-gray-50">
+    <!-- Background System -->
+    <div id="background-container">
+        <div class="bg-layer active" style="background-image: url('assets/images/backgrounds/bg-1.webp');"></div>
+        <div class="bg-layer" style="background-image: url('assets/images/backgrounds/bg-2.webp');"></div>
+        <div class="bg-layer" style="background-image: url('assets/images/backgrounds/bg-3.webp');"></div>
+        <div id="background-overlay"></div>
+    </div>
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white shadow-lg z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <a class="flex items-center space-x-2 hover:opacity-80 transition" href="index.html">
+                    <img alt="Alfadenta Logo" class="h-14 w-auto" src="assets/images/global/alfadenta-logotipas.webp" />
+                </a>
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-6">
+                    <a class="text-gray-700 hover:text-primary transition" href="index.html">Pradžia</a>
+                    <a class="text-gray-700 hover:text-primary transition" href="services.html">Paslaugos</a>
+                    <a class="text-gray-700 hover:text-primary transition" href="doctors.html">Gydytojai</a>
+                    <a class="text-gray-700 hover:text-primary transition" href="gallery.html">Galerija</a>
+                    <a class="text-primary font-semibold" href="straipsniai.html">Straipsniai</a>
+                    <a class="text-gray-700 hover:text-primary transition" href="booking.html">Registruotis</a>
+                    <a class="text-gray-700 hover:text-primary transition" href="contact.html">Kontaktai</a>
+                    <a class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary-dark transition"
+                        href="contact.html">Susisiekite</a>
+                </div>
+                <!-- Mobile Call & Menu Buttons -->
+                <div class="md:hidden flex items-center space-x-3">
+                    <a class="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition flex items-center space-x-2"
+                        href="tel:+37061203030">
+                        <i class="fas fa-phone"></i>
+                        <span class="font-semibold">Skambinti</span>
+                    </a>
+                    <button class="text-gray-700" id="mobile-menu-btn">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- Mobile Menu -->
+            <div class="hidden md:hidden pb-4" id="mobile-menu">
+                <a class="block py-2 text-gray-700 hover:text-primary" href="index.html">Pradžia</a>
+                <a class="block py-2 text-gray-700 hover:text-primary" href="services.html">Paslaugos</a>
+                <a class="block py-2 text-gray-700 hover:text-primary" href="doctors.html">Gydytojai</a>
+                <a class="block py-2 text-gray-700 hover:text-primary" href="gallery.html">Galerija</a>
+                <a class="block py-2 text-primary font-semibold" href="straipsniai.html">Straipsniai</a>
+                <a class="block py-2 text-gray-700 hover:text-primary" href="booking.html">Registruotis</a>
+                <a class="block py-2 text-gray-700 hover:text-primary" href="contact.html">Kontaktai</a>
+                <a class="mt-2 w-full bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary-dark block text-center"
+                    href="contact.html">Susisiekite</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg pt-32 pb-16" data-bg-index="0">
+        <div class="container mx-auto px-4 text-center text-gray-800">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Straipsniai</h1>
+            <p class="text-xl text-gray-700">Naudingi patarimai ir odontologijos naujienos iš mūsų specialistų</p>
+        </div>
+    </section>
+
+    <!-- Articles Grid -->
+    <section class="py-16 bg-white flex-grow">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Inbank article card -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="assets/images/Straipsniai/inbank.png" alt="Inbank mokėjimas dalimis"
+                            class="w-full h-full object-cover" />
+                        <div class="absolute bottom-4 left-4">
+                            <span
+                                class="bg-white text-blue-700 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">Finansavimas</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h2 class="text-xl font-bold text-gray-800 mt-2 mb-3 leading-snug">Inbank mokėjimas dalimis –
+                            patogus gydymo finansavimas odontologijoje</h2>
+                        <p class="text-gray-600 mb-4 leading-relaxed">Lankstus mokėjimo dalimis sprendimas, leidžiantis
+                            padengti gydymo išlaidas per mėnesines įmokas – be didelio vienkartinio mokėjimo.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-gray-400"><i class="fas fa-clock mr-1"></i> ~4 min.</span>
+                            <a href="straipsniai/inbank-isimokejimas.html"
+                                class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary-dark transition text-sm font-semibold">
+                                Skaityti <i class="fas fa-arrow-right ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kapos ar breketai article card -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="assets/images/Straipsniai/ordolines.png" alt="Kapos ar breketai"
+                            class="w-full h-full object-cover" />
+                        <div class="absolute bottom-4 left-4">
+                            <span
+                                class="bg-white text-teal-700 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">Tiesinimas</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h2 class="text-xl font-bold text-gray-800 mt-2 mb-3 leading-snug">Kapos ar breketai – ką
+                            pasirinkti?</h2>
+                        <p class="text-gray-600 mb-4 leading-relaxed">Lyginame du populiariausius dantų tiesinimo
+                            metodus: estetika, komfortas, higiena, vizitų dažnumas ir prognozuojamumas.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-gray-400"><i class="fas fa-clock mr-1"></i> ~5 min.</span>
+                            <a href="straipsniai/kapos-ar-breketai.html"
+                                class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary-dark transition text-sm font-semibold">
+                                Skaityti <i class="fas fa-arrow-right ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pacientai iš užsienio article card -->
+                <!-- Pacientai iš užsienio article card -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="assets/images/Straipsniai/uzsenio.jpg"
+                            alt="Odontologijos paslaugos pacientams iš užsienio" class="w-full h-full object-cover" />
+                        <div class="absolute bottom-4 left-4">
+                            <span
+                                class="bg-white text-indigo-700 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">Užsienio
+                                pacientai</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h2 class="text-xl font-bold text-gray-800 mt-2 mb-3 leading-snug">Odontologijos paslaugos
+                            pacientams iš užsienio</h2>
+                        <p class="text-gray-600 mb-4 leading-relaxed">Planuojate gydymą Lietuvoje? Siūlome nuotolines
+                            konsultacijas, individualų planavimą ir modernias paslaugas atvykstantiems pacientams.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-gray-400"><i class="fas fa-clock mr-1"></i> ~4 min.</span>
+                            <a href="straipsniai/pacientai-is-uzsienio.html"
+                                class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary-dark transition text-sm font-semibold">
+                                Skaityti <i class="fas fa-arrow-right ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 gradient-bg" data-bg-index="2">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Turite klausimų?</h2>
+            <p class="text-xl text-gray-700 mb-8">Susisiekite su mūsų specialistais – mielai atsakysime</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a class="bg-primary text-white px-8 py-4 rounded-lg font-semibold hover:bg-primary-dark transition transform hover:scale-105"
+                    href="booking.html">
+                    <i class="fas fa-calendar-plus mr-2"></i> Registruotis
+                </a>
+                <a class="border-2 border-primary text-primary px-8 py-4 rounded-lg font-semibold hover:bg-primary hover:text-white transition"
+                    href="tel:+37061203030">
+                    <i class="fas fa-phone mr-2"></i> Skambinti dabar
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <a class="flex items-center space-x-2 mb-4 hover:opacity-80 transition" href="index.html">
+                        <img src="assets/images/global/alfadenta-logo-white-text.webp" alt="Alfadenta Logo"
+                            class="h-40 w-auto">
+                    </a>
+                    <p class="text-gray-400">Jūsų šypsenos priežiūra nuo 2014. Mes kuriame šypsenas, kurios keičia
+                        gyvenimus.</p>
+                    <div class="flex space-x-4 mt-4">
+                        <a class="text-gray-400 hover:text-blue-400" href="https://www.facebook.com/alfadentaklinika"><i
+                                class="fab fa-facebook text-xl"></i></a>
+                        <a class="text-gray-400 hover:text-blue-400" href="https://www.instagram.com/alfadenta/"><i
+                                class="fab fa-instagram text-xl"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Paslaugos</h4>
+                    <ul class="space-y-1 text-gray-400 text-sm">
+                        <li><a class="hover:text-blue-400" href="paslaugos/burnos-higiena.html">Profesionali burnos
+                                higiena</a></li>
+                        <li><a class="hover:text-blue-400" href="paslaugos/dantu-tiesinimas-ortopedija.html">Dantų
+                                tiesinimas kapomis</a></li>
+                        <li><a class="hover:text-blue-400" href="paslaugos/dantu-balinimas-beyond-polus.html">Dantų
+                                balinimas Beyond Polus</a></li>
+                        <li><a class="hover:text-blue-400" href="paslaugos/estetinis-plombavimas.html">Estetinis
+                                plombavimas</a></li>
+                        <li><a class="hover:text-blue-400" href="paslaugos/dantu-implantavimas.html">Dantų
+                                implantacija</a></li>
+                        <li><a class="hover:text-blue-400" href="paslaugos/dantu-laminates.html">Dantų laminatės</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Naudinga</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a class="hover:text-blue-400" href="index.html">Apie mus</a></li>
+                        <li><a class="hover:text-blue-400" href="doctors.html">Komanda</a></li>
+                        <li><a class="hover:text-blue-400" href="straipsniai.html">Straipsniai</a></li>
+                        <li><a class="hover:text-blue-400" href="privatumo-politika.html">Privatumo politika</a></li>
+                        <li><a class="hover:text-blue-400" href="svetaines-informacija.html">Svetainės informacija</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Kontaktai</h4>
+                    <ul class="space-y-2 text-gray-400 mb-4">
+                        <li><strong>Registratūra</strong></li>
+                        <li>I-V: 9:00 – 16:00</li>
+                        <li>VI-VII: Nedirbame</li>
+                        <li><strong>Tel. Nr.</strong></li>
+                        <li><i class="fas fa-phone mr-2"></i> +370 612 03030</li>
+                        <li><strong>Adresas</strong></li>
+                        <li><i class="fas fa-map-marker-alt mr-2"></i> Vytauto pr. 83, Kaunas</li>
+                        <li><strong>El. paštas</strong></li>
+                        <li><i class="fas fa-envelope mr-2"></i> info@alfadenta.lt</li>
+                    </ul>
+                    <div class="mt-4 pt-4 border-t border-gray-800">
+                        <a href="https://epos.inbank.lt/lt/ALFADENTA" target="_blank"
+                            class="flex items-center space-x-2 text-gray-400 hover:text-white transition">
+                            <i class="fas fa-credit-card"></i>
+                            <span>Paslaugos išsimokėtinai</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
+                <p>© 2024 Alfadenta. Visos teisės saugomos.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+    <script src="assets/js/background-system.js"></script>
+</body>
+
+</html>

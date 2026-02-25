@@ -110,6 +110,7 @@
                     <a class="text-gray-700 hover:text-primary transition" href="services.html">Paslaugos</a>
                     <a class="text-gray-700 hover:text-primary transition" href="doctors.html">Gydytojai</a>
                     <a class="text-gray-700 hover:text-primary transition" href="gallery.html">Galerija</a>
+                    <a class="text-gray-700 hover:text-primary transition" href="straipsniai.html">Straipsniai</a>
                     <a class="text-gray-700 hover:text-primary transition" href="booking.html">Registruotis</a>
                     <a class="text-gray-700 hover:text-primary transition" href="contact.html">Kontaktai</a>
                     <a class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary-dark transition"
@@ -135,6 +136,7 @@
                 <a class="block py-2 text-gray-700 hover:text-primary" href="services.html">Paslaugos</a>
                 <a class="block py-2 text-gray-700 hover:text-primary" href="doctors.html">Gydytojai</a>
                 <a class="block py-2 text-gray-700 hover:text-primary" href="gallery.html">Galerija</a>
+                <a class="block py-2 text-gray-700 hover:text-primary" href="straipsniai.html">Straipsniai</a>
                 <a class="block py-2 text-gray-700 hover:text-primary" href="booking.html">Registruotis</a>
                 <a class="block py-2 text-gray-700 hover:text-primary" href="contact.html">Kontaktai</a>
                 <button class="mt-2 w-full bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary-dark">
@@ -327,82 +329,257 @@
                 <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Ką sako mūsų pacientai</h2>
                 <p class="text-lg text-gray-600">Tikri atsiliepimai iš mūsų vertinamų pacientų</p>
             </div>
-            <div class="grid md:grid-cols-3 gap-8">
+            <div class="grid md:grid-cols-3 gap-8" id="reviews-grid">
+
                 <!-- Review 1 -->
                 <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-100">
-                    <div class="flex mb-4 text-yellow-400 text-sm">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+                    <div class="flex mb-3 text-yellow-400 text-sm">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i>
                     </div>
-                    <p class="text-gray-600 mb-6 italic">"Nuostabi klinika ir puikus personalas! Labai dziaugiuosi
-                        rezultatu. Tiesinau ne tik dantis, bet ir sukandima. Tiesintis dantis ir susitvarkyti sukandima
-                        pavyko per trumpa perioda (apie 1,5m). Taip pat dariausi estetini dantu plombavima, kuris
-                        paverte mano sypsena nuostabia. Didelis aciu Sigitai ir visam personalui uz nuostabia sypsena!"
-                    </p>
+                    <p class="text-gray-600 mb-4 italic">„Prieš metus lankiausi kitoje klinikoje, kur man pasakė, kad
+                        man nepadės nei breketai, nei kapos (pasiūlė operaciją ir tik tada breketus). Operacijos
+                        nenorėjau, tad jau buvau praradusi viltį turėti gražią šypseną. Tačiau atradusi Alfadentą…"</p>
+                    <div class="text-xs text-gray-400 italic mb-3">Atsakymas: Ačiū už Jūsų pasitikėjimą ir gražius
+                        žodžius! Džiaugiamės galėję padėti.</div>
                     <div class="flex items-center">
                         <div
-                            class="w-12 h-12 bg-primary-light rounded-full flex items-center justify-center text-primary-dark font-bold text-xl mr-4">
-                            V
-                        </div>
+                            class="w-10 h-10 bg-primary-light rounded-full flex items-center justify-center text-primary-dark font-bold text-lg mr-3">
+                            G</div>
                         <div>
-                            <div class="font-bold text-gray-900">Viltė S.</div>
+                            <div class="font-bold text-gray-900">Gintarė Žukauskaitė</div>
                             <div class="text-xs text-gray-500">Pacientė</div>
                         </div>
                     </div>
                 </div>
+
                 <!-- Review 2 -->
                 <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-100">
-                    <div class="flex mb-4 text-yellow-400 text-sm">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+                    <div class="flex mb-3 text-yellow-400 text-sm">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i>
                     </div>
-                    <p class="text-gray-600 mb-6 italic">"Labai džiaugiuosi atradusi šią kliniką! Nuo pat pirmo vizito
-                        visa informacija buvo pateikta labai aiškiai ir visas dantų tiesinimo procesas buvo sklandus ir
-                        malonus. Dar kartą ačiū už puikiai sukonstruotą mano naują šypseną! :)"</p>
+                    <p class="text-gray-600 mb-4 italic">„Ačiū, Alfadenta komandai už naują šypseną, už kantrybę
+                        atsakant į visus klausimus ir detalų viso proceso paaiškinimą. Rezultatai tikrai nustebino ir
+                        pranoko lūkesčius. Dabar galiu mėgautis ne tik nauja šypsena, bet ir sąkandžiu!"</p>
+                    <div class="text-xs text-gray-400 italic mb-3">Atsakymas: Nuoširdžiai dėkojame už teigiamą
+                        atsiliepimą – Jūsų įvertinimas mums labai svarbus.</div>
                     <div class="flex items-center">
                         <div
-                            class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center text-purple-600 font-bold text-xl mr-4">
-                            M
-                        </div>
+                            class="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center text-purple-600 font-bold text-lg mr-3">
+                            R</div>
                         <div>
-                            <div class="font-bold text-gray-900">Monika G.</div>
-                            <div class="text-xs text-gray-500">Pacientė</div>
+                            <div class="font-bold text-gray-900">Renatas Mandrijauskas</div>
+                            <div class="text-xs text-gray-500">Pacientas</div>
                         </div>
                     </div>
                 </div>
+
                 <!-- Review 3 -->
                 <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-100">
-                    <div class="flex mb-4 text-yellow-400 text-sm">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+                    <div class="flex mb-3 text-yellow-400 text-sm">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i>
                     </div>
-                    <p class="text-gray-600 mb-6 italic">"Esu dėkinga “Alfadenta” kolektyvui už pagalbą dantų tiesinimo
-                        metu. Esu patenkinta rezultatu. Didelis dėmesys skiriamas klientui, atsižvelgiama į jo
-                        poreikius. Lengva suderinti visą procesą gyvenant ne Lietuvoje. 😊 Didžiausios rekomendacijos
-                        👍…."</p>
+                    <p class="text-gray-600 mb-4 italic">„Džiaugiuosi atradusi šią kliniką! Prieš metus ieškojau
+                        klinikos dantų tiesinimui. Buvau poroje konsultacijų ir galiausiai pasirinkau būtent šią vietą.
+                        Tai, visų pirma, lėmė palankesni finansiniai aspektai. Pradėjus lankytis maloniai…"</p>
+                    <div class="text-xs text-gray-400 italic mb-3">Atsakymas: Ačiū, kad rinkotės Alfadenta kliniką.
+                        Linkime sveikos ir gražios šypsenos!</div>
                     <div class="flex items-center">
                         <div
-                            class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center text-green-600 font-bold text-xl mr-4">
-                            R
-                        </div>
+                            class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center text-green-600 font-bold text-lg mr-3">
+                            K</div>
                         <div>
-                            <div class="font-bold text-gray-900">Rasa O.</div>
+                            <div class="font-bold text-gray-900">Karolina Patašovaitė</div>
                             <div class="text-xs text-gray-500">Pacientė</div>
                         </div>
                     </div>
                 </div>
+
+                <!-- Review 4 (hidden initially) -->
+                <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-100 hidden" data-extra-review>
+                    <div class="flex mb-3 text-yellow-400 text-sm">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 mb-4 italic">„Labai noriu padėkoti visai komandai. Tobulai atliktas darbas
+                        :) Esu visiškai patenkinta rezultatu. Nepaprastai profesionalūs ir malonūs žmonės. Labai aiškiai
+                        ir suprantamai paaiškino visą dantų tiesinimo kapomis procesą, kas po ko, į ką…"</p>
+                    <div class="text-xs text-gray-400 italic mb-3">Atsakymas: Ačiū už Jūsų pasitikėjimą ir gražius
+                        žodžius! Džiaugiamės galėję padėti.</div>
+                    <div class="flex items-center">
+                        <div
+                            class="w-10 h-10 bg-pink-100 rounded-full flex items-center justify-center text-pink-600 font-bold text-lg mr-3">
+                            M</div>
+                        <div>
+                            <div class="font-bold text-gray-900">Monika Cepiene</div>
+                            <div class="text-xs text-gray-500">Pacientė</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 5 (hidden initially) -->
+                <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-100 hidden" data-extra-review>
+                    <div class="flex mb-3 text-yellow-400 text-sm">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 mb-4 italic">„Džiaugiuosi pasirinkusi šią kliniką dantų tiesinimui. Gydytoja
+                        suteikė visą reikiamą informaciją, atsakė į visus klausimus ir, įsiklausiusi į mano
+                        pageidavimus, parengė tiesinimo planą, kuris užtikrino būtent tokius rezultatus, kokių norėjau.
+                        Procesas greitas, sklandus ir be streso. Rekomenduoju."</p>
+                    <div class="text-xs text-gray-400 italic mb-3">Atsakymas: Ačiū už Jūsų pasitikėjimą ir gražius
+                        žodžius! Džiaugiamės galėję padėti.</div>
+                    <div class="flex items-center">
+                        <div
+                            class="w-10 h-10 bg-yellow-100 rounded-full flex items-center justify-center text-yellow-600 font-bold text-lg mr-3">
+                            E</div>
+                        <div>
+                            <div class="font-bold text-gray-900">Evenika Mandrijauskė</div>
+                            <div class="text-xs text-gray-500">Pacientė</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 6 (hidden initially) -->
+                <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-100 hidden" data-extra-review>
+                    <div class="flex mb-3 text-yellow-400 text-sm">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 mb-4 italic">„Nuostabi klinika ir puikus personalas! Labai džiaugiuosi
+                        rezultatu. Tiesinau ne tik dantis, bet ir sukandimą. Tiesintis dantis ir susitvarkyti sukandimą
+                        pavyko per trumpą periodą (apie 1,5m). Taip pat dariausi estetinį dantų plombavimą…"</p>
+                    <div class="text-xs text-gray-400 italic mb-3">Atsakymas: Ačiū už šiltus žodžius ir rekomendaciją –
+                        tai mus motyvuoja dar labiau.</div>
+                    <div class="flex items-center">
+                        <div
+                            class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 font-bold text-lg mr-3">
+                            V</div>
+                        <div>
+                            <div class="font-bold text-gray-900">Viltė Skruodytė</div>
+                            <div class="text-xs text-gray-500">Pacientė</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 7 (hidden initially) -->
+                <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-100 hidden" data-extra-review>
+                    <div class="flex mb-3 text-yellow-400 text-sm">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 mb-4 italic">„Alfadentoje pirmą kartą apsilankiau su daug įvairių dantų
+                        gydymo baimių dar 2019-aisiais. Tačiau gydytoja Sigita padėjo savo baimes nugalėti ir jau
+                        kelerius metus sėkmingai prižiūri mano šypseną…"</p>
+                    <div class="text-xs text-gray-400 italic mb-3">Atsakymas: Nuoširdžiai dėkojame už teigiamą
+                        atsiliepimą – Jūsų įvertinimas mums labai svarbus.</div>
+                    <div class="flex items-center">
+                        <div
+                            class="w-10 h-10 bg-teal-100 rounded-full flex items-center justify-center text-teal-600 font-bold text-lg mr-3">
+                            M</div>
+                        <div>
+                            <div class="font-bold text-gray-900">Marija Valatkevičienė</div>
+                            <div class="text-xs text-gray-500">Pacientė</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 8 (hidden initially) -->
+                <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-100 hidden" data-extra-review>
+                    <div class="flex mb-3 text-yellow-400 text-sm">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 mb-4 italic">„Labai džiaugiuosi atradusi šią kliniką! Nuo pat pirmo vizito
+                        visa informacija buvo pateikta labai aiškiai ir visas dantų tiesinimo procesas buvo sklandus ir
+                        malonus. Dar kartą ačiū už puikiai sukonstruotą mano naują šypseną! :)"</p>
+                    <div class="text-xs text-gray-400 italic mb-3">Atsakymas: Džiaugiamės Jūsų pasitikėjimu. Iki kitų
+                        apsilankymų Alfadenta klinikoje!</div>
+                    <div class="flex items-center">
+                        <div
+                            class="w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center text-orange-600 font-bold text-lg mr-3">
+                            M</div>
+                        <div>
+                            <div class="font-bold text-gray-900">Monika Grimailaitė</div>
+                            <div class="text-xs text-gray-500">Pacientė</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 9 (hidden initially) -->
+                <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-100 hidden" data-extra-review>
+                    <div class="flex mb-3 text-yellow-400 text-sm">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 mb-4 italic">„Iš visos širdies noriu padėkoti gydytojai Sigitai – už
+                        rūpestį, šilumą ir nuoširdumą. Tai ne tik puiki specialistė, bet ir labai mielas, šiltas žmogus.
+                        Visada jaučiu, kad esu išgirsta, priimama su šypsena ir nuoširdžiu noru padėti. Iškilus…"</p>
+                    <div class="text-xs text-gray-400 italic mb-3">Atsakymas: Nuoširdžiai dėkojame už teigiamą
+                        atsiliepimą – Jūsų įvertinimas mums labai svarbus.</div>
+                    <div class="flex items-center">
+                        <div
+                            class="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center text-red-500 font-bold text-lg mr-3">
+                            G</div>
+                        <div>
+                            <div class="font-bold text-gray-900">Giedrė Rutkauskienė</div>
+                            <div class="text-xs text-gray-500">Pacientė</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 10 (hidden initially) -->
+                <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-100 hidden" data-extra-review>
+                    <div class="flex mb-3 text-yellow-400 text-sm">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 mb-4 italic">„Rekomenduoju! Nuostabūs darbuotojai kruopščiai ir dėmesingai
+                        suteikia reikiamą gydymą ir pagalbą."</p>
+                    <div class="flex items-center">
+                        <div
+                            class="w-10 h-10 bg-indigo-100 rounded-full flex items-center justify-center text-indigo-600 font-bold text-lg mr-3">
+                            N</div>
+                        <div>
+                            <div class="font-bold text-gray-900">Nida Dubosaitė</div>
+                            <div class="text-xs text-gray-500">Pacientė</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Load more button -->
+            <div class="text-center mt-10" id="load-more-container">
+                <button id="load-more-btn"
+                    class="bg-white border-2 border-primary text-primary px-8 py-3 rounded-lg font-semibold hover:bg-primary hover:text-white transition"
+                    onclick="loadMoreReviews()">
+                    <i class="fas fa-chevron-down mr-2"></i> Rodyti daugiau atsiliepimų
+                </button>
+            </div>
+            <!-- Google Maps reviews link -->
+            <div class="text-center mt-6">
+                <a href="https://www.google.com/maps/place/Aesthetic+Dentistry+Clinic+Alfadent/@54.896075,23.924715,15z/data=!4m18!1m9!3m8!1s0x46e722777b920be7:0xca0d319b9b429f03!2sAesthetic+Dentistry+Clinic+Alfadent!8m2!3d54.8960749!4d23.9247149!9m1!1b1!16s%2Fg%2F11b6hmmd30!3m7!1s0x46e722777b920be7:0xca0d319b9b429f03!8m2!3d54.8960749!4d23.9247149!9m1!1b1!16s%2Fg%2F11b6hmmd30?hl=en&entry=ttu&g_ep=EgoyMDI2MDIyMi4wIKXMDSoASAFQAw%3D%3D"
+                    target="_blank" rel="noopener"
+                    class="inline-flex items-center text-red-500 hover:text-red-700 transition text-sm font-medium">
+                    <i class="fab fa-google mr-2 text-base"></i>
+                    Skaityti visus atsiliepimus „Google" žemėlapiuose
+                    <i class="fas fa-external-link-alt ml-2 text-xs"></i>
+                </a>
             </div>
         </div>
     </section>
+    <script>
+        function loadMoreReviews() {
+            document.querySelectorAll('[data-extra-review]').forEach(el => el.classList.remove('hidden'));
+            document.getElementById('load-more-container').classList.add('hidden');
+        }
+    </script>
+
+
+
     <!-- CTA Section -->
     <section class="py-16 gradient-bg" data-bg-index="2">
         <div class="container mx-auto px-4 text-center">

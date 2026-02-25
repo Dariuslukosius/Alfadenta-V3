@@ -1,508 +1,703 @@
 <!DOCTYPE html>
 
 <html lang="lt">
+
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Paslaugos - LamaLocal</title>
-<meta content="Visos odontologijos paslaugos vienoje vietoje. Dantų gydymas, implantavimas, protezavimas, balinimas, ortodontija ir daugiau. Teikiame kokybišką priežiūrą daugiau nei 26 metų Vilniuje." name="description"/>
-<meta content="index, follow" name="robots"/>
-<script src="https://cdn.tailwindcss.com"></script>
-<script src="assets/js/theme-config.js"></script>
-<link href="assets/css/theme.css" rel="stylesheet"/>
-<link href="assets/css/background-system.css" rel="stylesheet"/>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
-<style>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Paslaugos - LamaLocal</title>
+    <meta
+        content="Visos odontologijos paslaugos vienoje vietoje. Dantų gydymas, implantavimas, protezavimas, balinimas, ortodontija ir daugiau. Teikiame kokybišką priežiūrą daugiau nei 26 metų Vilniuje."
+        name="description" />
+    <meta content="index, follow" name="robots" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="assets/js/theme-config.js"></script>
+    <link href="assets/css/theme.css" rel="stylesheet" />
+    <link href="assets/css/background-system.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+    <style>
         /* Unique styles for services page if any */
     </style>
 </head>
+
 <body class="">
-<!-- Background System -->
-<div id="background-container">
-<div class="bg-layer active" style="background-image: url('assets/images/backgrounds/bg-1.webp');"></div>
-<div class="bg-layer" style="background-image: url('assets/images/backgrounds/bg-2.webp');"></div>
-<div class="bg-layer" style="background-image: url('assets/images/backgrounds/bg-3.webp');"></div>
-<div id="background-overlay"></div>
-</div>
-<!-- Navigation -->
-<nav class="fixed top-0 w-full bg-white shadow-lg z-50">
-<div class="container mx-auto px-4">
-<div class="flex justify-between items-center py-4">
-<a class="flex items-center space-x-2 hover:opacity-80 transition" href="index.html">
-<img alt="Alfadenta Logo" class="h-14 w-auto" src="assets/images/global/alfadenta-logotipas.webp"/>
-</a>
-<!-- Desktop Menu -->
-<div class="hidden md:flex items-center space-x-6">
-<a class="text-gray-700 hover:text-primary transition" href="index.html">Pradžia</a>
-<a class="text-primary font-semibold" href="services.html">Paslaugos</a>
-<a class="text-gray-700 hover:text-primary transition" href="doctors.html">Gydytojai</a>
-<a class="text-gray-700 hover:text-primary transition" href="gallery.html">Galerija</a>
-<a class="text-gray-700 hover:text-primary transition" href="booking.html">Registruotis</a>
-<a class="text-gray-700 hover:text-primary transition" href="contact.html">Kontaktai</a>
-<a class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary-dark transition" href="contact.html">
+    <!-- Background System -->
+    <div id="background-container">
+        <div class="bg-layer active" style="background-image: url('assets/images/backgrounds/bg-1.webp');"></div>
+        <div class="bg-layer" style="background-image: url('assets/images/backgrounds/bg-2.webp');"></div>
+        <div class="bg-layer" style="background-image: url('assets/images/backgrounds/bg-3.webp');"></div>
+        <div id="background-overlay"></div>
+    </div>
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white shadow-lg z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <a class="flex items-center space-x-2 hover:opacity-80 transition" href="index.html">
+                    <img alt="Alfadenta Logo" class="h-14 w-auto" src="assets/images/global/alfadenta-logotipas.webp" />
+                </a>
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-6">
+                    <a class="text-gray-700 hover:text-primary transition" href="index.html">Pradžia</a>
+                    <a class="text-primary font-semibold" href="services.html">Paslaugos</a>
+                    <a class="text-gray-700 hover:text-primary transition" href="doctors.html">Gydytojai</a>
+                    <a class="text-gray-700 hover:text-primary transition" href="gallery.html">Galerija</a>
+                    <a class="text-gray-700 hover:text-primary transition" href="straipsniai.html">Straipsniai</a>
+                    <a class="text-gray-700 hover:text-primary transition" href="booking.html">Registruotis</a>
+                    <a class="text-gray-700 hover:text-primary transition" href="contact.html">Kontaktai</a>
+                    <a class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary-dark transition"
+                        href="contact.html">
                         Susisiekite
                     </a>
-</div>
-<!-- Mobile Call & Menu Buttons -->
-<div class="md:hidden flex items-center space-x-3">
-<a class="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition flex items-center space-x-2" href="tel:+370 612 03030">
-<i class="fas fa-phone"></i>
-<span class="font-semibold">Skambinti</span>
-</a>
-<button class="text-gray-700" id="mobile-menu-btn">
-<i class="fas fa-bars text-xl"></i>
-</button>
-</div>
-</div>
-<!-- Mobile Menu -->
-<div class="hidden md:hidden pb-4" id="mobile-menu">
-<a class="block py-2 text-gray-700 hover:text-primary" href="index.html">Pradžia</a>
-<a class="block py-2 text-primary font-semibold" href="services.html">Paslaugos</a>
-<a class="block py-2 text-gray-700 hover:text-primary" href="doctors.html">Gydytojai</a>
-<a class="text-gray-700 hover:text-primary transition" href="gallery.html">Galerija</a>
-<a class="block py-2 text-gray-700 hover:text-primary" href="booking.html">Registruotis</a>
-<a class="block py-2 text-gray-700 hover:text-primary" href="contact.html">Kontaktai</a>
-<button class="mt-2 w-full bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary-dark">
+                </div>
+                <!-- Mobile Call & Menu Buttons -->
+                <div class="md:hidden flex items-center space-x-3">
+                    <a class="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition flex items-center space-x-2"
+                        href="tel:+370 612 03030">
+                        <i class="fas fa-phone"></i>
+                        <span class="font-semibold">Skambinti</span>
+                    </a>
+                    <button class="text-gray-700" id="mobile-menu-btn">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- Mobile Menu -->
+            <div class="hidden md:hidden pb-4" id="mobile-menu">
+                <a class="block py-2 text-gray-700 hover:text-primary" href="index.html">Pradžia</a>
+                <a class="block py-2 text-primary font-semibold" href="services.html">Paslaugos</a>
+                <a class="block py-2 text-gray-700 hover:text-primary" href="doctors.html">Gydytojai</a>
+                <a class="text-gray-700 hover:text-primary transition" href="gallery.html">Galerija</a>
+                <a class="block py-2 text-gray-700 hover:text-primary" href="straipsniai.html">Straipsniai</a>
+                <a class="block py-2 text-gray-700 hover:text-primary" href="booking.html">Registruotis</a>
+                <a class="block py-2 text-gray-700 hover:text-primary" href="contact.html">Kontaktai</a>
+                <button class="mt-2 w-full bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary-dark">
                     Susisiekite
                 </button>
-</div>
-</div>
-</nav>
-<!-- Hero Section -->
-<section class="gradient-bg pt-24 pb-16" data-bg-index="0">
-<div class="container mx-auto px-4 text-center">
-<h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Mūsų Paslaugos</h1>
-<p class="text-xl text-gray-700 max-w-3xl mx-auto">
+            </div>
+        </div>
+    </nav>
+    <!-- Hero Section -->
+    <section class="gradient-bg pt-24 pb-16" data-bg-index="0">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Mūsų Paslaugos</h1>
+            <p class="text-xl text-gray-700 max-w-3xl mx-auto">
                 Mes siūlome visapusį odontologijos paslaugų spektrą, naudodami naujausias technologijas ir technikas,
                 kad
                 užtikrintume geriausią galimą priežiūrą.
             </p>
-</div>
-</section>
-<!-- Services Grid -->
-<section class="py-16 bg-glass" data-bg-index="1" id="services-section">
-<div class="container mx-auto px-4">
-<div class="text-center mb-12">
-<h2 class="text-3xl font-bold text-gray-800 mb-4">Mūsų Paslaugos</h2>
-<p class="text-gray-600 max-w-2xl mx-auto">
+        </div>
+    </section>
+    <!-- Services Grid -->
+    <section class="py-16 bg-glass" data-bg-index="1" id="services-section">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Mūsų Paslaugos</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
                     Kategorizuotas paslaugų sąrašas jūsų patogumui.
                 </p>
-</div>
-<!-- Filter Categories Dropdown -->
-<div class="mb-12 flex flex-wrap justify-center gap-4">
-<!-- Category Dropdown -->
-<div class="relative inline-block" id="category-dropdown">
-<button class="bg-white border border-gray-300 rounded-lg px-5 py-3 text-gray-700 font-medium flex items-center gap-2 hover:bg-gray-50 transition w-full sm:w-auto sm:min-w-[250px] justify-between shadow-sm" id="dropdown-button">
-<span id="selected-category">Visos kategorijos</span>
-<svg class="w-5 h-5 transition-transform" fill="none" id="dropdown-arrow" stroke="currentColor" viewbox="0 0 24 24">
-<path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-</path>
-</svg>
-</button>
-<div class="hidden absolute left-0 mt-2 w-full bg-white border border-gray-200 rounded-lg shadow-lg z-40 max-h-96 overflow-y-auto" id="dropdown-menu">
-<button class="category-option w-full text-left px-5 py-3 hover:bg-blue-50 transition font-medium text-gray-700 border-b border-gray-100" data-filter="all">
+            </div>
+            <!-- Filter Categories Dropdown -->
+            <div class="mb-12 flex flex-wrap justify-center gap-4">
+                <!-- Category Dropdown -->
+                <div class="relative inline-block" id="category-dropdown">
+                    <button
+                        class="bg-white border border-gray-300 rounded-lg px-5 py-3 text-gray-700 font-medium flex items-center gap-2 hover:bg-gray-50 transition w-full sm:w-auto sm:min-w-[250px] justify-between shadow-sm"
+                        id="dropdown-button">
+                        <span id="selected-category">Visos kategorijos</span>
+                        <svg class="w-5 h-5 transition-transform" fill="none" id="dropdown-arrow" stroke="currentColor"
+                            viewbox="0 0 24 24">
+                            <path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                            </path>
+                        </svg>
+                    </button>
+                    <div class="hidden absolute left-0 mt-2 w-full bg-white border border-gray-200 rounded-lg shadow-lg z-40 max-h-96 overflow-y-auto"
+                        id="dropdown-menu">
+                        <button
+                            class="category-option w-full text-left px-5 py-3 hover:bg-blue-50 transition font-medium text-gray-700 border-b border-gray-100"
+                            data-filter="all">
                             Visos kategorijos
                         </button>
-<button class="category-option w-full text-left px-5 py-3 hover:bg-blue-50 transition text-gray-700" data-filter="tiesinimas">
+                        <button
+                            class="category-option w-full text-left px-5 py-3 hover:bg-blue-50 transition text-gray-700"
+                            data-filter="tiesinimas">
                             Dantų tiesinimas
                         </button>
-<button class="category-option w-full text-left px-5 py-3 hover:bg-blue-50 transition text-gray-700" data-filter="estetika">
+                        <button
+                            class="category-option w-full text-left px-5 py-3 hover:bg-blue-50 transition text-gray-700"
+                            data-filter="estetika">
                             Dantų estetika
                         </button>
-<button class="category-option w-full text-left px-5 py-3 hover:bg-blue-50 transition text-gray-700" data-filter="balinimas">
-                            Dantų balinimas
-                        </button>
-<button class="category-option w-full text-left px-5 py-3 hover:bg-blue-50 transition text-gray-700" data-filter="gydymas">
-                            Dantų gydymas
-                        </button>
-<button class="category-option w-full text-left px-5 py-3 hover:bg-blue-50 transition text-gray-700" data-filter="atstatymas">
+                        <button
+                            class="category-option w-full text-left px-5 py-3 hover:bg-blue-50 transition text-gray-700"
+                            data-filter="atstatymas">
                             Priekinių dantų atstatymas
                         </button>
-<button class="category-option w-full text-left px-5 py-3 hover:bg-blue-50 transition text-gray-700" data-filter="kuponai">
-                            Dovanų kuponai
-                        </button>
-<button class="category-option w-full text-left px-5 py-3 hover:bg-blue-50 transition text-gray-700" data-filter="vaikams">
-                            Vaikams
-                        </button>
-<button class="category-option w-full text-left px-5 py-3 hover:bg-blue-50 transition text-gray-700" data-filter="skaitmenines">
-                            Skaitmeninės technologijos
-                        </button>
-<button class="category-option w-full text-left px-5 py-3 hover:bg-blue-50 transition text-gray-700" data-filter="naujausios">
-                            Naujausios technologijos
-                        </button>
-<button class="category-option w-full text-left px-5 py-3 hover:bg-blue-50 transition text-gray-700" data-filter="sakandis">
+                        <button
+                            class="category-option w-full text-left px-5 py-3 hover:bg-blue-50 transition text-gray-700"
+                            data-filter="sakandis">
                             Sąkandžio pakėlimas
                         </button>
-<button class="category-option w-full text-left px-5 py-3 hover:bg-blue-50 transition text-gray-700" data-filter="po-orto">
-                            Po ortodontinio gydymo
+                        <button
+                            class="category-option w-full text-left px-5 py-3 hover:bg-blue-50 transition text-gray-700"
+                            data-filter="gydymas">
+                            Dantų gydymas
                         </button>
-<button class="category-option w-full text-left px-5 py-3 hover:bg-blue-50 transition text-gray-700" data-filter="higiena">
+                        <button
+                            class="category-option w-full text-left px-5 py-3 hover:bg-blue-50 transition text-gray-700"
+                            data-filter="balinimas">
+                            Dantų balinimas
+                        </button>
+                        <button
+                            class="category-option w-full text-left px-5 py-3 hover:bg-blue-50 transition text-gray-700"
+                            data-filter="higiena">
                             Profesionali higiena
                         </button>
-</div>
-</div>
-<!-- Search Box -->
-<div class="relative w-full sm:w-auto">
-<input class="border border-gray-300 rounded-lg px-5 py-3 pl-12 w-full sm:w-auto sm:min-w-[250px] focus:outline-none focus:ring-2 focus:ring-primary shadow-sm" id="search-input" placeholder="Paieška..." type="text"/>
-<svg class="w-5 h-5 text-gray-400 absolute left-4 top-1/2 transform -translate-y-1/2" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-<path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
-</svg>
-</div>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" id="services-grid"><div class="service-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl" data-category="higiena">
-<div class="relative h-48 bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center">
-<img alt="Burnos higiena" class="lazy-image w-full h-full object-cover drop-shadow-lg" loading="lazy" src="assets/images/services/korteles%20nuoptraukos/Patikimumas%20dantistas.webp"/>
-</div>
-<div class="p-6">
-<h3 class="text-xl font-bold text-gray-800 mb-3">Burnos higiena</h3>
-<p class="text-gray-600 mb-4">Profesionalios burnos higienos procedūros.</p>
-<a class="w-full bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary-dark transition text-center block" href="paslaugos/burnos-higiena.html">Plačiau</a>
-</div>
-</div><div class="service-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl" data-category="higiena">
-<div class="relative h-48 flex items-center justify-center"><img alt="Lazerinė higiena" class="lazy-image w-full h-full object-cover" loading="lazy" src="assets/images/services/lazerine-higiena-1.webp"/></div>
-<div class="p-6">
-<h3 class="text-xl font-bold text-gray-800 mb-3">Lazerinė higiena</h3>
-<p class="text-gray-600 mb-4">Lazerio panaudojimas efektyvesnei higienai.</p>
-<a class="w-full bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary-dark transition text-center block" href="paslaugos/lazerine-higiena.html">Plačiau</a>
-</div>
-</div><div class="service-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl" data-category="higiena">
-<div class="relative h-48 flex items-center justify-center"><img alt="Herpes gydymas lazeriu" class="lazy-image w-full h-full object-cover" loading="lazy" src="assets/images/services/herpes-gydymas-lazeriu.webp"/></div>
-<div class="p-6">
-<h3 class="text-xl font-bold text-gray-800 mb-3">Herpes gydymas lazeriu</h3>
-<p class="text-gray-600 mb-4">Greitas ir efektyvus pūslelinės gydymas.</p>
-<a class="w-full bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary-dark transition text-center block" href="paslaugos/herpes-gydymas-lazeriu.html">Plačiau</a>
-</div>
-</div><div class="service-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl" data-category="po-orto">
-<div class="relative h-48 flex items-center justify-center"><img alt="Retencinės vielutės" class="lazy-image w-full h-full object-cover" loading="lazy" src="assets/images/services/retencines-vielutes-1.webp"/></div>
-<div class="p-6">
-<h3 class="text-xl font-bold text-gray-800 mb-3">Retencinės vielutės</h3>
-<p class="text-gray-600 mb-4">Ilgalaikis fiksavimas po ortodontinio gydymo.</p>
-<a class="w-full bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary-dark transition text-center block" href="paslaugos/retencines-vielutes.html">Plačiau</a>
-</div>
-</div><div class="service-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl" data-category="po-orto">
-<div class="relative h-48 flex items-center justify-center"><img alt="Naktiniai Reteineriai" class="lazy-image w-full h-full object-cover" loading="lazy" src="assets/images/services/korteles%20nuoptraukos/Naktiniai%20reteineriai.webp"/></div>
-<div class="p-6">
-<h3 class="text-xl font-bold text-gray-800 mb-3">Naktiniai Reteineriai</h3>
-<p class="text-gray-600 mb-4">Rezultato užtikrinimui po tiesinimo.</p>
-<a class="w-full bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary-dark transition text-center block" href="paslaugos/naktiniai-reteineriai.html">Plačiau</a>
-</div>
-</div><div class="service-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl" data-category="skaitmenines">
-<div class="relative h-48 flex items-center justify-center"><img alt="iTero Lumina skaneris" class="lazy-image w-full h-full object-cover" loading="lazy" src="assets/images/services/korteles%20nuoptraukos/Itero%20Lumina%20ekranas.webp"/></div>
-<div class="p-6">
-<h3 class="text-xl font-bold text-gray-800 mb-3">iTero Lumina skaneris</h3>
-<p class="text-gray-600 mb-4">Itin tikslus 3D skenavimas be atspaudų.</p>
-<a class="w-full bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary-dark transition text-center block" href="paslaugos/itero-lumina.html">Plačiau</a>
-</div>
-</div><div class="service-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl" data-category="sakandis">
-<div class="relative h-48 flex items-center justify-center"><img alt="Skenavimas iTero skaneriu" class="lazy-image w-full h-full object-cover" loading="lazy" src="assets/images/services/korteles%20nuoptraukos/Itero%20lumina%20naujas.webp"/></div>
-<div class="p-6">
-<h3 class="text-xl font-bold text-gray-800 mb-3">Skenavimas iTero skaneriu</h3>
-<p class="text-gray-600 mb-4">Diagnostika sąkandžio analizei.</p>
-<a class="w-full bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary-dark transition text-center block" href="paslaugos/skenavimas-itero.html">Plačiau</a>
-</div>
-</div><div class="service-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl" data-category="skaitmenines">
-<div class="relative h-48 bg-gradient-to-br from-teal-400 to-teal-600 flex items-center justify-center">
-<img alt="Tyrimai ir diagnostika" class="lazy-image w-full h-full object-cover drop-shadow-lg" loading="lazy" onerror="this.src='https://picsum.photos/seed/dental-diagnostics/400/300'" src="assets/images/services/korteles%20nuoptraukos/Tyrimai.webp"/>
-</div>
-<div class="p-6">
-<h3 class="text-xl font-bold text-gray-800 mb-3">Tyrimai ir diagnostika</h3>
-<p class="text-gray-600 mb-4">Modernūs diagnostikos metodai.</p>
-<a class="w-full bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary-dark transition text-center block" href="paslaugos/tyrimai-ir-diagnostika.html">Plačiau</a>
-</div>
-</div><div class="service-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl" data-category="tiesinimas">
-<div class="relative h-48 bg-gradient-to-br from-emerald-400 to-emerald-600 flex items-center justify-center">
-<a class="w-full h-full block" href="paslaugos/dantu-tiesinimas-ortopedija.html">
-<img alt="Dantų tiesinimas kapomis" class="lazy-image w-full h-full object-cover drop-shadow-lg hover:opacity-90 transition" loading="lazy" onerror="this.src='https://picsum.photos/seed/dantu-tiesinimas/400/300'" src="assets/images/services/Tiesinimas.jpg"/>
-</a>
-</div>
-<div class="p-6">
-<h3 class="text-xl font-bold text-gray-800 mb-3">Dantų tiesinimas kapomis</h3>
-<p class="text-gray-600 mb-4">Dantų tiesinimas naudojant modernias ortodontines sistemas.</p>
-<a class="w-full bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary-dark transition text-center block" href="paslaugos/dantu-tiesinimas-ortopedija.html">Plačiau</a>
-</div>
-</div><div class="service-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl" data-category="tiesinimas">
-<div class="relative h-48 flex items-center justify-center"><img alt="Six Month Smiles breketai" class="lazy-image w-full h-full object-cover" loading="lazy" src="assets/images/services/korteles%20nuoptraukos/Six%20Month%20Smiles%20breketai.webp"/>
-</div>
-<div class="p-6">
-<h3 class="text-xl font-bold text-gray-800 mb-3">Six Month Smiles breketai</h3>
-<p class="text-gray-600 mb-4">Greitas dantų tiesinimas su Six Month Smiles sistema.</p>
-<a class="w-full bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary-dark transition text-center block" href="paslaugos/dantu-tiesinimas.html">Plačiau</a>
-</div>
-</div><div class="service-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl" data-category="tiesinimas vaikams">
-<div class="relative h-48 bg-gradient-to-br from-emerald-400 to-emerald-600 flex items-center justify-center">
-<img alt="Ortodontinis gydymas" class="lazy-image w-full h-full object-cover drop-shadow-lg" loading="lazy" src="assets/images/services/korteles%20nuoptraukos/Sypsena.webp"/>
-</div>
-<div class="p-6">
-<h3 class="text-xl font-bold text-gray-800 mb-3">Ortodontinis gydymas</h3>
-<p class="text-gray-600 mb-4">Sudėtingas dantų ir žandikaulio anomalijų gydymas.</p>
-<a class="w-full bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary-dark transition text-center block" href="paslaugos/ortodontinis-gydymas.html">Plačiau</a>
-</div>
-</div><div class="service-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl" data-category="estetika atstatymas gydymas">
-<div class="relative h-48 bg-gradient-to-br from-teal-400 to-teal-600 flex items-center justify-center">
-<img alt="Estetinis plombavimas" class="lazy-image w-full h-full object-cover drop-shadow-lg" loading="lazy" onerror="this.src='https://picsum.photos/seed/estetinis-plombavimas/400/300'" src="assets/images/services/estetinis-plombavimas/aesthetic-filling-2.webp"/>
-</div>
-<div class="p-6">
-<h3 class="text-xl font-bold text-gray-800 mb-3">Estetinis plombavimas</h3>
-<p class="text-gray-600 mb-4">Spalvotos kompozicinės plombos natūraliam dantų atkūrimui.</p>
-<a class="w-full bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary-dark transition text-center block" href="paslaugos/estetinis-plombavimas.html">Plačiau</a>
-</div>
-</div><div class="service-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl" data-category="estetika">
-<div class="relative h-48 flex items-center justify-center"><img alt="Dantų papuošalai" class="lazy-image w-full h-full object-cover" loading="lazy" src="assets/images/services/dantu-papuosalai-1.webp"/></div>
-<div class="p-6">
-<h3 class="text-xl font-bold text-gray-800 mb-3">Dantų papuošalai</h3>
-<p class="text-gray-600 mb-4">Išskirtinis akcentas jūsų šypsenai.</p>
-<a class="w-full bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary-dark transition text-center block" href="paslaugos/dantu-papuosalai.html">Plačiau</a>
-</div>
-</div><div class="service-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl" data-category="balinimas naujausios">
-<div class="relative h-48 bg-gradient-to-br from-purple-400 to-purple-600 flex items-center justify-center">
-<img alt="Balinimas Beyond Polus sistema" class="lazy-image w-full h-full object-cover drop-shadow-lg" loading="lazy" src="assets/images/services/balinimas-lazeriu.webp"/>
-</div>
-<div class="p-6">
-<h3 class="text-xl font-bold text-gray-800 mb-3">Balinimas Beyond Polus sistema</h3>
-<p class="text-gray-600 mb-4">Pažangus balinimas kabinete be skausmo.</p>
-<a class="w-full bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary-dark transition text-center block" href="paslaugos/dantu-balinimas-beyond-polus.html">Plačiau</a>
-</div>
-</div><div class="service-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl" data-category="balinimas">
-<div class="relative h-48 flex items-center justify-center"><img alt="Greitas dantų balinimas Quick" class="lazy-image w-full h-full object-cover" loading="lazy" src="assets/images/services/greitas-dantu-balinimas-quick.webp"/></div>
-<div class="p-6">
-<h3 class="text-xl font-bold text-gray-800 mb-3">Greitas dantų balinimas Quick</h3>
-<p class="text-gray-600 mb-4">Efektyvus balinimas iškart po burnos higienos.</p>
-<a class="w-full bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary-dark transition text-center block" href="paslaugos/dantu-balinimas-quick.html">Plačiau</a>
-</div>
-</div><div class="service-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl" data-category="balinimas">
-<div class="relative h-48 bg-gradient-to-br from-purple-400 to-purple-600 flex items-center justify-center">
-<img alt="Balinimas kapomis namuose" class="lazy-image w-full h-full object-cover drop-shadow-lg" loading="lazy" src="assets/images/services/balinimas-kapomis.webp"/>
-</div>
-<div class="p-6">
-<h3 class="text-xl font-bold text-gray-800 mb-3">Balinimas kapomis namuose</h3>
-<p class="text-gray-600 mb-4">Profesionalus dantų balinimas namų sąlygomis.</p>
-<a class="w-full bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary-dark transition text-center block" href="paslaugos/balinimas-kapomis.html">Plačiau</a>
-</div>
-</div><div class="service-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl" data-category="gydymas estetika atstatymas">
-<div class="relative h-48 flex items-center justify-center"><img alt="Priekinių dantų plombavimas" class="lazy-image w-full h-full object-cover" loading="lazy" src="assets/images/services/priekiniu-dantu-plombavimas.webp"/></div>
-<div class="p-6">
-<h3 class="text-xl font-bold text-gray-800 mb-3">Priekinių dantų plombavimas</h3>
-<p class="text-gray-600 mb-4">Estetiškas priekinių dantų atstatymas.</p>
-<a class="w-full bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary-dark transition text-center block" href="paslaugos/estetinis-plombavimas.html">Plačiau</a>
-</div>
-</div><div class="service-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl" data-category="kuponai">
-<div class="relative h-48 flex items-center justify-center">
-<img alt="Dovanų kuponai" class="lazy-image w-full h-full object-cover" loading="lazy" src="assets/images/services/Dovanu kuponas 2.jpg"/>
-</div>
-<div class="p-6">
-<h3 class="text-xl font-bold text-gray-800 mb-3">Dovanų kuponai</h3>
-<p class="text-gray-600 mb-4">Puiki dovana jūsų artimiesiems.</p>
-<a class="w-full bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary-dark transition text-center block" href="paslaugos/dovanu-kuponai.html">Plačiau</a>
-</div>
-</div><div class="service-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl" data-category="higiena">
-<div class="relative h-48 flex items-center justify-center"><img alt="Individualus priemonių parinkimas" class="lazy-image w-full h-full object-cover" loading="lazy" src="assets/images/services/individualus-priemoniu-parinkimas.webp"/></div>
-<div class="p-6">
-<h3 class="text-xl font-bold text-gray-800 mb-3">Individualus priemonių parinkimas</h3>
-<p class="text-gray-600 mb-4">Asmeninė konsultacija dėl priežiūros priemonių.</p>
-<a class="w-full bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary-dark transition text-center block" href="paslaugos/individualus-priemoniu-parinkimas.html">Plačiau</a>
-</div>
-</div><div class="service-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl" data-category="higiena">
-<div class="relative h-48 flex items-center justify-center"><img alt="Higienos apmokymai" class="lazy-image w-full h-full object-cover" loading="lazy" src="assets/images/services/korteles%20nuoptraukos/Dantu%20balinimas.webp"/></div>
-<div class="p-6">
-<h3 class="text-xl font-bold text-gray-800 mb-3">Higienos apmokymai</h3>
-<p class="text-gray-600 mb-4">Mokymai, kaip taisyklingai prižiūrėti dantis.</p>
-<a class="w-full bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary-dark transition text-center block" href="paslaugos/higienos-apmokymai.html">Plačiau</a>
-</div>
-</div><div class="service-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl" data-category="gydymas">
-<div class="relative h-48 flex items-center justify-center">
-<img alt="Krūminių dantų plombavimas" class="lazy-image w-full h-full object-cover" loading="lazy" src="assets/images/services/kruminiu-dantu-plombavimas.webp"/>
-</div>
-<div class="p-6">
-<h3 class="text-xl font-bold text-gray-800 mb-3">Krūminių dantų plombavimas</h3>
-<p class="text-gray-600 mb-4">Tvirtas ir ilgaamžis kramtomųjų dantų atstatymas atkuriant
+                        <button
+                            class="category-option w-full text-left px-5 py-3 hover:bg-blue-50 transition text-gray-700"
+                            data-filter="po-orto">
+                            Po ortodontinio gydymo
+                        </button>
+                        <button
+                            class="category-option w-full text-left px-5 py-3 hover:bg-blue-50 transition text-gray-700"
+                            data-filter="skaitmenines">
+                            Skaitmeninės technologijos
+                        </button>
+                        <button
+                            class="category-option w-full text-left px-5 py-3 hover:bg-blue-50 transition text-gray-700"
+                            data-filter="naujausios">
+                            Naujausios technologijos
+                        </button>
+                        <button
+                            class="category-option w-full text-left px-5 py-3 hover:bg-blue-50 transition text-gray-700"
+                            data-filter="kuponai">
+                            Dovanų kuponai
+                        </button>
+                        <button
+                            class="category-option w-full text-left px-5 py-3 hover:bg-blue-50 transition text-gray-700"
+                            data-filter="vaikams">
+                            Vaikams
+                        </button>
+                    </div>
+                </div>
+                <!-- Search Box -->
+                <div class="relative w-full sm:w-auto">
+                    <input
+                        class="border border-gray-300 rounded-lg px-5 py-3 pl-12 w-full sm:w-auto sm:min-w-[250px] focus:outline-none focus:ring-2 focus:ring-primary shadow-sm"
+                        id="search-input" placeholder="Paieška..." type="text" />
+                    <svg class="w-5 h-5 text-gray-400 absolute left-4 top-1/2 transform -translate-y-1/2" fill="none"
+                        stroke="currentColor" viewbox="0 0 24 24">
+                        <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-linecap="round"
+                            stroke-linejoin="round" stroke-width="2"></path>
+                    </svg>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" id="services-grid">
+                <!-- DANTŲ TIESINIMAS -->
+                <div class="service-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl"
+                    data-category="tiesinimas">
+                    <div
+                        class="relative h-48 bg-gradient-to-br from-emerald-400 to-emerald-600 flex items-center justify-center">
+                        <a class="w-full h-full block" href="paslaugos/dantu-tiesinimas-ortopedija.html">
+                            <img alt="Dantų tiesinimas kapomis"
+                                class="lazy-image w-full h-full object-cover drop-shadow-lg hover:opacity-90 transition"
+                                loading="lazy" src="assets/images/services/Tiesinimas.jpg" />
+                        </a>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Dantų tiesinimas kapomis</h3>
+                        <p class="text-gray-600 mb-4">Dantų tiesinimas naudojant modernias ortodontines sistemas.</p>
+                        <a class="w-full bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary-dark transition text-center block"
+                            href="paslaugos/dantu-tiesinimas-ortopedija.html">Plačiau</a>
+                    </div>
+                </div>
+                <div class="service-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl"
+                    data-category="tiesinimas">
+                    <div class="relative h-48 flex items-center justify-center"><img alt="Six Month Smiles breketai"
+                            class="lazy-image w-full h-full object-cover" loading="lazy"
+                            src="assets/images/services/korteles%20nuoptraukos/Six%20Month%20Smiles%20breketai.webp" />
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Six Month Smiles breketai</h3>
+                        <p class="text-gray-600 mb-4">Greitas dantų tiesinimas su Six Month Smiles sistema.</p>
+                        <a class="w-full bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary-dark transition text-center block"
+                            href="paslaugos/dantu-tiesinimas.html">Plačiau</a>
+                    </div>
+                </div>
+                <div class="service-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl"
+                    data-category="tiesinimas vaikams">
+                    <div
+                        class="relative h-48 bg-gradient-to-br from-emerald-400 to-emerald-600 flex items-center justify-center">
+                        <img alt="Ortodontinis gydymas" class="lazy-image w-full h-full object-cover drop-shadow-lg"
+                            loading="lazy" src="assets/images/services/korteles%20nuoptraukos/Sypsena.webp" />
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Ortodontinis gydymas</h3>
+                        <p class="text-gray-600 mb-4">Sudėtingas dantų ir žandikaulio anomalijų gydymas.</p>
+                        <a class="w-full bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary-dark transition text-center block"
+                            href="paslaugos/ortodontinis-gydymas.html">Plačiau</a>
+                    </div>
+                </div>
+                <!-- DANTŲ ESTETIKA -->
+                <div class="service-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl"
+                    data-category="estetika atstatymas gydymas">
+                    <div
+                        class="relative h-48 bg-gradient-to-br from-teal-400 to-teal-600 flex items-center justify-center">
+                        <img alt="Estetinis plombavimas" class="lazy-image w-full h-full object-cover drop-shadow-lg"
+                            loading="lazy" src="assets/images/services/Dantų gydymas gydytoja.jpg" />
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Estetinis plombavimas</h3>
+                        <p class="text-gray-600 mb-4">Spalvotos kompozicinės plombos natūraliam dantų atkūrimui.</p>
+                        <a class="w-full bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary-dark transition text-center block"
+                            href="paslaugos/estetinis-plombavimas.html">Plačiau</a>
+                    </div>
+                </div>
+                <div class="service-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl"
+                    data-category="estetika">
+                    <div class="relative h-48 flex items-center justify-center"><img alt="Dantų papuošalai"
+                            class="lazy-image w-full h-full object-cover" loading="lazy"
+                            src="assets/images/services/dantu-papuosalai-1.webp" /></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Dantų papuošalai</h3>
+                        <p class="text-gray-600 mb-4">Išskirtinis akcentas jūsų šypsenai.</p>
+                        <a class="w-full bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary-dark transition text-center block"
+                            href="paslaugos/dantu-papuosalai.html">Plačiau</a>
+                    </div>
+                </div>
+                <div class="service-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl"
+                    data-category="estetika">
+                    <div
+                        class="relative h-48 bg-gradient-to-br from-blue-400 to-primary-dark flex items-center justify-center">
+                        <img alt="Dantų būklės tyrimai" class="lazy-image w-full h-full object-cover drop-shadow-lg"
+                            loading="lazy"
+                            src="assets/images/services/korteles%20nuoptraukos/Dantu%20bukles%20tyrimas.webp" />
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Dantų būklės tyrimai</h3>
+                        <p class="text-gray-600 mb-4">Pilnas dantų ir žandikaulio būklės vertinimas.</p>
+                        <a class="w-full bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary-dark transition text-center block"
+                            href="paslaugos/nuodugnus-dantu-bukles-istyrimas.html">Plačiau</a>
+                    </div>
+                </div>
+                <!-- PRIEKINIŲ DANTŲ ATSTATYMAS -->
+                <div class="service-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl"
+                    data-category="estetika atstatymas">
+                    <div
+                        class="relative h-48 bg-gradient-to-br from-cyan-400 to-cyan-600 flex items-center justify-center">
+                        <img alt="Dantų atkūrimas laminatėmis"
+                            class="lazy-image w-full h-full object-cover drop-shadow-lg" loading="lazy"
+                            src="assets/images/services/laminates/laminates.webp" />
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Dantų atkūrimas laminatėmis</h3>
+                        <p class="text-gray-600 mb-4">Estetiškas ir patvarus priekinių dantų atkūrimas.</p>
+                        <a class="w-full bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary-dark transition text-center block"
+                            href="paslaugos/dantu-laminates.html">Plačiau</a>
+                    </div>
+                </div>
+
+                <!-- SĄKANDŽIO PAKĖLIMAS -->
+                <div class="service-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl"
+                    data-category="sakandis">
+                    <div class="relative h-48 flex items-center justify-center"><img alt="Sąkandžio pakėlimas"
+                            class="lazy-image w-full h-full object-cover" loading="lazy"
+                            src="assets/images/services/S%C4%85kand%C5%BEio%20pak%C4%97limas.png" /></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Sąkandžio pakėlimas</h3>
+                        <p class="text-gray-600 mb-4">Skaitmeninis dantų techniko projektavimas, dizainas pagal kurį
+                            burnoje perkeliamas galutinis dantų funkcinis anatominis atstatymas.</p>
+                        <a class="w-full bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary-dark transition text-center block"
+                            href="paslaugos/skenavimas-itero.html">Plačiau</a>
+                    </div>
+                </div>
+                <!-- DANTŲ GYDYMAS -->
+                <div class="service-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl"
+                    data-category="gydymas">
+                    <div class="relative h-48 flex items-center justify-center">
+                        <img alt="Krūminių dantų plombavimas" class="lazy-image w-full h-full object-cover"
+                            loading="lazy" src="assets/images/services/kruminiu-dantu-plombavimas.webp" />
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Krūminių dantų plombavimas</h3>
+                        <p class="text-gray-600 mb-4">Tvirtas ir ilgaamžis kramtomųjų dantų atstatymas atkuriant
                             natūralią anatomiją.</p>
-<a class="w-full bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary-dark transition text-center block" href="paslaugos/dantu-gydymas.html">Plačiau</a>
-</div>
-</div><div class="service-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl" data-category="estetika atstatymas">
-<div class="relative h-48 bg-gradient-to-br from-cyan-400 to-cyan-600 flex items-center justify-center">
-<img alt="Dantų atkūrimas laminatėmis" class="lazy-image w-full h-full object-cover drop-shadow-lg" loading="lazy" onerror="this.src='https://picsum.photos/seed/laminates/400/300'" src="assets/images/services/laminates/laminates.webp"/>
-</div>
-<div class="p-6">
-<h3 class="text-xl font-bold text-gray-800 mb-3">Dantų atkūrimas laminatėmis</h3>
-<p class="text-gray-600 mb-4">Estetiškas ir patvarus priekinių dantų atkūrimas.</p>
-<a class="w-full bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary-dark transition text-center block" href="paslaugos/dantu-laminates.html">Plačiau</a>
-</div>
-</div><div class="service-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl" data-category="vaikams">
-<div class="relative h-48 flex items-center justify-center"><img alt="Profesionali burnos higiena vaikams" class="lazy-image w-full h-full object-cover" loading="lazy" src="assets/images/services/korteles%20nuoptraukos/Profesionali%20burnos%20higiena%20vaikams.webp"/>
-</div>
-<div class="p-6">
-<h3 class="text-xl font-bold text-gray-800 mb-3">Profesionali burnos higiena vaikams</h3>
-<p class="text-gray-600 mb-4">Švelni burnos higiena mažiesiems pacientams.</p>
-<a class="w-full bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary-dark transition text-center block" href="paslaugos/vaiku-odontologija.html">Plačiau</a>
-</div>
-</div><div class="service-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl" data-category="tiesinimas vaikams">
-<div class="relative h-48 bg-gradient-to-br from-purple-400 to-purple-600 flex items-center justify-center">
-<img alt="Dantų tiesinimas kapomis vaikams" class="lazy-image w-full h-full object-cover drop-shadow-lg" loading="lazy" onerror="this.src='https://picsum.photos/seed/children-braces/400/300'" src="assets/images/services/Kapos.jpg"/>
-</div>
-<div class="p-6">
-<h3 class="text-xl font-bold text-gray-800 mb-3">Dantų tiesinimas kapomis vaikams</h3>
-<p class="text-gray-600 mb-4">Vaikų dantų tiesinimas naudojant modernias ortodontines sistemas.
+                        <a class="w-full bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary-dark transition text-center block"
+                            href="paslaugos/dantu-gydymas.html">Plačiau</a>
+                    </div>
+                </div>
+                <!-- DANTŲ BALINIMAS -->
+                <div class="service-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl"
+                    data-category="balinimas naujausios">
+                    <div
+                        class="relative h-48 bg-gradient-to-br from-purple-400 to-purple-600 flex items-center justify-center">
+                        <img alt="Balinimas Beyond Polus sistema"
+                            class="lazy-image w-full h-full object-cover drop-shadow-lg" loading="lazy"
+                            src="assets/images/services/balinimas-lazeriu.webp" />
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Balinimas Beyond Polus sistema</h3>
+                        <p class="text-gray-600 mb-4">Pažangus balinimas kabinete be skausmo.</p>
+                        <a class="w-full bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary-dark transition text-center block"
+                            href="paslaugos/dantu-balinimas-beyond-polus.html">Plačiau</a>
+                    </div>
+                </div>
+                <div class="service-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl"
+                    data-category="balinimas">
+                    <div class="relative h-48 flex items-center justify-center"><img alt="Greitas dantų balinimas Quick"
+                            class="lazy-image w-full h-full object-cover" loading="lazy"
+                            src="assets/images/services/greitas-dantu-balinimas-quick.webp" /></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Greitas dantų balinimas Quick</h3>
+                        <p class="text-gray-600 mb-4">Efektyvus balinimas iškart po burnos higienos.</p>
+                        <a class="w-full bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary-dark transition text-center block"
+                            href="paslaugos/dantu-balinimas-quick.html">Plačiau</a>
+                    </div>
+                </div>
+                <div class="service-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl"
+                    data-category="balinimas">
+                    <div class="relative h-48 bg-black flex items-center justify-center">
+                        <img alt="Balinimas kapomis namuose"
+                            class="lazy-image w-full h-full object-contain drop-shadow-lg" loading="lazy"
+                            src="assets/images/services/dantu%20balinimas%20kapomis%201.png" />
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Balinimas kapomis namuose</h3>
+                        <p class="text-gray-600 mb-4">Profesionalus dantų balinimas namų sąlygomis.</p>
+                        <a class="w-full bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary-dark transition text-center block"
+                            href="paslaugos/balinimas-kapomis.html">Plačiau</a>
+                    </div>
+                </div>
+                <!-- PROFESIONALI HIGIENA -->
+                <div class="service-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl"
+                    data-category="higiena">
+                    <div
+                        class="relative h-48 bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center">
+                        <img alt="Burnos higiena" class="lazy-image w-full h-full object-cover drop-shadow-lg"
+                            loading="lazy"
+                            src="assets/images/services/korteles%20nuoptraukos/Patikimumas%20dantistas.webp" />
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Burnos higiena</h3>
+                        <p class="text-gray-600 mb-4">Profesionalios burnos higienos procedūros.</p>
+                        <a class="w-full bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary-dark transition text-center block"
+                            href="paslaugos/burnos-higiena.html">Plačiau</a>
+                    </div>
+                </div>
+                <div class="service-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl"
+                    data-category="higiena naujausios">
+                    <div class="relative h-48 flex items-center justify-center"><img alt="Lazerinė higiena QuickLaze"
+                            class="lazy-image w-full h-full object-cover" loading="lazy"
+                            src="assets/images/services/lazerine-higiena-1.webp" /></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Lazerinė higiena QuickLaze</h3>
+                        <p class="text-gray-600 mb-4">Lazerio panaudojimas efektyvesnei higienai.</p>
+                        <a class="w-full bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary-dark transition text-center block"
+                            href="paslaugos/lazerine-higiena.html">Plačiau</a>
+                    </div>
+                </div>
+                <div class="service-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl"
+                    data-category="higiena">
+                    <div class="relative h-48 flex items-center justify-center"><img alt="Herpes gydymas lazeriu"
+                            class="lazy-image w-full h-full object-cover" loading="lazy"
+                            src="assets/images/services/herpes-gydymas-lazeriu.webp" /></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Herpes gydymas lazeriu</h3>
+                        <p class="text-gray-600 mb-4">Greitas ir efektyvus pūslelinės gydymas.</p>
+                        <a class="w-full bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary-dark transition text-center block"
+                            href="paslaugos/herpes-gydymas-lazeriu.html">Plačiau</a>
+                    </div>
+                </div>
+                <div class="service-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl"
+                    data-category="higiena">
+                    <div class="relative h-48 flex items-center justify-center"><img
+                            alt="Individualus priemonių parinkimas" class="lazy-image w-full h-full object-cover"
+                            loading="lazy" src="assets/images/services/individualus-priemoniu-parinkimas.webp" /></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Individualus priemonių parinkimas</h3>
+                        <p class="text-gray-600 mb-4">Asmeninė konsultacija dėl priežiūros priemonių.</p>
+                        <a class="w-full bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary-dark transition text-center block"
+                            href="paslaugos/individualus-priemoniu-parinkimas.html">Plačiau</a>
+                    </div>
+                </div>
+                <div class="service-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl"
+                    data-category="higiena">
+                    <div class="relative h-48 flex items-center justify-center"><img alt="Higienos apmokymai"
+                            class="lazy-image w-full h-full object-cover" loading="lazy"
+                            src="assets/images/services/korteles%20nuoptraukos/Dantu%20balinimas.webp" /></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Higienos apmokymai</h3>
+                        <p class="text-gray-600 mb-4">Mokymai, kaip taisyklingai prižiūrėti dantis.</p>
+                        <a class="w-full bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary-dark transition text-center block"
+                            href="paslaugos/higienos-apmokymai.html">Plačiau</a>
+                    </div>
+                </div>
+                <!-- PO ORTODONTINIO GYDYMO -->
+                <div class="service-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl"
+                    data-category="po-orto">
+                    <div class="relative h-48 flex items-center justify-center"><img alt="Retencinės vielutės"
+                            class="lazy-image w-full h-full object-cover" loading="lazy"
+                            src="assets/images/services/retencines-vielutes-1.webp" /></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Retencinės vielutės</h3>
+                        <p class="text-gray-600 mb-4">Ilgalaikis fiksavimas po ortodontinio gydymo.</p>
+                        <a class="w-full bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary-dark transition text-center block"
+                            href="paslaugos/retencines-vielutes.html">Plačiau</a>
+                    </div>
+                </div>
+                <div class="service-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl"
+                    data-category="po-orto">
+                    <div class="relative h-48 flex items-center justify-center"><img alt="Naktiniai Reteineriai"
+                            class="lazy-image w-full h-full object-cover" loading="lazy"
+                            src="assets/images/services/korteles%20nuoptraukos/Naktiniai%20reteineriai.webp" /></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Naktiniai Reteineriai</h3>
+                        <p class="text-gray-600 mb-4">Rezultato užtikrinimui po tiesinimo.</p>
+                        <a class="w-full bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary-dark transition text-center block"
+                            href="paslaugos/naktiniai-reteineriai.html">Plačiau</a>
+                    </div>
+                </div>
+                <!-- SKAITMENINĖS TECHNOLOGIJOS -->
+                <div class="service-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl"
+                    data-category="skaitmenines naujausios">
+                    <div class="relative h-48 flex items-center justify-center"><img alt="Lumina iTero skaneris"
+                            class="lazy-image w-full h-full object-cover" loading="lazy"
+                            src="assets/images/services/korteles%20nuoptraukos/Itero%20Lumina%20ekranas.webp" /></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Lumina iTero skaneris</h3>
+                        <p class="text-gray-600 mb-4">Itin tikslus 3D skenavimas be atspaudų.</p>
+                        <a class="w-full bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary-dark transition text-center block"
+                            href="paslaugos/itero-lumina.html">Plačiau</a>
+                    </div>
+                </div>
+                <div class="service-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl"
+                    data-category="skaitmenines">
+                    <div
+                        class="relative h-48 bg-gradient-to-br from-teal-400 to-teal-600 flex items-center justify-center">
+                        <img alt="Tyrimai ir diagnostika" class="lazy-image w-full h-full object-cover drop-shadow-lg"
+                            loading="lazy" src="assets/images/services/korteles%20nuoptraukos/Tyrimai.webp" />
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Tyrimai ir diagnostika</h3>
+                        <p class="text-gray-600 mb-4">Modernūs diagnostikos metodai.</p>
+                        <a class="w-full bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary-dark transition text-center block"
+                            href="paslaugos/tyrimai-ir-diagnostika.html">Plačiau</a>
+                    </div>
+                </div>
+                <!-- DOVANŲ KUPONAI -->
+                <div class="service-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl"
+                    data-category="kuponai">
+                    <div class="relative h-48 flex items-center justify-center">
+                        <img alt="Dovanų kuponai" class="lazy-image w-full h-full object-cover" loading="lazy"
+                            src="assets/images/services/Dovanu kuponas 2.jpg" />
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Dovanų kuponai</h3>
+                        <p class="text-gray-600 mb-4">Puiki dovana jūsų artimiesiems.</p>
+                        <a class="w-full bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary-dark transition text-center block"
+                            href="paslaugos/dovanu-kuponai.html">Plačiau</a>
+                    </div>
+                </div>
+                <!-- VAIKAMS -->
+                <div class="service-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl"
+                    data-category="vaikams">
+                    <div class="relative h-48 flex items-center justify-center"><img
+                            alt="Profesionali burnos higiena vaikams" class="lazy-image w-full h-full object-cover"
+                            loading="lazy"
+                            src="assets/images/services/korteles%20nuoptraukos/Profesionali%20burnos%20higiena%20vaikams.webp" />
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Profesionali burnos higiena vaikams</h3>
+                        <p class="text-gray-600 mb-4">Švelni burnos higiena mažiesiems pacientams.</p>
+                        <a class="w-full bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary-dark transition text-center block"
+                            href="paslaugos/vaiku-odontologija.html">Plačiau</a>
+                    </div>
+                </div>
+                <div class="service-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl"
+                    data-category="tiesinimas vaikams">
+                    <div
+                        class="relative h-48 bg-gradient-to-br from-purple-400 to-purple-600 flex items-center justify-center">
+                        <img alt="Dantų tiesinimas kapomis vaikams"
+                            class="lazy-image w-full h-full object-cover drop-shadow-lg" loading="lazy"
+                            src="assets/images/services/Kapos.jpg" />
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Dantų tiesinimas kapomis vaikams</h3>
+                        <p class="text-gray-600 mb-4">Vaikų dantų tiesinimas naudojant modernias ortodontines sistemas.
                         </p>
-<a class="w-full bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary-dark transition text-center block" href="paslaugos/dantu-tiesinimas-vaikams.html">Plačiau</a>
-</div>
-</div><div class="service-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl" data-category="vaikams">
-<div class="relative h-48 bg-gradient-to-br from-pink-400 to-pink-600 flex items-center justify-center">
-<img alt="Išsami vaikų dantų patikra" class="lazy-image w-full h-full object-cover drop-shadow-lg" loading="lazy" src="assets/images/services/korteles%20nuoptraukos/Itero%20lumina%20vaizdas.webp"/>
-</div>
-<div class="p-6">
-<h3 class="text-xl font-bold text-gray-800 mb-3">Išsami vaikų dantų patikra</h3>
-<p class="text-gray-600 mb-4">Specializuota vaikų dantų priežiūra ir profilaktika.</p>
-<a class="w-full bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary-dark transition text-center block" href="paslaugos/issami-vaiku-dantu-patikra.html">Plačiau</a>
-</div>
-</div><div class="service-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl" data-category="estetika">
-<div class="relative h-48 bg-gradient-to-br from-blue-400 to-primary-dark flex items-center justify-center">
-<img alt="Dantų būklės tyrimai" class="lazy-image w-full h-full object-cover drop-shadow-lg" loading="lazy" onerror="this.src='https://picsum.photos/seed/dental-examination/400/300'" src="assets/images/services/korteles%20nuoptraukos/Dantu%20bukles%20tyrimas.webp"/>
-</div>
-<div class="p-6">
-<h3 class="text-xl font-bold text-gray-800 mb-3">Dantų būklės tyrimai</h3>
-<p class="text-gray-600 mb-4">Pilnas dantų ir žandikaulio būklės vertinimas.</p>
-<a class="w-full bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary-dark transition text-center block" href="paslaugos/nuodugnus-dantu-bukles-istyrimas.html">Plačiau</a>
-</div>
-</div><div class="service-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl" data-category="vaikams">
-<div class="relative h-48 flex items-center justify-center"><img alt="Dantų sveikatos pažyma" class="lazy-image w-full h-full object-cover" loading="lazy" src="assets/images/services/korteles%20nuoptraukos/Dantu%20sveikatos%20pazyma.webp"/></div>
-<div class="p-6">
-<h3 class="text-xl font-bold text-gray-800 mb-3">Dantų sveikatos pažyma</h3>
-<p class="text-gray-600 mb-4">Oficiali pažyma mokyklai ar darželiui.</p>
-<a class="w-full bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary-dark transition text-center block" href="paslaugos/issami-vaiku-dantu-patikra.html">Plačiau</a>
-</div>
-</div></div>
-<!-- Load More Button -->
-<div class="text-center mt-12 hidden" id="load-more-container">
-<button class="bg-primary text-white px-8 py-3 rounded-lg hover:bg-primary-dark transition font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-1" id="load-more-btn">
+                        <a class="w-full bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary-dark transition text-center block"
+                            href="paslaugos/dantu-tiesinimas-vaikams.html">Plačiau</a>
+                    </div>
+                </div>
+                <div class="service-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl"
+                    data-category="vaikams">
+                    <div
+                        class="relative h-48 bg-gradient-to-br from-pink-400 to-pink-600 flex items-center justify-center">
+                        <img alt="Išsami vaikų dantų patikra"
+                            class="lazy-image w-full h-full object-cover drop-shadow-lg" loading="lazy"
+                            src="assets/images/services/korteles%20nuoptraukos/Itero%20lumina%20vaizdas.webp" />
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Išsami vaikų dantų patikra</h3>
+                        <p class="text-gray-600 mb-4">Specializuota vaikų dantų priežiūra ir profilaktika.</p>
+                        <a class="w-full bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary-dark transition text-center block"
+                            href="paslaugos/issami-vaiku-dantu-patikra.html">Plačiau</a>
+                    </div>
+                </div>
+                <div class="service-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl"
+                    data-category="vaikams">
+                    <div class="relative h-48 flex items-center justify-center"><img alt="Dantų sveikatos pažyma"
+                            class="lazy-image w-full h-full object-cover" loading="lazy"
+                            src="assets/images/services/korteles%20nuoptraukos/Dantu%20sveikatos%20pazyma.webp" /></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Dantų sveikatos pažyma</h3>
+                        <p class="text-gray-600 mb-4">Oficiali pažyma mokyklai ar darželiui.</p>
+                        <a class="w-full bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary-dark transition text-center block"
+                            href="paslaugos/issami-vaiku-dantu-patikra.html">Plačiau</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Load More Button -->
+            <div class="text-center mt-12 hidden" id="load-more-container">
+                <button
+                    class="bg-primary text-white px-8 py-3 rounded-lg hover:bg-primary-dark transition font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                    id="load-more-btn">
                     Daugiau paslaugų
                 </button>
-</div>
-</div>
-</section>
-<!-- Service Details Modal -->
-<div class="modal" id="serviceModal">
-<div class="modal-content">
-<div class="relative">
-<button class="absolute top-4 right-4 text-gray-500 hover:text-gray-700 z-10" onclick="closeModal()">
-<i class="fas fa-times text-2xl"></i>
-</button>
-<div id="modalContent">
-<!-- Content will be dynamically loaded here -->
-</div>
-</div>
-</div>
-</div>
-<!-- CTA Section -->
-<!-- Footer -->
-<!-- Footer -->
-<!-- CTA Section -->
-<section class="py-16 gradient-bg" data-bg-index="2">
-<div class="container mx-auto px-4 text-center">
-<h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Pasiruošę savo odontologijos vizitui?</h2>
-<p class="text-xl text-gray-700 mb-8">Prisijunkite prie tūkstančių patenkintų pacientų, kurie patiki mums
+            </div>
+        </div>
+    </section>
+    <!-- Service Details Modal -->
+    <div class="modal" id="serviceModal">
+        <div class="modal-content">
+            <div class="relative">
+                <button class="absolute top-4 right-4 text-gray-500 hover:text-gray-700 z-10" onclick="closeModal()">
+                    <i class="fas fa-times text-2xl"></i>
+                </button>
+                <div id="modalContent">
+                    <!-- Content will be dynamically loaded here -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- CTA Section -->
+    <!-- Footer -->
+    <!-- Footer -->
+    <!-- CTA Section -->
+    <section class="py-16 gradient-bg" data-bg-index="2">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Pasiruošę savo odontologijos vizitui?</h2>
+            <p class="text-xl text-gray-700 mb-8">Prisijunkite prie tūkstančių patenkintų pacientų, kurie patiki mums
                 savo šypsenas</p>
-<div class="flex flex-col sm:flex-row gap-4 justify-center">
-<a class="bg-primary text-white px-8 py-4 rounded-lg font-semibold hover:bg-primary-dark transition transform hover:scale-105" href="booking.html">
-<i class="fas fa-calendar-plus mr-2"></i> Registruotis
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a class="bg-primary text-white px-8 py-4 rounded-lg font-semibold hover:bg-primary-dark transition transform hover:scale-105"
+                    href="booking.html">
+                    <i class="fas fa-calendar-plus mr-2"></i> Registruotis
                 </a>
-<a class="border-2 border-primary text-primary px-8 py-4 rounded-lg font-semibold hover:bg-primary hover:text-white transition" href="tel:+37061203030">
-<i class="fas fa-phone mr-2"></i> Skambinti dabar
+                <a class="border-2 border-primary text-primary px-8 py-4 rounded-lg font-semibold hover:bg-primary hover:text-white transition"
+                    href="tel:+37061203030">
+                    <i class="fas fa-phone mr-2"></i> Skambinti dabar
                 </a>
-</div>
-</div>
-</section>
-<footer class="bg-gray-900 text-white py-12">
-<div class="container mx-auto px-4">
-<div class="grid md:grid-cols-4 gap-8 mb-8">
-<div>
-<a class="flex items-center space-x-2 mb-4 hover:opacity-80 transition" href="index.html">
-<img alt="Alfadenta Logo" class="h-40 w-auto" src="assets/images/global/alfadenta-logo-white-text.webp"/>
-</a>
-<p class="text-gray-400">Jūsų šypsenos priežiūra nuo 2014. Mes kuriame šypsenas, kurios keičia
+            </div>
+        </div>
+    </section>
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <a class="flex items-center space-x-2 mb-4 hover:opacity-80 transition" href="index.html">
+                        <img alt="Alfadenta Logo" class="h-40 w-auto"
+                            src="assets/images/global/alfadenta-logo-white-text.webp" />
+                    </a>
+                    <p class="text-gray-400">Jūsų šypsenos priežiūra nuo 2014. Mes kuriame šypsenas, kurios keičia
                         gyvenimus.</p>
-<div class="flex space-x-4 mt-4">
-<a class="text-gray-400 hover:text-blue-400" href="https://www.facebook.com/alfadentaklinika"><i class="fab fa-facebook text-xl"></i></a>
-<a class="text-gray-400 hover:text-blue-400" href="https://www.instagram.com/alfadenta/"><i class="fab fa-instagram text-xl"></i></a>
-</div>
-</div>
-<div>
-<h4 class="text-lg font-semibold mb-4">Paslaugos</h4>
-<ul class="space-y-1 text-gray-400 text-sm">
-<li><a class="hover:text-blue-400" href="paslaugos/dantu-tiesinimas.html">Dantų tiesinimas</a>
-</li>
-<li><a class="hover:text-blue-400" href="paslaugos/estetinis-plombavimas.html">Estetinis
+                    <div class="flex space-x-4 mt-4">
+                        <a class="text-gray-400 hover:text-blue-400" href="https://www.facebook.com/alfadentaklinika"><i
+                                class="fab fa-facebook text-xl"></i></a>
+                        <a class="text-gray-400 hover:text-blue-400" href="https://www.instagram.com/alfadenta/"><i
+                                class="fab fa-instagram text-xl"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Paslaugos</h4>
+                    <ul class="space-y-1 text-gray-400 text-sm">
+                        <li><a class="hover:text-blue-400" href="paslaugos/dantu-tiesinimas.html">Dantų tiesinimas</a>
+                        </li>
+                        <li><a class="hover:text-blue-400" href="paslaugos/estetinis-plombavimas.html">Estetinis
                                 plombavimas</a></li>
-<li><a class="hover:text-blue-400" href="paslaugos/dantu-balinimas-beyond-polus.html">Dantų
+                        <li><a class="hover:text-blue-400" href="paslaugos/dantu-balinimas-beyond-polus.html">Dantų
                                 balinimas
                                 lazeriu</a></li>
-<li><a class="hover:text-blue-400" href="paslaugos/dantu-laminates.html">Dantų atkūrimas
+                        <li><a class="hover:text-blue-400" href="paslaugos/dantu-laminates.html">Dantų atkūrimas
                                 laminatėmis</a></li>
-<li><a class="hover:text-blue-400" href="paslaugos/itero-lumina.html">iTero Lumina</a></li>
-<li><a class="hover:text-blue-400" href="paslaugos/burnos-higiena.html">Profesionali burnos
+                        <li><a class="hover:text-blue-400" href="paslaugos/itero-lumina.html">iTero Lumina</a></li>
+                        <li><a class="hover:text-blue-400" href="paslaugos/burnos-higiena.html">Profesionali burnos
                                 higiena</a></li>
-<li><a class="hover:text-blue-400" href="paslaugos/dantu-tiesinimas-ortopedija.html">Dantų
+                        <li><a class="hover:text-blue-400" href="paslaugos/dantu-tiesinimas-ortopedija.html">Dantų
                                 tiesinimas kapomis</a></li>
-</ul>
-</div>
-<div>
-<h4 class="text-lg font-semibold mb-4">Naudinga</h4>
-<ul class="space-y-2 text-gray-400">
-<li><a class="hover:text-blue-400" href="index.html">Apie mus</a></li>
-<li><a class="hover:text-blue-400" href="doctors.html">Komanda</a></li>
-<li><a class="hover:text-blue-400" href="#">Kainoraštis</a></li>
-<li><a class="hover:text-blue-400" href="privatumo-politika.html">Privatumo politika</a></li>
-<li><a class="hover:text-blue-400" href="svetaines-informacija.html">Svetainės informacija</a>
-</li>
-</ul>
-</div>
-<div>
-<h4 class="text-lg font-semibold mb-4">Kontaktai</h4>
-<ul class="space-y-2 text-gray-400 mb-4">
-<li><strong>Registratūra</strong></li>
-<li>I-V: 9:00 – 16:00</li>
-<li>VI-VII: Nedirbame</li>
-<li><strong>Tel. Nr.</strong></li>
-<li><i class="fas fa-phone mr-2"></i> +370 612 03030</li>
-<li><strong>Adresas</strong></li>
-<li><i class="fas fa-map-marker-alt mr-2"></i> Vytauto pr. 83, Kaunas, 44238 Kauno m. sav.</li>
-<li><strong>El. paštas</strong></li>
-<li><i class="fas fa-envelope mr-2"></i> info@alfadenta.lt</li>
-</ul>
-<div class="mt-4 pt-4 border-t border-gray-800">
-<h5 class="text-md font-semibold mb-2">Rekvizitai</h5>
-<ul class="space-y-1 text-gray-400 text-sm">
-<li>UAB Alfadenta</li>
-<li>Įm. k.: 303415894</li>
-<li>PVM mokėtojas: ne PVM mokėtojas</li>
-<li>Bankas: Luminor bankas</li>
-<li>SWIFT: AGBLLT2X</li>
-<li>A.s.: LT87 4010 0510 0217 6965</li>
-</ul>
-</div>
-<div class="mt-4 pt-4 border-t border-gray-800">
-<a class="flex items-center space-x-2 text-gray-400 hover:text-white transition" href="https://epos.inbank.lt/lt/ALFADENTA" target="_blank">
-<i class="fas fa-credit-card"></i>
-<span>Paslaugos išsimokėtinai</span>
-</a>
-</div>
-</div>
-</div>
-<!-- Map Section -->
-<div class="border-t border-gray-800 mt-8 pt-8">
-<div class="text-center mb-6">
-<h4 class="text-lg font-semibold text-white mb-2">Raskite mus žemėlapyje</h4>
-<p class="text-gray-400">Vytauto pr. 83, Kaunas, 44238 Kauno m. sav., Lietuva</p>
-</div>
-<div class="w-full h-64 rounded-lg overflow-hidden">
-<iframe allowfullscreen="" height="100%" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2294.3901067970974!2d23.922134613200768!3d54.89607487266562!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46e722777b920be7%3A0xca0d319b9b429f03!2sAesthetic%20Dentistry%20Clinic%20Alfadent!5e0!3m2!1sen!2slt!4v1770641257185!5m2!1sen!2slt" style="border:0;" width="100%"></iframe>
-</div>
-</div>
-<div class="border-t border-gray-800 pt-8 text-center text-gray-400">
-<p>© 2024 Alfadenta. Visos teisės saugomos.</p>
-</div>
-</div>
-</footer>
-<script>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Naudinga</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a class="hover:text-blue-400" href="index.html">Apie mus</a></li>
+                        <li><a class="hover:text-blue-400" href="doctors.html">Komanda</a></li>
+                        <li><a class="hover:text-blue-400" href="#">Kainoraštis</a></li>
+                        <li><a class="hover:text-blue-400" href="privatumo-politika.html">Privatumo politika</a></li>
+                        <li><a class="hover:text-blue-400" href="svetaines-informacija.html">Svetainės informacija</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Kontaktai</h4>
+                    <ul class="space-y-2 text-gray-400 mb-4">
+                        <li><strong>Registratūra</strong></li>
+                        <li>I-V: 9:00 – 16:00</li>
+                        <li>VI-VII: Nedirbame</li>
+                        <li><strong>Tel. Nr.</strong></li>
+                        <li><i class="fas fa-phone mr-2"></i> +370 612 03030</li>
+                        <li><strong>Adresas</strong></li>
+                        <li><i class="fas fa-map-marker-alt mr-2"></i> Vytauto pr. 83, Kaunas, 44238 Kauno m. sav.</li>
+                        <li><strong>El. paštas</strong></li>
+                        <li><i class="fas fa-envelope mr-2"></i> info@alfadenta.lt</li>
+                    </ul>
+                    <div class="mt-4 pt-4 border-t border-gray-800">
+                        <h5 class="text-md font-semibold mb-2">Rekvizitai</h5>
+                        <ul class="space-y-1 text-gray-400 text-sm">
+                            <li>UAB Alfadenta</li>
+                            <li>Įm. k.: 303415894</li>
+                            <li>PVM mokėtojas: ne PVM mokėtojas</li>
+                            <li>Bankas: Luminor bankas</li>
+                            <li>SWIFT: AGBLLT2X</li>
+                            <li>A.s.: LT87 4010 0510 0217 6965</li>
+                        </ul>
+                    </div>
+                    <div class="mt-4 pt-4 border-t border-gray-800">
+                        <a class="flex items-center space-x-2 text-gray-400 hover:text-white transition"
+                            href="https://epos.inbank.lt/lt/ALFADENTA" target="_blank">
+                            <i class="fas fa-credit-card"></i>
+                            <span>Paslaugos išsimokėtinai</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Map Section -->
+            <div class="border-t border-gray-800 mt-8 pt-8">
+                <div class="text-center mb-6">
+                    <h4 class="text-lg font-semibold text-white mb-2">Raskite mus žemėlapyje</h4>
+                    <p class="text-gray-400">Vytauto pr. 83, Kaunas, 44238 Kauno m. sav., Lietuva</p>
+                </div>
+                <div class="w-full h-64 rounded-lg overflow-hidden">
+                    <iframe allowfullscreen="" height="100%" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2294.3901067970974!2d23.922134613200768!3d54.89607487266562!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46e722777b920be7%3A0xca0d319b9b429f03!2sAesthetic%20Dentistry%20Clinic%20Alfadent!5e0!3m2!1sen!2slt!4v1770641257185!5m2!1sen!2slt"
+                        style="border:0;" width="100%"></iframe>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
+                <p>© 2024 Alfadenta. Visos teisės saugomos.</p>
+            </div>
+        </div>
+    </footer>
+    <script>
         // Dropdown and search filtering
         document.addEventListener('DOMContentLoaded', () => {
             const dropdownButton = document.getElementById('dropdown-button');
@@ -632,6 +827,7 @@
             });
         }
     </script>
-<script src="assets/js/background-system.js"></script>
+    <script src="assets/js/background-system.js"></script>
 </body>
+
 </html>
