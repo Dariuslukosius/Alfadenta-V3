@@ -322,37 +322,67 @@
         </div>
     </section>
     <!-- Pricing Section -->
-    <section class="py-16 bg-white">
+    <section class="py-16 bg-white border-t border-gray-100">
         <div class="container mx-auto px-4">
             <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-gray-800 mb-4">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
                     Kainos
                 </h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Skaidri kainodara ir lanksčios atsiskaitymo galimybės
+                </p>
             </div>
-            <div class="max-w-3xl mx-auto bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100">
-                <div class="divide-y divide-gray-100">
-                    <div class="p-6 hover:bg-gray-50 transition">
-                        <div class="flex justify-between items-start mb-2">
-                            <span class="font-medium text-gray-700">Konsultacija</span>
-                            <span class="font-bold text-primary-dark">Nemokama</span>
+
+            <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
+                <!-- Service Prices -->
+                <div class="bg-gray-50 rounded-2xl p-8 shadow-sm hover:shadow-md transition">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-primary/10 p-3 rounded-lg mr-4">
+                            <i class="fas fa-tag text-primary text-xl"></i>
                         </div>
-                        <p class="text-sm text-gray-500">Jei pacientas atlieka restauracijos procedūrą mūsų klinikoje
+                        <h3 class="text-2xl font-bold text-gray-800">Paslaugų kainos</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-start pb-4 border-b border-gray-200">
+                            <span class="text-gray-700 font-medium mr-4">Porceliano laminatė</span>
+                            <span class="text-primary font-bold text-xl shrink-0 text-right">nuo 500 EUR</span>
+                        </div>
+                        <div class="flex justify-between items-start pb-4 border-b border-gray-200">
+                            <span class="text-gray-700 font-medium mr-4">Kompozito laminatė</span>
+                            <span class="text-primary font-bold text-xl shrink-0 text-right">nuo 220 EUR</span>
+                        </div>
+                        <div class="flex justify-between items-start pb-4 border-b border-gray-200">
+                            <span class="text-gray-700 font-medium mr-4">Konsultacija</span>
+                            <span class="text-primary font-bold text-xl shrink-0 text-right">30 EUR*</span>
+                        </div>
+                        <p class="text-sm text-gray-500 italic mt-4">
+                            * Nemokama, jei atliekama procedūra klinikoje.
                         </p>
                     </div>
-                    <div class="p-6 hover:bg-gray-50 transition">
-                        <div class="flex justify-between items-start mb-2">
-                            <span class="font-medium text-gray-700">Porceliano laminatė</span>
-                            <span class="font-bold text-primary-dark">nuo 500 Eur</span>
+                </div>
+
+                <!-- InBank Financing -->
+                <div
+                    class="bg-gradient-to-br from-primary/5 to-white rounded-2xl p-8 border border-primary/10 shadow-sm hover:shadow-md transition">
+                    <div class="flex items-center mb-6">
+                        <div class="p-3 mr-4">
+                            <img src="../assets/images/Straipsniai/inbank.png" alt="InBank" class="h-8 w-auto">
                         </div>
-                        <p class="text-sm text-gray-500">Vieno danties</p>
+                        <h3 class="text-2xl font-bold text-gray-800">Atidėtas mokėjimas</h3>
                     </div>
-                    <div class="p-6 hover:bg-gray-50 transition">
-                        <div class="flex justify-between items-start mb-2">
-                            <span class="font-medium text-gray-700">Kompozito laminatė (COMPONEER, Edelweiss,
-                                Visalys)</span>
-                            <span class="font-bold text-primary-dark">nuo 220 Eur</span>
+                    <div class="space-y-4">
+                        <h4 class="font-bold text-gray-700">InBank lizingas</h4>
+                        <p class="text-gray-600 leading-relaxed">
+                            Pasinaudokite galimybe už paslaugas atsiskaityti dalimis. Patogus ir greitas būdas
+                            pasirūpinti savo šypsena jau dabar.
+                        </p>
+                        <div class="pt-4">
+                            <a href="https://epos.inbank.lt/lt/ALFADENTA" target="_blank"
+                                class="inline-flex items-center bg-primary text-white px-6 py-3 rounded-xl font-bold hover:bg-primary-dark transition shadow-lg shadow-primary/20">
+                                <span>Lizingo skaičiuoklė</span>
+                                <i class="fas fa-external-link-alt ml-2 text-sm"></i>
+                            </a>
                         </div>
-                        <p class="text-sm text-gray-500">Vieno danties</p>
                     </div>
                 </div>
             </div>
@@ -366,7 +396,7 @@
                     Dažniausiai užduodami klausimai
                 </h2>
                 <p class="text-gray-600 max-w-3xl mx-auto">
-                    Atsakome į populiariausius klausimus apie dantų tiesinimą.
+                    Atsakome į populiariausius klausimus apie laminates.
                 </p>
             </div>
             <div class="max-w-3xl mx-auto space-y-4">
@@ -437,7 +467,8 @@
                     </button>
                     <div class="hidden mt-4 text-gray-600 leading-relaxed border-t pt-4 border-gray-200" id="faq5">
                         <p>
-                            Porceliano laminatė nuo 500 Eur (vieno danties). Konsultacija nemokama (jei atliekama procedūra klinikoje).
+                            Porceliano laminatė nuo 500 Eur (vieno danties). Konsultacija nemokama (jei atliekama
+                            procedūra klinikoje).
                         </p>
                     </div>
                 </div>
@@ -553,7 +584,7 @@
                                 atstatymas „Visi ant 4" metodu
                             </a>
                         </li>
-                        
+
                         <li>
                             <a class="hover:text-blue-400" href="dantu-laminates.html">
                                 Dantų atkūrimas
@@ -680,10 +711,10 @@
                             <li>UAB Alfadenta</li>
 
                             <li>Įm. k.: 303415894</li>
-                                        <li>PVM mokėtojas: ne PVM mokėtojas</li>
-                                        <li>Bankas: Luminor bankas</li>
-                                        <li>SWIFT: AGBLLT2X</li>
-                                        <li>A.s.: LT87 4010 0510 0217 6965</li>
+                            <li>PVM mokėtojas: ne PVM mokėtojas</li>
+                            <li>Bankas: Luminor bankas</li>
+                            <li>SWIFT: AGBLLT2X</li>
+                            <li>A.s.: LT87 4010 0510 0217 6965</li>
 
                         </ul>
 
