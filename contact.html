@@ -436,20 +436,31 @@
             // Show loading state
             submitButton.disabled = true;
             submitButton.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Siunčiama...';
-            // Prepare form data
+            // Prepare form data (Standardized keys for universal templates)
             const formData = {
-                first_name: this.first_name.value,
-                last_name: this.last_name.value,
+                firstName: this.first_name.value,
+                lastName: this.last_name.value,
                 phone: this.phone.value,
                 email: this.email.value,
                 subject: this.subject.value || 'Bendra užklausa',
-                message: this.message.value
+                message: this.message.value,
+                // These are empty for contact form but included for template consistency
+                date: '-',
+                time: '-',
+                service: this.subject.value || 'Bendra užklausa'
             };
             // Send email using EmailJS
-            console.log('Sending email with data:', formData);
-            emailjs.send('service_54hzvym', 'template_reefgb5', formData)
-                .then(function (response) {
-                    console.log('SUCCESS!', response.status, response.text);
+            console.log('Sending emails with data:', formData);
+
+            // 1. Send to Admin
+            const adminEmail = emailjs.send('service_54hzvym', 'UNIVERSAL_ADMIN_TEMPLATE_ID', formData);
+
+            // 2. Send to Customer
+            const customerEmail = emailjs.send('service_54hzvym', 'UNIVERSAL_CUSTOMER_TEMPLATE_ID', formData);
+
+            Promise.all([adminEmail, customerEmail])
+                .then(function (responses) {
+                    console.log('SUCCESS!', responses);
                     // Show success message
                     const successDiv = document.createElement('div');
                     successDiv.className = 'bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded-lg mb-4';
