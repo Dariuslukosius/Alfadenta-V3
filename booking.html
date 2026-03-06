@@ -484,7 +484,7 @@
                 email: document.getElementById('email').value,
                 phone: document.getElementById('phone').value,
                 date: document.getElementById('date').value,
-                time: selectedTimeInput.value,
+                time: selectedTimeInput.options[selectedTimeInput.selectedIndex].text,
                 service: document.getElementById('service').options[document.getElementById('service').selectedIndex].text,
                 subject: 'Nauja vizito registracija',
                 message: 'Užregistruotas naujas vizitas per svetainės formą.'
