@@ -442,12 +442,12 @@
                 lastName: this.last_name.value,
                 phone: this.phone.value,
                 email: this.email.value,
-                subject: this.subject.value || 'Bendra užklausa',
+                subject: this.subject.options[this.subject.selectedIndex].text || 'Bendra užklausa',
                 message: this.message.value,
                 // These are empty for contact form but included for template consistency
                 date: '-',
                 time: '-',
-                service: this.subject.value || 'Bendra užklausa'
+                service: this.subject.options[this.subject.selectedIndex].text || 'Bendra užklausa'
             };
             // Send email using EmailJS
             console.log('Sending emails with data:', formData);
