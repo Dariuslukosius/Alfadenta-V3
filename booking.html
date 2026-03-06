@@ -492,10 +492,10 @@
             // Send emails using EmailJS
 
             // 1. Send to Admin
-            const adminEmail = emailjs.send('service_54hzvym', 'UNIVERSAL_ADMIN_TEMPLATE_ID', formData);
+            const adminEmail = emailjs.send('service_54hzvym', 'template_98pydrr', formData);
 
             // 2. Send to Customer
-            const customerEmail = emailjs.send('service_54hzvym', 'UNIVERSAL_CUSTOMER_TEMPLATE_ID', formData);
+            const customerEmail = emailjs.send('service_54hzvym', 'template_reefgb5', formData);
 
             Promise.all([adminEmail, customerEmail])
                 .then(function (responses) {
