@@ -39,7 +39,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script>
         (function () {
-            emailjs.init("7bdA9YoKvT6_Df2b1"); // Replace YOUR_PUBLIC_KEY with your actual EmailJS public key
+            emailjs.init("IucUQ4OUskUKaN0Cu"); // Replace YOUR_PUBLIC_KEY with your actual EmailJS public key
         })();
     </script>
 </head>
@@ -488,7 +488,7 @@
                 service: document.getElementById('service').options[document.getElementById('service').selectedIndex].text,
             };
             // Send email using EmailJS
-            emailjs.send('service_7xkq8co', 'template_qnrc6ky', formData)
+            emailjs.send('service_54hzvym', 'template_98pydrr', formData)
                 .then(function (response) {
                     console.log('SUCCESS!', response.status, response.text);
                     // Show success message
