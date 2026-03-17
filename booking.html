@@ -36,12 +36,13 @@
             color: white;
         }
     </style>
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script>
         (function () {
-            emailjs.init("IucUQ4OUskUKaN0Cu"); // Replace YOUR_PUBLIC_KEY with your actual EmailJS public key
+            emailjs.init("OqlZzkUssJsZtAfWC");
         })();
     </script>
+
 </head>
 
 <body class="">
@@ -459,12 +460,8 @@
         const bookingForm = document.getElementById('bookingForm');
         bookingForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            // Validate time selection
-            if (!selectedTimeInput.value) {
-                alert('Prašome pasirinkti laiką');
-                return;
-            }
-            // Collect form data (Standardized keys for universal templates)
+
+            // Collect form data
             const formData = {
                 firstName: document.getElementById('firstName').value,
                 lastName: document.getElementById('lastName').value,
@@ -476,13 +473,18 @@
                 subject: 'Nauja vizito registracija',
                 message: 'Užregistruotas naujas vizitas per svetainės formą.'
             };
-            // Send emails using EmailJS
+
+            // Show loading state
+            const submitButton = bookingForm.querySelector('button[type="submit"]');
+            const originalText = submitButton.innerHTML;
+            submitButton.disabled = true;
+            submitButton.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Siunčiama...';
 
             // 1. Send to Admin
-            const adminEmail = emailjs.send('service_54hzvym', 'template_98pydrr', formData);
+            const adminEmail = emailjs.send('service_6gnmpv8', 'template_l5meme9', formData);
 
             // 2. Send to Customer
-            const customerEmail = emailjs.send('service_54hzvym', 'template_reefgb5', formData);
+            const customerEmail = emailjs.send('service_6gnmpv8', 'template_3wg6bbi', formData);
 
             Promise.all([adminEmail, customerEmail])
                 .then(function (responses) {
@@ -493,25 +495,21 @@
                     successDiv.innerHTML = `
                         <div class="flex items-center">
                             <i class="fas fa-check-circle mr-2"></i>
-                            <span>Ačiū! Jūsų žinutė sėkmingai išsiųsta. Mes su jumis susisieksime artimiausiu metu.</span>
+                            <span>Ačiū! Jūsų registracija sėkmingai išsiųsta. Mes su jumis susisieksime artimiausiu metu.</span>
                         </div>
                     `;
-                    // Insert success message before the form
-                    document.getElementById('bookingForm').parentNode.insertBefore(successDiv, document.getElementById('bookingForm'));
-                    // Reset form
-                    document.getElementById('bookingForm').reset();
-                    // Remove success message after 5 seconds
-                    setTimeout(() => {
-                        successDiv.remove();
-                    }, 5000);
-                    // Reset form after delay
-                    setTimeout(() => {
-                        bookingForm.reset();
-                        timeSlots.forEach(s => s.classList.remove('selected'));
-                    }, 500);
-                }, function (error) {
-                    console.log('FAILED...', error);
+                    bookingForm.parentNode.insertBefore(successDiv, bookingForm);
+                    bookingForm.reset();
+                    timeSlots.forEach(s => s.classList.remove('selected'));
+                    setTimeout(() => successDiv.remove(), 5000);
+                })
+                .catch(function (error) {
+                    console.error('FAILED...', error);
                     alert('Klaida siunčiant užklausą. Prašome pabandyti dar kartą arba susisiekti telefonu.');
+                })
+                .finally(() => {
+                    submitButton.disabled = false;
+                    submitButton.innerHTML = originalText;
                 });
         });
     </script>

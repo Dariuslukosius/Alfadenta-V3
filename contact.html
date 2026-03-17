@@ -408,9 +408,9 @@
     <script>
         // Initialize EmailJS
         (function () {
-            emailjs.init("IucUQ4OUskUKaN0Cu"); // Replace with your EmailJS public key
+            emailjs.init("OqlZzkUssJsZtAfWC");
         })();
-        // Mobile Menu Toggle
+
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
         mobileMenuBtn.addEventListener('click', () => {
@@ -421,10 +421,12 @@
             e.preventDefault();
             const submitButton = this.querySelector('button[type="submit"]');
             const originalText = submitButton.innerHTML;
+
             // Show loading state
             submitButton.disabled = true;
             submitButton.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Siunčiama...';
-            // Prepare form data (Standardized keys for universal templates)
+
+            // Prepare form data
             const formData = {
                 firstName: this.first_name.value,
                 lastName: this.last_name.value,
@@ -432,19 +434,16 @@
                 email: this.email.value,
                 subject: this.subject.options[this.subject.selectedIndex].text || 'Bendra užklausa',
                 message: this.message.value,
-                // These are empty for contact form but included for template consistency
                 date: '-',
                 time: '-',
                 service: this.subject.options[this.subject.selectedIndex].text || 'Bendra užklausa'
             };
-            // Send email using EmailJS
-            console.log('Sending emails with data:', formData);
 
             // 1. Send to Admin
-            const adminEmail = emailjs.send('service_54hzvym', 'template_98pydrr', formData);
+            const adminEmail = emailjs.send('service_6gnmpv8', 'template_l5meme9', formData);
 
             // 2. Send to Customer
-            const customerEmail = emailjs.send('service_54hzvym', 'template_reefgb5', formData);
+            const customerEmail = emailjs.send('service_6gnmpv8', 'template_3wg6bbi', formData);
 
             Promise.all([adminEmail, customerEmail])
                 .then(function (responses) {
@@ -458,17 +457,12 @@
                             <span>Ačiū! Jūsų žinutė sėkmingai išsiųsta. Mes su jumis susisieksime artimiausiu metu.</span>
                         </div>
                     `;
-                    // Insert success message before the form
                     document.getElementById('contact-form').parentNode.insertBefore(successDiv, document.getElementById('contact-form'));
-                    // Reset form
                     document.getElementById('contact-form').reset();
-                    // Remove success message after 5 seconds
-                    setTimeout(() => {
-                        successDiv.remove();
-                    }, 5000);
+                    setTimeout(() => successDiv.remove(), 5000);
                 })
                 .catch(function (error) {
-                    console.log('FAILED...', error);
+                    console.error('FAILED...', error);
                     // Show error message
                     const errorDiv = document.createElement('div');
                     errorDiv.className = 'bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded-lg mb-4';
@@ -478,12 +472,8 @@
                             <span>Atsiprašome, įvyko klaida siunčiant žinutę. Bandykite dar kartą arba skambinkite telefonu.</span>
                         </div>
                     `;
-                    // Insert error message before the form
                     document.getElementById('contact-form').parentNode.insertBefore(errorDiv, document.getElementById('contact-form'));
-                    // Remove error message after 5 seconds
-                    setTimeout(() => {
-                        errorDiv.remove();
-                    }, 5000);
+                    setTimeout(() => errorDiv.remove(), 5000);
                 })
                 .finally(function () {
                     // Restore button state
